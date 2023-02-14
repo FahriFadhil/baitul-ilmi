@@ -17,4 +17,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::view('/', 'home');
+Route::view('/profile', 'profile');
+Route::view('/academic', 'academic');
+Route::view('/news', 'news.index');
+Route::view('/enrollment', 'enrollment');
+Route::view('/gallery', 'gallery');
