@@ -19,3 +19,4 @@ Route::view('/academic', 'academic');
 Route::view('/news', 'news.index');
 Route::view('/enrollment', 'enrollment');
 Route::view('/gallery', 'gallery');
+Route::view('/alumni', 'alumni');
