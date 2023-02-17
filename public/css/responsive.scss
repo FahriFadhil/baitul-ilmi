@@ -1,0 +1,59 @@
+@media (max-width:992px) {
+
+    :root {
+        --font-heading-lg: 2rem;
+        --font-heading-md: 1.5rem;
+        --font-heading-sm: 1.25rem;
+    }
+
+    footer {
+        .container {
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .contact {
+            width: 100%;
+        }
+        .map {
+            width: 100%;
+            iframe {
+                width: 100%;
+            }
+        }
+    }
+
+    // ===== PROFILE PAGE STYLE =====
+
+    #home-page {
+        .carousel {
+            margin-bottom: 2rem;
+        }
+        section {
+            padding: 2.5rem 0;
+        }
+        .sambutan {
+
+            .person {
+                display: grid;
+                grid-template-areas: 'heading img'
+                                        'name img';
+                grid-template-columns: 6fr 2fr;
+                grid-template-rows: auto auto auto;
+                gap: 1rem;
+    
+                h1 {
+                    grid-area: heading;
+                    align-self: end;
+                }
+                h4 {
+                    grid-area: name;
+                }
+                .image-bg {
+                    grid-area: img;
+                    width: 20%;
+                }
+            }
+        }
+    }
+}
