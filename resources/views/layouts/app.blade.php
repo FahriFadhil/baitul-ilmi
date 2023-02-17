@@ -24,6 +24,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
 
 </head>
 
@@ -69,10 +70,16 @@
             </div>
         </nav>
 
+<<<<<<< Updated upstream
 
         <main class="py-4 container">
             @yield('content')
         </main>
+=======
+        <div class="nav-clear" style="height: 5rem;"></div>
+
+        @yield('content')
+>>>>>>> Stashed changes
 
         <footer class="footer">
             <div class="container py-4">
