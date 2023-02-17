@@ -21,3 +21,4 @@ Route::view('/penerimaan', 'enrollment');
 Route::view('/gallery', 'gallery');
 Route::view('/alumni', 'alumni');
 
+Route::get('/dashboard','DashboardConttroller@update');
