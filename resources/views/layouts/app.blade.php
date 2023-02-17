@@ -5,10 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Icon -->
+    <link rel="icon" href="{{ asset('icon/logo.png') }}" type="image/x-icon">
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ Request::path() == '/' ? 'Home' : ucfirst(strtolower(Request::path())) }} | {{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -17,7 +20,6 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-t2eiHbO1JeMYgI5M8DpNwdfwLgrGZ6NPFa6X5U6VJ99F/R+AT6wt/7ic8WJcVq3JSbZm7VYI9RzG7xv44uy/Dg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -50,8 +52,8 @@
                         <li class="nav-item {{ Request::is('academic') ? 'active' : '' }}">
                             <a href="/academic" class="nav-link">ACADEMIC</a>
                         </li>
-                        <li class="nav-item {{ Request::is('enrollment') ? 'active' : '' }}">
-                            <a href="/enrollment" class="nav-link">PENERIMAAN</a>
+                        <li class="nav-item {{ Request::is('penerimaan') ? 'active' : '' }}">
+                            <a href="/penerimaan" class="nav-link">PENERIMAAN</a>
                         </li>
                         <li class="nav-item {{ Request::is('news') ? 'active' : '' }}">
                             <a href="/news" class="nav-link">NEWS</a>
@@ -79,7 +81,7 @@
                         <img class="logo-img" src="{{ asset('icon/logo.png') }}">
                         <div class="logo-text">SMA ISLAM TERPADU<span class="d-block"></span>BAITUL 'ILMI</div>
                     </div>
-                    <div class="location">
+                    <div class="location ms-3">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                             <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
                         </svg>
@@ -92,7 +94,7 @@
                         </p>
                     </div>
                     <div class="contact-header">
-                        <h3>Contact Information</h3>
+                        <h3>Informasi Kontak</h3>
                     </div>
                     <a class="contact-item" href="/">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
