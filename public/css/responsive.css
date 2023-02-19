@@ -3,6 +3,8 @@
     --font-heading-lg: 2rem;
     --font-heading-md: 1.5rem;
     --font-heading-sm: 1.25rem;
+    --font-content-lg: 1.1rem;
+    --font-content-sm: .9rem;
   }
   nav .navbar-collapse {
     margin: 0.5rem 0;
@@ -32,6 +34,9 @@
   }
   #home-page section {
     padding: 2.5rem 0;
+  }
+  #home-page .container {
+    font-size: var(--font-content-lg);
   }
   #home-page .sambutan .person {
     display: grid;

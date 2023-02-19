@@ -15,8 +15,7 @@
   --font-heading-md: 1.75rem;
   --font-heading-sm: 1.25rem;
   --font-content-lg: 1.2rem;
-  --font-content-md: 1rem;
-  --font-content-sm: .8rem;
+  --font-content-sm: 1rem;
 }
 
 *, ::after, ::before {
@@ -158,7 +157,7 @@ footer .copyright {
   background-color: rgba(0, 0, 0, 0.5);
 }
 #home-page .carousel .carousel-item {
-  aspect-ratio: 64/33;
+  aspect-ratio: 16/9;
   width: 100%;
 }
 #home-page .carousel .carousel-item img {
@@ -216,7 +215,7 @@ footer .copyright {
 #home-page .container .sambutan .content {
   font-size: var(--font-content-lg);
 }
-#home-page .container .sambutan .content .border {
+#home-page .container .sambutan .content .card {
   box-shadow: 0 0.5rem 0 0.1rem var(--clr-green-main);
   padding: 1rem;
   border-radius: 0.25rem;
@@ -232,4 +231,39 @@ footer .copyright {
 }
 #home-page .container .sambutan .content a:hover {
   color: var(--clr-green-dark);
+}
+#home-page .container .keunggulan {
+  padding-bottom: 4rem;
+  padding-top: 0;
+}
+#home-page .container .keunggulan .row {
+  margin: 2rem 0;
+}
+#home-page .container .keunggulan .row .card {
+  display: flex;
+  flex-direction: row;
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  gap: 1rem;
+  transition: 0.3s;
+}
+#home-page .container .keunggulan .row .card:hover {
+  box-shadow: 0 0.25rem 0 0.1rem var(--clr-green-main);
+}
+#home-page .container .keunggulan .row .card .icon {
+  flex: 1;
+  display: grid;
+  place-items: center;
+}
+#home-page .container .keunggulan .row .card .icon svg {
+  height: 3rem;
+}
+#home-page .container .keunggulan .row .card .icon svg path {
+  fill: var(--clr-green-dark);
+}
+#home-page .container .keunggulan .row .card .content {
+  flex: 5;
+}
+#home-page .container .keunggulan .row .card .content p {
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */

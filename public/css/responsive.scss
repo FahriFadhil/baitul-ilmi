@@ -4,6 +4,9 @@
         --font-heading-lg: 2rem;
         --font-heading-md: 1.5rem;
         --font-heading-sm: 1.25rem;
+
+        --font-content-lg: 1.1rem;
+        --font-content-sm: .9rem;
     }
 
     nav {
@@ -46,8 +49,11 @@
         section {
             padding: 2.5rem 0;
         }
-        .sambutan {
+        .container {
+            font-size: var(--font-content-lg);
 
+        }
+        .sambutan {
             .person {
                 display: grid;
                 grid-template-areas: 'heading img'
