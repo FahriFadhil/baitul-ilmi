@@ -88,6 +88,10 @@ nav {
     }
 }
 
+.nav-clear {
+    height: 5rem;
+}
+
 footer {
     background-color: var(--clr-black-main);
     color: var(--clr-white-main);
@@ -194,7 +198,7 @@ footer {
         }
 
         .carousel-item {
-            aspect-ratio: 16/9;
+            aspect-ratio: 64/33;
             width: 100%;
     
             img {

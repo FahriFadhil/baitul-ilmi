@@ -6,6 +6,20 @@
         --font-heading-sm: 1.25rem;
     }
 
+    nav {
+        .navbar-collapse {
+            margin: .5rem 0;
+
+            .nav-item {
+                margin-top: .25rem;
+
+                .nav-link {
+                    padding: .75rem;
+                }
+            }
+        }
+    }
+
     footer {
         .container {
             flex-direction: column;

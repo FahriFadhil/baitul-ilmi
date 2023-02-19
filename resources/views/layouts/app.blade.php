@@ -70,6 +70,8 @@
             </div>
         </nav>
 
+        <div class="nav-clear"></div>
+
         @yield('content')
 
         <footer class="footer">

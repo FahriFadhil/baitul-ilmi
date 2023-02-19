@@ -68,6 +68,10 @@ nav .navbar-collapse .navbar-nav .nav-item .nav-link {
   color: var(--clr-white-main);
 }
 
+.nav-clear {
+  height: 5rem;
+}
+
 footer {
   background-color: var(--clr-black-main);
   color: var(--clr-white-main);
@@ -154,7 +158,7 @@ footer .copyright {
   background-color: rgba(0, 0, 0, 0.5);
 }
 #home-page .carousel .carousel-item {
-  aspect-ratio: 16/9;
+  aspect-ratio: 64/33;
   width: 100%;
 }
 #home-page .carousel .carousel-item img {

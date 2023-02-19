@@ -4,6 +4,15 @@
     --font-heading-md: 1.5rem;
     --font-heading-sm: 1.25rem;
   }
+  nav .navbar-collapse {
+    margin: 0.5rem 0;
+  }
+  nav .navbar-collapse .nav-item {
+    margin-top: 0.25rem;
+  }
+  nav .navbar-collapse .nav-item .nav-link {
+    padding: 0.75rem;
+  }
   footer .container {
     flex-direction: column;
     justify-content: center;
