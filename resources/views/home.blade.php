@@ -6,7 +6,6 @@
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-
                 <img src="https://source.unsplash.com/1200x800?school" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
@@ -24,6 +23,13 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
+        <div class="carousel-text text-center">
+            <h1>
+                SMA Islam Terpadu Baitul 'Ilmi
+            </h1>
+            <p>"Ilmu itu dia akan menghilangkan sesuatu yang menutupi matamu, dan memberikan kamu petunjuk jalan apabila kamu tersesat. Dia akan memberikanmu manfaat sepanjang kehidupanmu dan akan tetap semerbak selama kepergianmu."</p>
+            <p>- Abu Ishaq Al Ilbiri -</p>
+        </div>
     </div>
 
     <div class="container">
@@ -150,6 +156,59 @@
                             <p>Pendidikan Mengenai Dasar Ilmu, Mengolah Data, & Presentasi berbasis Komputer. </p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="visi-misi">
+            <h1 class="text-center mb-5">Visi & Misi</h1>
+            <div class="card d-flex align-items-center text-center">
+                <h4>Visi</h4>
+                <p>Menuju generasi berilmu dengan berpegang teguh kepada Al-Qur'an dan Sunnah sesuai dengan pamahaman salafussholeh.</p>
+            </div>
+            <div class="card d-flex align-items-center text-center">
+                <h4>Misi</h4>
+                <p>Membentuk dan menanamkan pendidikan agama islam dengan aqidah, akhlak dan ibadah berdasarkan pemahaman para salafussholeh Menyelenggarakan pendidikan yang berkualitas namun terjangkau oleh masyarakat.</p>
+                <p class="dot"></p>
+                <p>Mengembangkan potensi anak dan menyiapkan untuk mandiri dan bersahaja dalam hidup serta berilmu dan siap meniti jenjang pendidikan yang lebih tinggi.</p>
+                <p class="dot"></p>
+                <p>Memberikan pelayanan yang optimal dan profesional dibidang pendidikan dengan cara pengajaran nilai-nilai keislaman, hafalan Al-Qur'an dan penanaman akhlak Islam, bimbingan dan pengetahuan sehingga siswa memiliki kemampuan hard skill dan keahlian soft skill.</p>
+            </div>
+        </section>
+
+        <section class="berita container">
+            <div class="header">
+                <h1>Berita Terbaru Baitul 'Ilmi</h1>
+                <a href="/news">Semua Berita &raquo;</a>
+            </div>
+            <div class="row my-5">
+                <div class="col-lg-6">
+                    <a class="card mb-4">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                        </div>
+                    </a>
+                    <a class="card mb-4">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <a class="card mb-4">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                        </div>
+                    </a>
+                    <a class="card mb-4">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>

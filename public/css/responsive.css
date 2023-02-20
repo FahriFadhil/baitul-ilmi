@@ -33,7 +33,7 @@
     margin-bottom: 2rem;
   }
   #home-page section {
-    padding: 2.5rem 0;
+    padding: 0;
   }
   #home-page .container {
     font-size: var(--font-content-lg);
@@ -55,5 +55,8 @@
   #home-page .sambutan .person .image-bg {
     grid-area: img;
     width: 20%;
+  }
+  #home-page .visi-misi .card p {
+    width: 100%;
   }
 }/*# sourceMappingURL=responsive.css.map */

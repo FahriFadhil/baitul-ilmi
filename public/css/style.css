@@ -143,12 +143,26 @@ footer .copyright {
   color: var(--clr-white-main);
 }
 
-#home-page section {
-  padding: 4rem 0;
-}
 #home-page .carousel {
   position: relative;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
+}
+#home-page .carousel .carousel-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--clr-white-main);
+  z-index: 10;
+}
+#home-page .carousel .carousel-text h1 {
+  display: inline;
+  border-bottom: 0.25rem solid var(--clr-green-dark);
+  padding: 0.75rem 1rem;
+}
+#home-page .carousel .carousel-text:nth-child(2) {
+  font-size: var(--font-heading-sm);
+  padding-top: 2rem;
 }
 #home-page .carousel::after {
   content: "";
@@ -167,6 +181,9 @@ footer .copyright {
 }
 #home-page .container {
   font-size: var(--font-content-lg);
+}
+#home-page .container .penerimaan {
+  padding: 4rem 0;
 }
 #home-page .container .penerimaan .content .button-penerimaan {
   border-radius: 0.5rem;
@@ -197,6 +214,9 @@ footer .copyright {
 }
 #home-page .container .penerimaan .image .image-bg:hover {
   box-shadow: 0.75rem 0.75rem 0 var(--clr-green-main);
+}
+#home-page .container .sambutan {
+  padding: 3rem 0;
 }
 #home-page .container .sambutan .person .image-bg {
   width: 100%;
@@ -233,8 +253,7 @@ footer .copyright {
   color: var(--clr-green-dark);
 }
 #home-page .container .keunggulan {
-  padding-bottom: 4rem;
-  padding-top: 0;
+  padding-bottom: 2rem;
 }
 #home-page .container .keunggulan .row {
   margin: 2rem 0;
@@ -266,4 +285,32 @@ footer .copyright {
 }
 #home-page .container .keunggulan .row .card .content p {
   margin: 0;
+}
+#home-page .container .visi-misi {
+  padding-bottom: 4rem;
+}
+#home-page .container .visi-misi .card {
+  margin-top: 2rem;
+  padding: 1.25rem;
+  transition: 0.3s;
+}
+#home-page .container .visi-misi .card h4 {
+  margin-bottom: 1rem;
+}
+#home-page .container .visi-misi .card:hover {
+  box-shadow: 0 0.25rem 0 0.1rem var(--clr-green-main);
+}
+#home-page .container .visi-misi .card p {
+  width: 75%;
+}
+#home-page .container .visi-misi .card .dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--clr-black-main);
+}
+#home-page .container .berita .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }/*# sourceMappingURL=style.css.map */

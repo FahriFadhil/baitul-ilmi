@@ -182,12 +182,28 @@ footer {
 // ===== PROFILE PAGE STYLE =====
 
 #home-page {
-    section {
-        padding: 4rem 0;
-    }
     .carousel {
         position: relative;
-        margin-bottom: 3rem;
+        margin-bottom: 4rem;
+
+        .carousel-text {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--clr-white-main);
+            z-index: 10;
+
+            h1 {
+                display: inline;
+                border-bottom: .25rem solid var(--clr-green-dark);
+                padding: .75rem 1rem;
+            }
+            &:nth-child(2) {
+                font-size: var(--font-heading-sm);
+                padding-top: 2rem;
+            }
+        }
 
         &::after {
             content: "";
@@ -210,6 +226,8 @@ footer {
         font-size: var(--font-content-lg);
 
         .penerimaan {
+            padding: 4rem 0;
+
             .content {
                 .button-penerimaan {
                     border-radius: .5rem;
@@ -248,6 +266,7 @@ footer {
         }
 
         .sambutan {
+            padding: 3rem 0;
             .person {
                 .image-bg {
                     width: 100%;
@@ -293,8 +312,7 @@ footer {
         }
 
         .keunggulan {
-            padding-bottom: 4rem;
-            padding-top: 0;
+            padding-bottom: 2rem;
 
             .row {
                 margin: 2rem 0;
@@ -332,9 +350,44 @@ footer {
                             margin: 0;
                         }
                     }
-
-
                 }
+            }
+        }
+
+        .visi-misi {
+            padding-bottom: 4rem;
+
+            .card {
+                margin-top: 2rem;
+                padding: 1.25rem;
+                transition: .3s;
+
+                h4 {
+                    margin-bottom: 1rem;
+                }
+
+                &:hover {
+                    box-shadow: 0 .25rem 0 .1rem var(--clr-green-main);
+                }
+
+                p {
+                    width: 75%;
+                }
+
+                .dot {
+                    width: .5rem;
+                    height: .5rem;
+                    border-radius: .5rem;
+                    background-color: var(--clr-black-main);
+                }
+            }
+        }
+
+        .berita {
+            .header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
             }
         }
     }
