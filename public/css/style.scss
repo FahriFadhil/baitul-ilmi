@@ -194,14 +194,14 @@ footer {
             color: var(--clr-white-main);
             z-index: 10;
 
-            h1 {
-                display: inline;
-                border-bottom: .25rem solid var(--clr-green-dark);
-                padding: .75rem 1rem;
+            .divider {
+                height: .25rem;
+                margin: 1.5rem 0;
+                width: 100%;
+                background-color: var(--clr-green-dark);
             }
-            &:nth-child(2) {
+            .quote {
                 font-size: var(--font-heading-sm);
-                padding-top: 2rem;
             }
         }
 
@@ -302,6 +302,7 @@ footer {
                 }
 
                 a {
+                    cursor: pointer;
                     color: var(--clr-green-main);
 
                     &:hover {
@@ -384,10 +385,20 @@ footer {
         }
 
         .berita {
+            margin-bottom: 6rem;
             .header {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+
+                a {
+                    cursor: pointer;
+                    color: var(--clr-green-main);
+
+                    &:hover {
+                        color: var(--clr-green-dark);
+                    }
+                }
             }
         }
     }

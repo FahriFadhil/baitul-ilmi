@@ -27,7 +27,8 @@
             <h1>
                 SMA Islam Terpadu Baitul 'Ilmi
             </h1>
-            <p>"Ilmu itu dia akan menghilangkan sesuatu yang menutupi matamu, dan memberikan kamu petunjuk jalan apabila kamu tersesat. Dia akan memberikanmu manfaat sepanjang kehidupanmu dan akan tetap semerbak selama kepergianmu."</p>
+            <div class="divider"></div>
+            <p class="quote">"Ilmu itu dia akan menghilangkan sesuatu yang menutupi matamu, dan memberikan kamu petunjuk jalan apabila kamu tersesat. Dia akan memberikanmu manfaat sepanjang kehidupanmu dan akan tetap semerbak selama kepergianmu."</p>
             <p>- Abu Ishaq Al Ilbiri -</p>
         </div>
     </div>
