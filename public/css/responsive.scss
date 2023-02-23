@@ -40,7 +40,7 @@
         }
     }
 
-    // ===== PROFILE PAGE STYLE =====
+    // ===== HOME PAGE STYLE =====
 
     #home-page {
         .carousel {
@@ -71,6 +71,35 @@
                 .image-bg {
                     grid-area: img;
                     width: 20%;
+                }
+            }
+        }
+        .visi-misi {
+            .card {
+                p {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    // ===== PROFILE PAGE STYLE =====
+
+    #profile-page {
+        .sambutan {
+            .person {
+                position: relative;
+                margin-top: 2rem;
+                .image-bg {
+                    position: absolute;
+                    width: 15vw;
+                    right: 1rem;
+                    bottom: -7rem;
+                }
+            }
+            .content {
+                h1 {
+                    margin-bottom: 2rem;
                 }
             }
         }

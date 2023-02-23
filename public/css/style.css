@@ -324,4 +324,112 @@ footer .copyright {
 }
 #home-page .container .berita .header a:hover {
   color: var(--clr-green-dark);
+}
+
+#profile-page .container {
+  font-size: var(--font-content-lg);
+}
+#profile-page .sambutan {
+  padding-top: 5rem;
+  padding-bottom: 1rem;
+}
+#profile-page .sambutan .person .image-bg {
+  width: 100%;
+  aspect-ratio: 3/4;
+  border-radius: 0.5rem;
+  box-shadow: 0.5rem 0.5rem 0 var(--clr-green-main);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.3s;
+  margin: 2rem 0;
+}
+#profile-page .sambutan .person .image-bg:hover {
+  box-shadow: 0.75rem 0.75rem 0 var(--clr-green-main);
+}
+#profile-page .sambutan .content {
+  font-size: var(--font-content-lg);
+}
+#profile-page .sambutan .content .card {
+  box-shadow: 0 0.5rem 0 0.1rem var(--clr-green-main);
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+#profile-page .sambutan .content hr {
+  padding: 1rem;
+}
+#profile-page .sambutan .content p {
+  line-height: 1.75;
+}
+#profile-page .sambutan .content a {
+  cursor: pointer;
+  color: var(--clr-green-main);
+}
+#profile-page .sambutan .content a:hover {
+  color: var(--clr-green-dark);
+}
+#profile-page .sambutan-rest {
+  padding-bottom: 5rem;
+}
+#profile-page .sambutan-rest .card {
+  box-shadow: 0 0.5rem 0 0.1rem var(--clr-green-main);
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+#profile-page .visi-misi {
+  padding-bottom: 4rem;
+}
+#profile-page .visi-misi .card {
+  margin-top: 2rem;
+  padding: 1.25rem;
+  transition: 0.3s;
+}
+#profile-page .visi-misi .card h4 {
+  margin-bottom: 1rem;
+}
+#profile-page .visi-misi .card:hover {
+  box-shadow: 0 0.25rem 0 0.1rem var(--clr-green-main);
+}
+#profile-page .visi-misi .card p {
+  width: 75%;
+}
+#profile-page .visi-misi .card .dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--clr-black-main);
+}
+#profile-page .sejarah {
+  padding-bottom: 6rem;
+}
+#profile-page .sejarah .image {
+  aspect-ratio: 2/1;
+  width: 100%;
+  box-shadow: 0.5rem 0.5rem 0 var(--clr-green-main);
+  border-radius: 0.5rem;
+  transition: 0.3s;
+}
+#profile-page .sejarah .image .bg-image {
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#profile-page .sejarah .image:hover {
+  box-shadow: 0.75rem 0.75rem 0 var(--clr-green-main);
+}
+#profile-page .sejarah .content {
+  margin-top: 2rem;
+  padding: 1.25rem;
+  transition: 0.3s;
+}
+#profile-page .sejarah .content .img-thumbnail {
+  aspect-ratio: 2/1;
+  box-shadow: 0.3rem 0.3rem 0 var(--clr-green-main);
+  transition: 0.3s;
+}
+#profile-page .sejarah .content .img-thumbnail:hover {
+  box-shadow: 0.5rem 0.5rem 0 var(--clr-green-main);
 }/*# sourceMappingURL=style.css.map */
