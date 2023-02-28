@@ -531,3 +531,89 @@ footer {
         }
     }
 }
+
+// ===== ACADEMIC PAGE STYLE =====
+
+#academic-page {
+    .container {
+        font-size: var(--font-content-lg);
+    }
+    .keunggulan {
+        padding-top: 5rem;
+        padding-bottom: 2rem;
+
+        .row {
+            margin: 2rem 0;
+
+            .card {
+                display: flex;
+                flex-direction: row;
+                margin: 1.5rem 0;
+                padding: 1.25rem;
+                gap: 1rem;
+                transition: .3s;
+
+                &:hover {
+                    box-shadow: 0 .25rem 0 .1rem var(--clr-green-main);
+                }
+
+                .icon {
+                    flex: 1;
+                    display: grid;
+                    place-items: center;
+
+                    svg {
+                        height: 3rem;
+                        
+                        path {
+                            fill: var(--clr-green-dark);
+                        }
+                    }
+                }
+
+                .content {
+                    flex: 5;
+
+                    p {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+    .ekstrakurikuler {
+        padding-bottom: 2rem;
+        .row {
+            margin: 2rem 0;
+
+            .card {
+                aspect-ratio: 2/1;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            .title {
+                background-color: var(--clr-green-dark);
+                color: var(--clr-white-light);
+                display: grid;
+                place-items: center;
+            }
+        }
+    }
+    .teacher {
+        padding-bottom: 6rem;
+
+        .row {
+            margin: 2rem 0;
+    
+            .card {
+                aspect-ratio: 2/2.5;
+
+                img {
+                    aspect-ratio: 3/4;
+                }
+            }
+        }
+    }
+}

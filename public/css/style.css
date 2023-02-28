@@ -432,4 +432,73 @@ footer .copyright {
 }
 #profile-page .sejarah .content .img-thumbnail:hover {
   box-shadow: 0.5rem 0.5rem 0 var(--clr-green-main);
+}
+
+#academic-page .container {
+  font-size: var(--font-content-lg);
+}
+#academic-page .keunggulan {
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+}
+#academic-page .keunggulan .row {
+  margin: 2rem 0;
+}
+#academic-page .keunggulan .row .card {
+  display: flex;
+  flex-direction: row;
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  gap: 1rem;
+  transition: 0.3s;
+}
+#academic-page .keunggulan .row .card:hover {
+  box-shadow: 0 0.25rem 0 0.1rem var(--clr-green-main);
+}
+#academic-page .keunggulan .row .card .icon {
+  flex: 1;
+  display: grid;
+  place-items: center;
+}
+#academic-page .keunggulan .row .card .icon svg {
+  height: 3rem;
+}
+#academic-page .keunggulan .row .card .icon svg path {
+  fill: var(--clr-green-dark);
+}
+#academic-page .keunggulan .row .card .content {
+  flex: 5;
+}
+#academic-page .keunggulan .row .card .content p {
+  margin: 0;
+}
+#academic-page .ekstrakurikuler {
+  padding-bottom: 2rem;
+}
+#academic-page .ekstrakurikuler .row {
+  margin: 2rem 0;
+}
+#academic-page .ekstrakurikuler .row .card {
+  aspect-ratio: 2/1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#academic-page .ekstrakurikuler .row .title {
+  background-color: var(--clr-green-dark);
+  color: var(--clr-white-light);
+  display: grid;
+  place-items: center;
+}
+#academic-page .teacher {
+  padding-bottom: 6rem;
+}
+#academic-page .teacher .row {
+  margin: 2rem 0;
+}
+#academic-page .teacher .row .card {
+  aspect-ratio: 2/2.5;
+}
+#academic-page .teacher .row .card img {
+  aspect-ratio: 3/4;
 }/*# sourceMappingURL=style.css.map */

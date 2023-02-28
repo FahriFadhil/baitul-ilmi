@@ -75,4 +75,7 @@
   #profile-page .visi-misi .card p {
     width: 100%;
   }
+  #academic-page .ekstrakurikuler .row .card {
+    aspect-ratio: 5/4;
+  }
 }/*# sourceMappingURL=responsive.css.map */
