@@ -617,3 +617,134 @@ footer {
         }
     }
 }
+
+#enrollment-page {
+    .carousel {
+        position: relative;
+        margin-bottom: 4rem;
+
+        .carousel-text {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--clr-white-main);
+            z-index: 10;
+
+            .divider {
+                height: .25rem;
+                margin: 1.5rem 0;
+                width: 100%;
+                background-color: var(--clr-green-dark);
+            }
+            .quote {
+                font-size: var(--font-heading-sm);
+            }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .carousel-item {
+            aspect-ratio: 16/9;
+            width: 100%;
+    
+            img {
+                object-fit: cover;
+                max-height: 100%;
+            }
+        }
+    }
+    .alur {
+        padding-bottom: 3rem;
+        .tree {
+            .graph {
+                height: 115vh;
+                position: relative;
+
+                .vertical-line {
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background-color: var(--clr-green-dark);
+                    height: 100%;
+                    width: 1rem;
+                    border-radius: .5rem;
+                }
+
+                .dot {
+                    width: 2rem;
+                    height: 2rem;
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    border-radius: 50%;
+                    background-color: var(--clr-yellow-dark);
+
+                    &:nth-child(6) {
+                        top: 7.5%;
+                    }
+                    &:nth-child(2) {
+                        top: 27.5%;
+                    }
+                    &:nth-child(3) {
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                    &:nth-child(4) {
+                        bottom: 27.5%;
+                    }
+                    &:nth-child(5) {
+                        bottom: 7.5%;
+                    }
+                }
+            }
+            .card {
+                margin-bottom: 1.5rem;
+                .title-point {
+                    background-color: var(--clr-green-dark);
+                    color: var(--clr-white-main);
+                    
+                    h1 {
+                        padding: 3.5rem 0;
+                    }
+                }
+            }
+        }
+    }
+    .biaya {
+        padding-bottom: 3rem;
+        .card {
+            transition: .3s;
+            &:hover {
+                box-shadow: 0 .25rem 0 .1rem var(--clr-green-main);
+            }
+        }
+    }
+    .syarat {
+        padding-bottom: 3rem;
+        .card {
+            .title-point {
+                background-color: var(--clr-green-dark);
+                color: var(--clr-white-main);
+                
+                h1 {
+                    padding: 3.5rem 0;
+                }
+            }
+        }
+    }
+    .agenda {
+        padding-bottom: 3rem;
+        .card {
+            transition: .3s;
+            &:hover {
+                box-shadow: 0 .25rem 0 .1rem var(--clr-green-main);
+            }
+        }
+    }
+}

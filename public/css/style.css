@@ -501,4 +501,120 @@ footer .copyright {
 }
 #academic-page .teacher .row .card img {
   aspect-ratio: 3/4;
+}
+
+#enrollment-page .carousel {
+  position: relative;
+  margin-bottom: 4rem;
+}
+#enrollment-page .carousel .carousel-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--clr-white-main);
+  z-index: 10;
+}
+#enrollment-page .carousel .carousel-text .divider {
+  height: 0.25rem;
+  margin: 1.5rem 0;
+  width: 100%;
+  background-color: var(--clr-green-dark);
+}
+#enrollment-page .carousel .carousel-text .quote {
+  font-size: var(--font-heading-sm);
+}
+#enrollment-page .carousel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#enrollment-page .carousel .carousel-item {
+  aspect-ratio: 16/9;
+  width: 100%;
+}
+#enrollment-page .carousel .carousel-item img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 100%;
+}
+#enrollment-page .alur {
+  padding-bottom: 3rem;
+}
+#enrollment-page .alur .tree .graph {
+  height: 115vh;
+  position: relative;
+}
+#enrollment-page .alur .tree .graph .vertical-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--clr-green-dark);
+  height: 100%;
+  width: 1rem;
+  border-radius: 0.5rem;
+}
+#enrollment-page .alur .tree .graph .dot {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background-color: var(--clr-yellow-dark);
+}
+#enrollment-page .alur .tree .graph .dot:nth-child(6) {
+  top: 7.5%;
+}
+#enrollment-page .alur .tree .graph .dot:nth-child(2) {
+  top: 27.5%;
+}
+#enrollment-page .alur .tree .graph .dot:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#enrollment-page .alur .tree .graph .dot:nth-child(4) {
+  bottom: 27.5%;
+}
+#enrollment-page .alur .tree .graph .dot:nth-child(5) {
+  bottom: 7.5%;
+}
+#enrollment-page .alur .tree .card {
+  margin-bottom: 1.5rem;
+}
+#enrollment-page .alur .tree .card .title-point {
+  background-color: var(--clr-green-dark);
+  color: var(--clr-white-main);
+}
+#enrollment-page .alur .tree .card .title-point h1 {
+  padding: 3.5rem 0;
+}
+#enrollment-page .biaya {
+  padding-bottom: 3rem;
+}
+#enrollment-page .biaya .card {
+  transition: 0.3s;
+}
+#enrollment-page .biaya .card:hover {
+  box-shadow: 0 0.25rem 0 0.1rem var(--clr-green-main);
+}
+#enrollment-page .syarat {
+  padding-bottom: 3rem;
+}
+#enrollment-page .syarat .card .title-point {
+  background-color: var(--clr-green-dark);
+  color: var(--clr-white-main);
+}
+#enrollment-page .syarat .card .title-point h1 {
+  padding: 3.5rem 0;
+}
+#enrollment-page .agenda {
+  padding-bottom: 3rem;
+}
+#enrollment-page .agenda .card {
+  transition: 0.3s;
+}
+#enrollment-page .agenda .card:hover {
+  box-shadow: 0 0.25rem 0 0.1rem var(--clr-green-main);
 }/*# sourceMappingURL=style.css.map */
