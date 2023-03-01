@@ -78,4 +78,7 @@
   #academic-page .ekstrakurikuler .row .card {
     aspect-ratio: 5/4;
   }
+  #enrollment-page .syarat .card .title-point h1 {
+    padding: 2rem 0;
+  }
 }/*# sourceMappingURL=responsive.css.map */
