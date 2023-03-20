@@ -47,6 +47,7 @@
                 </th>
             </thead>
             <tbody>
+    
                 <tr>
                     <td>1</td>
                     <td>0055924867</td>
@@ -120,6 +121,7 @@
                     <td>Laki-Laki</td>
                 </tr>
             </tbody>
+            
         </table>
     </div>
 

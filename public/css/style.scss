@@ -400,6 +400,10 @@ footer {
                 align-items: center;
                 justify-content: space-between;
             }
+
+            .card img{
+                width: 100%;
+            }
         }
     }
 }
@@ -578,76 +582,40 @@ footer {
     }
 
     .content {
-        display: grid;
+        display: flex;
         flex-wrap: wrap;
         margin: 20px;
-        margin-left: 7rem;
         margin-bottom: 50px;
         justify-content: center;
-        margin-top: 5%;
-        grid-template-areas:
-            'a b c d'
-            'e f g h'
-        ;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 300px);
-        width: 100%;
-
-        .item-galeri {
-            width: 100%;
-        }
-    
-        .item-galeri:nth-child(1) {
-            grid-area: a;
-            background-image: url(https:/source.unsplash.com/2000x2000?school);
-            margin: 5px;
-            width: 100%;
-        }
-        .item-galeri:nth-child(2) {
-            grid-area: b;
-            background-image: url(https:/source.unsplash.com/2000x2000?school);
-            margin: 5px;
-        }
-        .item-galeri:nth-child(3) {
-            grid-area: c;
-            background-image: url(https:/source.unsplash.com/2000x2000?school);
-            margin: 5px;
-        }
-        .item-galeri:nth-child(4) {
-            grid-area: d;
-            background-image: url(https:/source.unsplash.com/2000x2000?school);
-            margin: 5px;
-        }
-        .item-galeri:nth-child(5) {
-            grid-area: e;
-            background-image: url(https:/source.unsplash.com/2000x2000?school);
-            margin: 5px;
-        }
-        .item-galeri:nth-child(6) {
-            grid-area: f;
-            background-image: url(https:/source.unsplash.com/2000x2000?school);
-            margin: 5px;
-        }
-        .item-galeri:nth-child(7) {
-            grid-area: g;
-            background-image: url(https:/source.unsplash.com/2000x2000?school);
-            margin: 5px;
-        }
-        .item-galeri:nth-child(8) {
-            grid-area: h;
-            background-image: url(https:/source.unsplash.com/2000x2000?school);
-            margin: 5px;
-        }
+        align-items: center;
+        margin-left: 6rem;
     }
 
     .item-galeri {
         flex: 25%;
-        max-width: 30%;
+        max-width: 20%;
         padding: 0 10px;
         margin-bottom: 10px;
+        margin-top: 2rem;
+
+        h4{
+            margin-top: 10px;
+        }
+        
     }
 
 
+    .item-galeri img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+        cursor: pointer;
+        border-radius: 0.25rem;
+    }
+
+    .judul {
+        margin: auto;
+    }
 
     @media screen and (max-width: 992px) {
         .item-galeri {
@@ -662,6 +630,5 @@ footer {
             max-width: 50%;
         }
     }
-
 
 }

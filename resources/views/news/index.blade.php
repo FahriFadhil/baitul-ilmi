@@ -31,22 +31,70 @@
         </div>
     </div>
     <div class="content container">
+        <!-- <div class="row row-cols-4">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+        </div> -->
+
         <div class="item-galeri">
+            <img src="https:/source.unsplash.com/2000x2000?school" alt="">
+            <h4>Siswa Baitul Ilmi</h4>
+            <p>siswa ini makan dengan sesuatu yang besar dan membuat heboh sekolah, sehingga...</p>
         </div>
         <div class="item-galeri">
+            <img src="https:/source.unsplash.com/2000x2000?school" alt="">
+            <h4>Siswa Baitul Ilmi</h4>
+            <p>siswa ini makan dengan sesuatu yang besar dan membuat heboh sekolah, sehingga...</p>
         </div>
         <div class="item-galeri">
+            <img src="https:/source.unsplash.com/2000x2000?school" alt="">
+            <h4>Siswa Baitul Ilmi</h4>
+            <p>siswa ini makan dengan sesuatu yang besar dan membuat heboh sekolah, sehingga...</p>
         </div>
         <div class="item-galeri">
+            <img src="https:/source.unsplash.com/2000x2000?school" alt="">
+            <h4>Siswa Baitul Ilmi</h4>
+            <p>siswa ini makan dengan sesuatu yang besar dan membuat heboh sekolah, sehingga...</p>
         </div>
         <div class="item-galeri">
+            <img src="https:/source.unsplash.com/2000x2000?school" alt="">
+            <h4>Siswa Baitul Ilmi</h4>
+            <p>siswa ini makan dengan sesuatu yang besar dan membuat heboh sekolah, sehingga...</p>
         </div>
         <div class="item-galeri">
+            <img src="https:/source.unsplash.com/2000x2000?school" alt="">
+            <h4>Siswa Baitul Ilmi</h4>
+            <p>siswa ini makan dengan sesuatu yang besar dan membuat heboh sekolah, sehingga...</p>
         </div>
         <div class="item-galeri">
+            <img src="https:/source.unsplash.com/2000x2000?school" alt="">
+            <h4>Siswa Baitul Ilmi</h4>
+            <p>siswa ini makan dengan sesuatu yang besar dan membuat heboh sekolah, sehingga...</p>
         </div>
         <div class="item-galeri">
+            <img src="https:/source.unsplash.com/2000x2000?school" alt="">
+            <h4>Siswa Baitul Ilmi</h4>
+            <p>siswa ini makan dengan sesuatu yang besar dan membuat heboh sekolah, sehingga...</p>
         </div>
+        <div class="item-galeri">
+            <img src="https:/source.unsplash.com/2000x2000?school" alt="">
+            <h4>Siswa Baitul Ilmi</h4>
+            <p>siswa ini makan dengan sesuatu yang besar dan membuat heboh sekolah, sehingga...</p>
+        </div>
+        <div class="item-galeri">
+            <img src="https:/source.unsplash.com/2000x2000?school" alt="">
+            <h4>Siswa Baitul Ilmi</h4>
+            <p>siswa ini makan dengan sesuatu yang besar dan membuat heboh sekolah, sehingga...</p>
+        </div>
+
+        
+        
     </div>
 
 

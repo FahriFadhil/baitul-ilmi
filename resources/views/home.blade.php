@@ -181,32 +181,29 @@
                 <h1>Berita Terbaru Baitul 'Ilmi</h1>
                 <a href="/news">Semua Berita &raquo;</a>
             </div>
-            <div class="row my-5">
-                <div class="col-lg-6">
-                    <a class="card mb-4">
-                        <img src="..." class="card-img-top" alt="...">
+            <div class="row my-5 grid gap-3">
+                    <a class="card col-md p-0">
+                        <img src="https:/source.unsplash.com/2000x2000?school" class="card-img-top img-fluid" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <h5 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, distinctio!</h5>
                         </div>
                     </a>
-                    <a class="card mb-4">
-                        <img src="..." class="card-img-top" alt="...">
+                    <a class="card col-md p-0">
+                        <img src="https:/source.unsplash.com/2000x2000?school" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <h5 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, distinctio!</h5>
                         </div>
                     </a>
-                </div>
-                <div class="col-lg-6">
-                    <a class="card mb-4">
-                        <img src="..." class="card-img-top" alt="...">
+                    <a class="card col-md p-0">
+                        <img src="https:/source.unsplash.com/2000x2000?school" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <h5 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, distinctio!</h5>
                         </div>
                     </a>
-                    <a class="card mb-4">
-                        <img src="..." class="card-img-top" alt="...">
+                    <a class="card col-md p-0">
+                        <img src="https:/source.unsplash.com/2000x2000?school" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, beatae.</h5>
                         </div>
                     </a>
                 </div>

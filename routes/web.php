@@ -19,5 +19,5 @@ Route::view('/academic', 'academic');
 Route::view('/news', 'news.index');
 Route::view('/penerimaan', 'enrollment');
 Route::view('/gallery', 'gallery');
-Route::view('/alumni', 'alumni');
+Route::view('/alumni', 'alumni');   
 
