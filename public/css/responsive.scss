@@ -40,7 +40,7 @@
         }
     }
 
-    // ===== PROFILE PAGE STYLE =====
+    // ===== HOME PAGE STYLE =====
 
     #home-page {
         .carousel {
@@ -82,4 +82,59 @@
             }
         }
     }
+
+    // ===== PROFILE PAGE STYLE =====
+
+    #profile-page {
+        .sambutan {
+            .person {
+                position: relative;
+                margin-top: 2rem;
+                .image-bg {
+                    position: absolute;
+                    width: 15vw;
+                    right: 1rem;
+                    bottom: -7rem;
+                }
+            }
+            .content {
+                h1 {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+        .visi-misi {
+            .card {
+                p {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    // ===== PROFILE PAGE STYLE =====
+
+    #academic-page {
+        .ekstrakurikuler {
+            .row {
+                .card {
+                    aspect-ratio: 5/4;
+                }
+            }
+        }
+    }
+
+    #enrollment-page {
+        .syarat {
+            .card {
+                .title-point {
+                    
+                    h1 {
+                        padding: 2rem 0;
+                    }
+                }
+            }
+        }
+    }
 }
+

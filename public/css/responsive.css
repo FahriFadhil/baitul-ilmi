@@ -59,4 +59,26 @@
   #home-page .visi-misi .card p {
     width: 100%;
   }
+  #profile-page .sambutan .person {
+    position: relative;
+    margin-top: 2rem;
+  }
+  #profile-page .sambutan .person .image-bg {
+    position: absolute;
+    width: 15vw;
+    right: 1rem;
+    bottom: -7rem;
+  }
+  #profile-page .sambutan .content h1 {
+    margin-bottom: 2rem;
+  }
+  #profile-page .visi-misi .card p {
+    width: 100%;
+  }
+  #academic-page .ekstrakurikuler .row .card {
+    aspect-ratio: 5/4;
+  }
+  #enrollment-page .syarat .card .title-point h1 {
+    padding: 2rem 0;
+  }
 }/*# sourceMappingURL=responsive.css.map */

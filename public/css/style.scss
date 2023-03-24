@@ -185,7 +185,7 @@ footer {
     }
 }
 
-// ===== PROFILE PAGE STYLE =====
+// ===== HOME PAGE STYLE =====
 
 #home-page {
     .carousel {
@@ -200,15 +200,13 @@ footer {
             color: var(--clr-white-main);
             z-index: 10;
 
-            h1 {
-                display: inline;
-                border-bottom: .25rem solid var(--clr-green-dark);
-                padding: .75rem 1rem;
+            .divider {
+                height: .25rem;
+                margin: 1.5rem 0;
+                width: 100%;
+                background-color: var(--clr-green-dark);
             }
-
-            &:nth-child(2) {
                 font-size: var(--font-heading-sm);
-                padding-top: 2rem;
             }
         }
 
@@ -313,6 +311,7 @@ footer {
                 }
 
                 a {
+                    cursor: pointer;
                     color: var(--clr-green-main);
 
                     &:hover {
@@ -395,10 +394,365 @@ footer {
         }
 
         .berita {
+            margin-bottom: 6rem;
             .header {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+
+                a {
+                    cursor: pointer;
+                    color: var(--clr-green-main);
+
+                    &:hover {
+                        color: var(--clr-green-dark);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ===== PROFILE PAGE STYLE =====
+
+#profile-page {
+    .container {
+        font-size: var(--font-content-lg);
+    }
+    .sambutan {
+        padding-top: 5rem;
+        padding-bottom: 1rem;
+        .person {
+            .image-bg {
+                width: 100%;
+                aspect-ratio: 3/4;
+                border-radius: .5rem;
+                box-shadow: .5rem .5rem 0 var(--clr-green-main);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                transition: .3s;
+                margin: 2rem 0;
+
+                &:hover {
+                    box-shadow: .75rem .75rem 0 var(--clr-green-main);
+                }
+            }
+        }
+        .content {
+            font-size: var(--font-content-lg);
+            
+            .card {
+                box-shadow: 0 .5rem 0 .1rem var(--clr-green-main);
+                padding: 1rem;
+                border-radius: .25rem;
+            }
+            
+            hr {
+                padding: 1rem;
+            }
+
+            p {
+                line-height: 1.75;
+            }
+
+            a {
+                cursor: pointer;
+                color: var(--clr-green-main);
+
+                &:hover {
+                    color: var(--clr-green-dark);
+                }
+            }
+        }
+    }
+    .sambutan-rest {
+        padding-bottom: 5rem;
+        .card {
+            box-shadow: 0 .5rem 0 .1rem var(--clr-green-main);
+            padding: 1rem;
+            border-radius: .25rem;
+        }
+    }
+    .visi-misi {
+        padding-bottom: 4rem;
+
+        .card {
+            margin-top: 2rem;
+            padding: 1.25rem;
+            transition: .3s;
+
+            h4 {
+                margin-bottom: 1rem;
+            }
+
+            &:hover {
+                box-shadow: 0 .25rem 0 .1rem var(--clr-green-main);
+            }
+
+            p {
+                width: 75%;
+            }
+
+            .dot {
+                width: .5rem;
+                height: .5rem;
+                border-radius: .5rem;
+                background-color: var(--clr-black-main);
+            }
+        }
+    }
+    .sejarah {
+        padding-bottom: 6rem;
+        .image {
+            aspect-ratio: 2/1;
+            width: 100%;
+            box-shadow: .5rem .5rem 0 var(--clr-green-main);
+            border-radius: .5rem;
+            transition: .3s;
+            
+            .bg-image {
+                border-radius: .5rem;
+                width: 100%;
+                height: 100%;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            &:hover {
+                box-shadow: .75rem .75rem 0 var(--clr-green-main);
+            }
+        }
+        .content {
+            margin-top: 2rem;
+            padding: 1.25rem;
+            transition: .3s;
+
+            .img-thumbnail {
+                aspect-ratio: 2/1;
+                box-shadow: .3rem .3rem 0 var(--clr-green-main);
+                transition: .3s;
+                &:hover {
+                    box-shadow: .5rem .5rem 0 var(--clr-green-main);
+                }
+            }
+        }
+    }
+}
+
+// ===== ACADEMIC PAGE STYLE =====
+
+#academic-page {
+    .container {
+        font-size: var(--font-content-lg);
+    }
+    .keunggulan {
+        padding-top: 5rem;
+        padding-bottom: 2rem;
+
+        .row {
+            margin: 2rem 0;
+
+            .card {
+                display: flex;
+                flex-direction: row;
+                margin: 1.5rem 0;
+                padding: 1.25rem;
+                gap: 1rem;
+                transition: .3s;
+
+                &:hover {
+                    box-shadow: 0 .25rem 0 .1rem var(--clr-green-main);
+                }
+
+                .icon {
+                    flex: 1;
+                    display: grid;
+                    place-items: center;
+
+                    svg {
+                        height: 3rem;
+                        
+                        path {
+                            fill: var(--clr-green-dark);
+                        }
+                    }
+                }
+
+                .content {
+                    flex: 5;
+
+                    p {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+    .ekstrakurikuler {
+        padding-bottom: 2rem;
+        .row {
+            margin: 2rem 0;
+
+            .card {
+                aspect-ratio: 2/1;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            .title {
+                background-color: var(--clr-green-dark);
+                color: var(--clr-white-light);
+                display: grid;
+                place-items: center;
+            }
+        }
+    }
+    .teacher {
+        padding-bottom: 6rem;
+
+        .row {
+            margin: 2rem 0;
+    
+            .card {
+                aspect-ratio: 2/2.5;
+
+                img {
+                    aspect-ratio: 3/4;
+                }
+            }
+        }
+    }
+}
+
+#enrollment-page {
+    .carousel {
+        position: relative;
+        margin-bottom: 4rem;
+
+        .carousel-text {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--clr-white-main);
+            z-index: 10;
+
+            .divider {
+                height: .25rem;
+                margin: 1.5rem 0;
+                width: 100%;
+                background-color: var(--clr-green-dark);
+            }
+            .quote {
+                font-size: var(--font-heading-sm);
+            }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .carousel-item {
+            aspect-ratio: 16/9;
+            width: 100%;
+    
+            img {
+                object-fit: cover;
+                max-height: 100%;
+            }
+        }
+    }
+    .alur {
+        padding-bottom: 3rem;
+        .tree {
+            .graph {
+                height: 115vh;
+                position: relative;
+
+                .vertical-line {
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background-color: var(--clr-green-dark);
+                    height: 100%;
+                    width: 1rem;
+                    border-radius: .5rem;
+                }
+
+                .dot {
+                    width: 2rem;
+                    height: 2rem;
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    border-radius: 50%;
+                    background-color: var(--clr-yellow-dark);
+
+                    &:nth-child(6) {
+                        top: 7.5%;
+                    }
+                    &:nth-child(2) {
+                        top: 27.5%;
+                    }
+                    &:nth-child(3) {
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                    &:nth-child(4) {
+                        bottom: 27.5%;
+                    }
+                    &:nth-child(5) {
+                        bottom: 7.5%;
+                    }
+                }
+            }
+            .card {
+                margin-bottom: 1.5rem;
+                .title-point {
+                    background-color: var(--clr-green-dark);
+                    color: var(--clr-white-main);
+                    
+                    h1 {
+                        padding: 3.5rem 0;
+                    }
+                }
+            }
+        }
+    }
+    .biaya {
+        padding-bottom: 3rem;
+        .card {
+            transition: .3s;
+            &:hover {
+                box-shadow: 0 .25rem 0 .1rem var(--clr-green-main);
+            }
+        }
+    }
+    .syarat {
+        padding-bottom: 3rem;
+        .card {
+            .title-point {
+                background-color: var(--clr-green-dark);
+                color: var(--clr-white-main);
+                
+                h1 {
+                    padding: 3.5rem 0;
+                }
+            }
+        }
+    }
+    .agenda {
+        padding-bottom: 3rem;
+        .card {
+            transition: .3s;
+            &:hover {
+                box-shadow: 0 .25rem 0 .1rem var(--clr-green-main);
             }
 
             .card img{
