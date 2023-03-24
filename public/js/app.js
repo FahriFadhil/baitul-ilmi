@@ -2130,5 +2130,8 @@
         Toast: ni,
         Tooltip: Pe
     }
+    
 }));
+
+
 //# sourceMappingURL=bootstrap.min.js.map
