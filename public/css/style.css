@@ -18,7 +18,9 @@
   --font-content-sm: 1rem;
 }
 
-*, ::after, ::before {
+*,
+::after,
+::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -28,7 +30,9 @@ body {
   font-size: var(--font-content-md);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: bold;
   font-size: var(--font-heading-lg);
 }
@@ -543,7 +547,7 @@ footer .copyright {
   padding-bottom: 3rem;
 }
 #enrollment-page .alur .tree .graph {
-  height: 115vh;
+  height: 56rem;
   position: relative;
 }
 #enrollment-page .alur .tree .graph .vertical-line {
