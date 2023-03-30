@@ -33,6 +33,13 @@
                 <span class="tooltip">Dashboard</span>
             </li>
             <li>
+                <a href="/dashboard/pendaftaran">
+                    <i class='bx bx-chair'></i>
+                    <span class="links_name">Pendaftaran</span>
+                </a>
+                <span class="tooltip">Pendaftaran</span>
+            </li>
+            <li>
                 <a href="/dashboard/news">
                     <i class='bx bx-news'></i>
                     <span class="links_name">Berita</span>
@@ -56,7 +63,6 @@
             <li class="profile">
                 <div class="profile-details">
                     <div class="person">
-                        <img src="https://source.unsplash.com/80x80?profile" alt="profileImg">
                         <div class="name_job">
                             <div class="name">Prem Shahi</div>
                             <div class="job">Web designer</div>

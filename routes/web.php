@@ -23,6 +23,8 @@ Route::view('/alumni', 'alumni');
 
 Route::view('/dashboard', 'dashboard.index');
 Route::view('/dashboard/news', 'dashboard.news.index');
+Route::view('/dashboard/news/detail', 'dashboard.news.detail');
 Route::view('/dashboard/gallery', 'dashboard.gallery.index');
 Route::view('/dashboard/alumni', 'dashboard.alumni.index');
+Route::view('/dashboard/pendaftaran', 'dashboard.enrollment.index');
 
