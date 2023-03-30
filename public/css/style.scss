@@ -207,6 +207,11 @@ footer {
                 background-color: var(--clr-green-dark);
             }
 
+            .quote {
+                font-size: var(--font-heading-sm);
+            }
+        }
+
             font-size: var(--font-heading-sm);
         }
     }
@@ -307,6 +312,19 @@ footer {
                 padding: 1rem;
             }
 
+                    .icon {
+                        flex: 1;
+                        display: grid;
+                        place-items: center;
+
+                        svg {
+                            height: 3rem;
+
+                            path {
+                                fill: var(--clr-green-dark);
+                            }
+                        }
+                    }
             p {
                 line-height: 1.75;
             }
@@ -364,6 +382,7 @@ footer {
             }
         }
     }
+
 
     .visi-misi {
         padding-bottom: 4rem;
@@ -691,7 +710,7 @@ footer {
 
         .tree {
             .graph {
-                height: 115vh;
+                height: 56rem;
                 position: relative;
 
                 .vertical-line {
@@ -794,7 +813,7 @@ footer {
         }
     }
 }
-
+          
 #gallery-page {
 
     .content {
