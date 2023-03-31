@@ -22,9 +22,15 @@ Route::view('/gallery', 'gallery');
 Route::view('/alumni', 'alumni');   
 
 Route::view('/dashboard', 'dashboard.index');
+
 Route::view('/dashboard/news', 'dashboard.news.index');
-Route::view('/dashboard/news/detail', 'dashboard.news.detail');
+Route::view('/dashboard/news/detail', 'dashboard.news.edit');
+Route::view('/dashboard/news/create', 'dashboard.news.create');
+
 Route::view('/dashboard/gallery', 'dashboard.gallery.index');
+Route::view('/dashboard/gallery/create', 'dashboard.gallery.create');
+
 Route::view('/dashboard/alumni', 'dashboard.alumni.index');
+
 Route::view('/dashboard/pendaftaran', 'dashboard.enrollment.index');
 

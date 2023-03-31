@@ -3,21 +3,21 @@
 @section('content')
 
 <div class="d-flex justify-content-between align-items-center">
-    <h1>News Detail : Dibuka Pendaftaran</h1>
-    <p class="btn btn-primary py-2 px-3" data-bs-toggle="modal" data-bs-target="#add-gallery" type="button">Add +</p>
+    <h1>Detail Berita</h1>
+    <a class="btn btn-secondary py-2 px-3" href="/dashboard/news">&larr; Kembali</a>
 </div>
 
 <div class="container-fluid py-4">
 
     <form action="">
-        <div class="row">
-            <div class="col-md-3">
+        <div class="row align-items-center">
+            <div class="col-lg-3">
+                <img src="{{ asset('icon/logo.png') }}" alt="..." class="card-img my-2 ms-auto" style="max-width: 24rem;">
+                <h5 class="mt-4 mb-2">Klik Untuk Mengubah Gambar &darr;</h5>
                 <input type="file" class="form-control px-2 py-1" placeholder="Gambar Berita">
-                <p class="text-muted mt-2">Ukuran Gambar yang Disarankan 4:3 (<i>400 x 300 px</i>) </p>
-                <h4 class="mt-4">Gambar Berita</h4>
-                <img src="{{ asset('icon/logo.png') }}" alt="..." class="card-img mt-2">
+                <p class="text-muted mt-2 mb-5">Ukuran Gambar yang Disarankan: <br> 4:3 (<i>400 x 300 px</i>) </p>
             </div>
-            <div class="col-md-8 ms-auto">
+            <div class="col-lg-8 ms-auto">
                 <div class="mb-3">
                     <input type="text" class="form-control px-3 py-2" placeholder="Judul Berita">
                 </div>
@@ -32,11 +32,12 @@
                 <div class="mb-3">
                     <textarea class="form-control px-3 py-2" style="min-height: 16rem;" id="exampleFormControlTextarea1" rows="3" placeholder="Isi Berita"></textarea>
                 </div>
+                <div class="btn btn-danger px-3 py-2 ">Hapus Berita Ini</div>
+                <div class="btn btn-success px-3 py-2 mx-2">Simpan Perubahan</div>
             </div>
         </div>
     </form>
-</div>
-</a>
+
 </div>
 
 </div>
