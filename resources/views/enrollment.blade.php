@@ -24,12 +24,12 @@
             <span class="visually-hidden">Next</span>
         </button>
         <div class="carousel-text text-center">
-            <h1>Dibuka Pendaftaran Peserta Didik Baru Tahun Ajaran 2023/2024. </h1>
-            <div class="divider"></div>
-            <p class="quote">
+            <h1 class="h2">Dibuka Pendaftaran Peserta Didik Baru Tahun Ajaran 2023/2024. </h1>
+            <div class="divider d-none d-md-block"></div>
+            <p class="quote d-none d-md-block">
                 Sekolah SMA Islam Terpadu Baitul 'Ilmi sedang membuka pendaftaran bagi <b>siswa putri SMA dan sederajat</b> untuk tahun ajaran <b>2023 / 2023</b>.
             </p>
-            <a href=""></a>
+            <a href="" class="btn btn-success btn-lg mt-3"> Daftar Sekarang</a>
         </div>
     </div>
     <div class="container">
@@ -458,6 +458,10 @@
                 </div>
             </div>
         </section>
+        <div class="row d-flex">
+            <h3>Lakukan Pendaftaran Sekarang</h3>
+            <a href="" class="btn btn-success btn-lg"> Daftar Sekarang</a>
+        </div>
     </div>
     </div>
 </main>
