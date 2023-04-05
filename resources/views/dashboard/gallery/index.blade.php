@@ -25,6 +25,28 @@
             </div>
         </div>
     </div>
+    <div class="col p-2">
+        <div class="card border-0">
+            <img src="{{ asset('icon/logo.png') }}" alt="..." class="card-img p-1">
+            <div class="card-img-overlay p-3 text-white">
+                <div class="card-action">
+                    <a href="" class="btn btn-lg btn-danger" onclick="confrim('Yakin Menghapus Gallery Ini?\nHal ini tidak dapat diulang')"><i class='bx bx-trash p-2'></i></a>
+                </div>
+                <p class="card-title">Lorem sit amet, consectetur adipisicing elit. Temporibus, placeat?</p>
+            </div>
+        </div>
+    </div>
+    <div class="col p-2">
+        <div class="card border-0">
+            <img src="{{ asset('icon/logo.png') }}" alt="..." class="card-img p-1">
+            <div class="card-img-overlay p-3 text-white">
+                <div class="card-action">
+                    <a href="" class="btn btn-lg btn-danger" onclick="confrim('Yakin Menghapus Gallery Ini?\nHal ini tidak dapat diulang')"><i class='bx bx-trash p-2'></i></a>
+                </div>
+                <p class="card-title">Lorem sit amet, consectetur adipisicing elit. Temporibus, placeat?</p>
+            </div>
+        </div>
+    </div>
 
 </div>
 
