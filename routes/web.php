@@ -28,3 +28,4 @@ Route::view('/dashboard/gallery', 'dashboard.gallery.index');
 Route::view('/dashboard/alumni', 'dashboard.alumni.index');
 Route::view('/dashboard/pendaftaran', 'dashboard.enrollment.index');
 
+Route::view('/loginn', 'login.index');
