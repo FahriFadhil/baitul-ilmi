@@ -14,13 +14,13 @@
                 <option value="3">2018/2019</option>
             </select>
             <div class="input-group-append">
-                <button class="btn btn-primary" type="button" id="button-addon2">Ubah</button>
+                <button class="btn btn-primary rounded-1" type="button" id="button-addon2">Ubah</button>
             </div>
 
         </div>
         <table class="table table-bordered container mt-4">
             <tr>
-                <td colspan="4" width="300">
+                <td colspan="3" width="300">
                     <strong>Angkatan 2015/2017</strong>
                 </td>
             </tr>
