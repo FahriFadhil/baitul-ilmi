@@ -11,6 +11,8 @@
 |
 */
 
+use App\Http\Controllers\NewsController;
+
 Auth::routes();
 
 Route::view('/', 'home');
@@ -23,14 +25,11 @@ Route::view('/alumni', 'alumni');
 
 Route::view('/dashboard', 'dashboard.index');
 
-Route::view('/dashboard/news', 'dashboard.news.index');
-Route::view('/dashboard/news/detail', 'dashboard.news.edit');
-Route::view('/dashboard/news/create', 'dashboard.news.create');
+Route::resource('/dashboard/news', 'NewsController');
 
-Route::view('/dashboard/gallery', 'dashboard.gallery.index');
-Route::view('/dashboard/gallery/create', 'dashboard.gallery.create');
+Route::resource('/dashboard/gallery', 'GalleryController');
 
-Route::view('/dashboard/alumni', 'dashboard.alumni.index');
+Route::resource('/dashboard/alumni', 'AlumniController');
 
 Route::view('/dashboard/pendaftaran', 'dashboard.enrollment.index');
 

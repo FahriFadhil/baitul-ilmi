@@ -8,31 +8,37 @@
         <div class="col search-bar">
             <input type="text" class="col py-2 px-3 rounded" placeholder="Cari Berita...">
         </div>
-        <a class="col btn btn-primary py-2 px-3" href="/dashboard/news/create">Tambah Berita +</a>
+        <a class="col btn btn-primary py-2 px-3" href="{{ route('news.create') }}">Tambah Berita +</a>
     </div>
 </div>
 
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xl-5 py-4">
 
+    @foreach($data as $news)
+
     <div class="col p-2">
-        <a class="card border-0" href="/dashboard/news/detail">
-            <img src="{{ asset('icon/logo.png') }}" alt="..." class="card-img p-1">
+        <a class="card border-0" href="{{ route('news.edit', $news->id) }}">
+            <img src="{{ asset('storage/images') }}/{{ $news->image }}" alt="..." class="card-img p-1">
             <div class="card-body p-3">
-                <h5 class="card-title">Baitul 'Ilmi Membuka Pendaftaran</h5>
-                <div class="card-text pt-3">
-                    <p style="font-size: 15px;" class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-                    <div class="d-flex justify-content-between pt-3">
+                <h5 class="card-title"> {{ $news->headline }}</h5>
+                <div class="card-text pt-2">
+                    <p style="font-size: 15px;" class="text-muted">{{ implode(' ', array_slice(explode(' ', $news->description), 0, 12)) . (strlen($news->description) > 12 ? '...' : '') }}
+</p>
+                    <div class="d-flex justify-content-between pt-2">
                         <p>
-                            Luzman Rifqi
+                            {{ $news->author }}
                         </p>
                         <p>
-                            28 Maret, 2023
+                            {{ \Carbon\Carbon::parse($news->created_at)->format('M d, Y') }}
                         </p>
                     </div>
                 </div>
             </div>
         </a>
     </div>
+
+
+    @endforeach
 
 </div>
 

@@ -9,34 +9,38 @@
 
 <div class="container-fluid py-4">
 
-    <form action="">
-        <div class="row align-items-center">
-            <div class="col-lg-3">
-                <img src="{{ asset('icon/logo.png') }}" alt="..." class="card-img my-2 ms-auto" style="max-width: 24rem;">
-                <h5 class="mt-4 mb-2">Klik Untuk Mengubah Gambar &darr;</h5>
-                <input type="file" class="form-control px-2 py-1" placeholder="Gambar Berita">
-                <p class="text-muted mt-2 mb-5">Ukuran Gambar yang Disarankan: <br> 4:3 (<i>400 x 300 px</i>) </p>
-            </div>
-            <div class="col-lg-8 ms-auto">
-                <div class="mb-3">
-                    <input type="text" class="form-control px-3 py-2" placeholder="Judul Berita">
+    <div class="row align-items-center">
+        <form method="post" action="{{ route('news.update', $news->id) }}" enctype="multipart/form-data">
+            @csrf
+            {{ method_field('PUT') }}
+            <div class="row align-items-center">
+                <div class="col-lg-3">
+                    <img src="{{ asset('storage/images') }}/{{ $news->image }}" alt="..." class="card-img my-2 ms-auto" style="max-width: 24rem;" id="imagePreview">
+                    <h5 class="mt-4 mb-2">Klik Untuk Mengubah Gambar &darr;</h5>
+                    <input name="image" type="file" class="form-control px-2 py-1" placeholder="Gambar Berita" id="image-input">
+                    <p class="text-muted mt-2 mb-5">Ukuran Gambar yang Disarankan: <br> 4:3 (<i>400 x 300 px</i>) </p>
                 </div>
-                <div class="row gap-4 mb-3">
-                    <div class="col">
-                        <input class="form-control px-3 py-2" type="text" placeholder="Penulis">
+                <div class="col-lg-8 ms-auto">
+                    <div class="mb-3">
+                        <input name="headline" type="text" class="form-control px-3 py-2" placeholder="Judul Berita" value="{{ $news->headline }}">
                     </div>
-                    <div class="col">
-                        <input class="form-control px-3 py-2" type="date" placeholder="Tanggal Dibuat">
+                    <div class="row gap-4 mb-3">
+                        <input name="author" class="form-control px-3 py-2" type="text" placeholder="Penulis" value="{{ $news->author }}">
                     </div>
+                    <div class="mb-3">
+                        <textarea name="description" class="form-control px-3 py-2" style="min-height: 16rem;" id="exampleFormControlTextarea1" rows="3" placeholder="Isi Berita">{{ $news->description }}</textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success px-3 py-2 mx-2">Simpan Perubahan</button>
                 </div>
-                <div class="mb-3">
-                    <textarea class="form-control px-3 py-2" style="min-height: 16rem;" id="exampleFormControlTextarea1" rows="3" placeholder="Isi Berita"></textarea>
-                </div>
-                <div class="btn btn-danger px-3 py-2 ">Hapus Berita Ini</div>
-                <div class="btn btn-success px-3 py-2 mx-2">Simpan Perubahan</div>
             </div>
-        </div>
-    </form>
+        </form>
+        <form method="post" action="{{ route('news.destroy', $news->id) }}">
+            @csrf
+            {{ method_field('DELETE') }}
+            <button type="submit" class="btn btn-danger px-3 py-2" onclick="confirm('Yakin Menghapus Berita Ini?\nHal ini tidak dapat diulang')">Hapus
+                Berita Ini</button>
+        </form>
+    </div>
 
 </div>
 
@@ -46,7 +50,8 @@
 @section('css')
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+</script>
 
 <style>
     .card {
@@ -60,5 +65,18 @@
         background-color: hsl(0, 0%, 95%);
     }
 </style>
+
+@endsection
+@section('js')
+
+<script>
+    document.getElementById('image-input').addEventListener('change', (ev) => {
+        let reader = new FileReader()
+        reader.readAsDataURL(ev.target.files[0])
+        reader.onload = () => {
+            document.getElementById('imagePreview').setAttribute('src', reader.result)
+        }
+    })
+</script>
 
 @endsection

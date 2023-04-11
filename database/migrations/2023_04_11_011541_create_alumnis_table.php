@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateNewsTable extends Migration
+class CreateAlumnisTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,15 @@ class CreateNewsTable extends Migration
      */
     public function up()
     {
-        Schema::create('news', function (Blueprint $table) {
+        Schema::create('alumnis', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('headline');
-            $table->string('image');
-            $table->text('description');
-            $table->string('author');
+            $table->integer('graduation_id')->unsigned();
+            $table->string('name');
+            $table->integer('nis');
+            $table->enum('gender', ['Laki-Laki', 'Perempuan']);
             $table->timestamps();
+
+            $table->foreign('graduation_id')->references('id')->on('graduations')->onDelete('cascade');
         });
     }
 
@@ -30,6 +32,6 @@ class CreateNewsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('news');
+        Schema::dropIfExists('alumnis');
     }
 }

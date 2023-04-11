@@ -9,14 +9,15 @@
 
 <div class="container-fluid py-4">
 
-    <form action="">
+    <form method="post" action="{{ route('gallery.store') }}" enctype="multipart/form-data">
+        @csrf
         <div style="max-width: 32rem;">
-            <img src="{{ asset('icon/logo.png') }}" alt="..." class="card-img my-2 ms-auto mb-4" style="max-width: 24rem;">
+            <img src="" alt="..." class="card-img my-2 ms-auto mb-4" style="max-width: 24rem;" id="imagePreview">
             <h5 class="mt-4 mb-2">Klik Untuk Menambah Gambar &darr;</h5>
-            <input type="file" class="form-control px-2 py-1" placeholder="Gambar Berita">
-            <p class="text-muted mt-2 mb-4">Ukuran Gambar yang Disarankan: <br> 4:3 (<i>400 x 300 px</i>) </p>
-            <textarea class="form-control px-3 py-2 mb-3" type="text" placeholder="Keterangan Gallery..."></textarea>
-            <div class="btn btn-success px-3 py-2">Buat Gallery</div>
+            <input name="image" type="file" class="form-control px-2 py-1" placeholder="Gambar Berita" id="image-input">
+            <p class="text-muted mt-2 mb-4">Ukuran Gambar yang Disarankan: <br> 1:1 (<i>100 x 100 px</i>) </p>
+            <textarea name="description" class="form-control px-3 py-2 mb-3" type="text" placeholder="Keterangan Gallery..."></textarea>
+            <button type="submit" class="btn btn-success px-3 py-2">Buat Gallery</button>
         </div>
     </form>
 
@@ -42,5 +43,18 @@
         background-color: hsl(0, 0%, 95%);
     }
 </style>
+
+@endsection
+@section('js')
+
+<script>
+    document.getElementById('image-input').addEventListener('change', (ev) => {
+        let reader = new FileReader()
+        reader.readAsDataURL(ev.target.files[0])
+        reader.onload = () => {
+            document.getElementById('imagePreview').setAttribute('src', reader.result)
+        }
+    })
+</script>
 
 @endsection
