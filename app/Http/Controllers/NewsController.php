@@ -14,7 +14,8 @@ class NewsController extends Controller
      */
     public function index()
     {
-        //
+        $data = News::all();
+        return view('dashboard.news.index', compact('data'));
     }
 
     /**
@@ -24,7 +25,7 @@ class NewsController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.news.create');
     }
 
     /**
@@ -35,7 +36,18 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        if ($request->hasFile('image')) {
+            $destination_path = 'public/images';
+            $image = $request->file('image');
+            $name = $image->getClientOriginalName();
+            $request->file('image')->storeAs($destination_path, $name);
+            $data['image'] = $name;
+        };
+        
+        News::create($data);
+        return redirect('/dashboard/news');
     }
 
     /**
@@ -55,9 +67,10 @@ class NewsController extends Controller
      * @param  \App\News  $news
      * @return \Illuminate\Http\Response
      */
-    public function edit(News $news)
+    public function edit($id)
     {
-        //
+        $news = News::findOrFail($id);
+        return view('dashboard.news.edit', compact('news'));
     }
 
     /**
@@ -67,9 +80,21 @@ class NewsController extends Controller
      * @param  \App\News  $news
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, News $news)
+    public function update(Request $request, $id)
     {
-        //
+        $news = News::findOrFail($id);
+        $data = $request->all();
+
+        if ($request->hasFile('image')) {
+            $destination_path = 'public/images';
+            $image = $request->file('image');
+            $name = $image->getClientOriginalName();
+            $request->file('image')->storeAs($destination_path, $name);
+            $data['image'] = $name;
+        };
+
+        $news->update($data);
+        return redirect('/dashboard/news');
     }
 
     /**
@@ -78,8 +103,10 @@ class NewsController extends Controller
      * @param  \App\News  $news
      * @return \Illuminate\Http\Response
      */
-    public function destroy(News $news)
+    public function destroy($id)
     {
-        //
+        $data = News::findOrFail($id);
+        $data->delete();
+        return redirect('/dashboard/news');
     }
 }

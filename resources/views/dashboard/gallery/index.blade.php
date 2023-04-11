@@ -8,45 +8,31 @@
         <div class="col search-bar">
             <input type="text" class="col py-2 px-3 rounded" placeholder="Cari Gallery...">
         </div>
-        <a class="col btn btn-primary py-2 px-3" href="/dashboard/gallery/create">Tambah Gallery +</a>
+        <a class="col btn btn-primary py-2 px-3" href="{{ route('gallery.create') }}">Tambah Gallery +</a>
     </div>
 </div>
 
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6 py-4">
 
+    @foreach($data as $gallery)
+
     <div class="col p-2">
         <div class="card border-0">
-            <img src="{{ asset('icon/logo.png') }}" alt="..." class="card-img p-1">
+            <img src="{{ asset('storage/images') }}/{{ $gallery->image }}" alt="..." class="card-img p-1">
             <div class="card-img-overlay p-3 text-white">
                 <div class="card-action">
-                    <a href="" class="btn btn-lg btn-danger" onclick="confrim('Yakin Menghapus Gallery Ini?\nHal ini tidak dapat diulang')"><i class='bx bx-trash p-2'></i></a>
+                    <form action="{{ route('gallery.destroy', $gallery->id) }}" method="post">
+                        @csrf
+                        {{ method_field('DELETE') }}
+                        <button type="submit" class="btn btn-lg btn-danger" onclick="confrim('Yakin Menghapus Gallery Ini?\nHal ini tidak dapat diulang')"><i class='bx bx-trash p-2'></i></button>
+                    </form>
                 </div>
-                <p class="card-title">Lorem sit amet, consectetur adipisicing elit. Temporibus, placeat?</p>
+                <p class="card-title">{{ $gallery->description }}</p>
             </div>
         </div>
     </div>
-    <div class="col p-2">
-        <div class="card border-0">
-            <img src="{{ asset('icon/logo.png') }}" alt="..." class="card-img p-1">
-            <div class="card-img-overlay p-3 text-white">
-                <div class="card-action">
-                    <a href="" class="btn btn-lg btn-danger" onclick="confrim('Yakin Menghapus Gallery Ini?\nHal ini tidak dapat diulang')"><i class='bx bx-trash p-2'></i></a>
-                </div>
-                <p class="card-title">Lorem sit amet, consectetur adipisicing elit. Temporibus, placeat?</p>
-            </div>
-        </div>
-    </div>
-    <div class="col p-2">
-        <div class="card border-0">
-            <img src="{{ asset('icon/logo.png') }}" alt="..." class="card-img p-1">
-            <div class="card-img-overlay p-3 text-white">
-                <div class="card-action">
-                    <a href="" class="btn btn-lg btn-danger" onclick="confrim('Yakin Menghapus Gallery Ini?\nHal ini tidak dapat diulang')"><i class='bx bx-trash p-2'></i></a>
-                </div>
-                <p class="card-title">Lorem sit amet, consectetur adipisicing elit. Temporibus, placeat?</p>
-            </div>
-        </div>
-    </div>
+
+    @endforeach
 
 </div>
 

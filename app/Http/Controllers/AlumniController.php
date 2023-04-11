@@ -14,7 +14,8 @@ class AlumniController extends Controller
      */
     public function index()
     {
-        //
+        $data = Alumni::all();
+        return view('dashboard.Alumni.index', compact('data'));
     }
 
     /**

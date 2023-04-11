@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Galeri extends Model
+class Gallery extends Model
 {
-    
+    protected $guarded = ['id'];
 }

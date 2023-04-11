@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Galeri;
+use App\Gallery;
 use Illuminate\Http\Request;
 
-class GaleriController extends Controller
+class GalleryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,8 @@ class GaleriController extends Controller
      */
     public function index()
     {
-        //
+        $data = Gallery::all();
+        return view('dashboard.gallery.index', compact('data'));
     }
 
     /**
@@ -24,7 +25,7 @@ class GaleriController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.gallery.create');
     }
 
     /**
@@ -35,16 +36,27 @@ class GaleriController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        if ($request->hasFile('image')) {
+            $destination_path = 'public/images';
+            $image = $request->file('image');
+            $name = $image->getClientOriginalName();
+            $request->file('image')->storeAs($destination_path, $name);
+            $data['image'] = $name;
+        };
+        
+        Gallery::create($data);
+        return redirect('/dashboard/gallery');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Galeri  $galeri
+     * @param  \App\Gallery  $gallery
      * @return \Illuminate\Http\Response
      */
-    public function show(Galeri $galeri)
+    public function show(Gallery $gallery)
     {
         //
     }
@@ -52,10 +64,10 @@ class GaleriController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Galeri  $galeri
+     * @param  \App\Gallery  $gallery
      * @return \Illuminate\Http\Response
      */
-    public function edit(Galeri $galeri)
+    public function edit(Gallery $gallery)
     {
         //
     }
@@ -64,10 +76,10 @@ class GaleriController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Galeri  $galeri
+     * @param  \App\Gallery  $gallery
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Galeri $galeri)
+    public function update(Request $request, Gallery $gallery)
     {
         //
     }
@@ -75,11 +87,13 @@ class GaleriController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Galeri  $galeri
+     * @param  \App\Gallery  $gallery
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Galeri $galeri)
+    public function destroy($id)
     {
-        //
+        $data = Gallery::findOrFail($id);
+        $data->delete();
+        return redirect('/dashboard/gallery');   
     }
 }

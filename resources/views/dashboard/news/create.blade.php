@@ -9,34 +9,31 @@
 
 <div class="container-fluid py-4">
 
-<form action="">
+    <form method="post" action="{{ route('news.store') }}" enctype="multipart/form-data">
+        @csrf
         <div class="row align-items-center">
             <div class="col-lg-3">
-                <img src="{{ asset('icon/logo.png') }}" alt="..." class="card-img my-2 ms-auto" style="max-width: 24rem;">
+                <img alt="..." class="card-img my-2 ms-auto" style="max-width: 24rem;" id="imagePreview">
+                <p class="custom-file-label"></p>
                 <h5 class="mt-4 mb-2">Klik Untuk Menambahkan Gambar &darr;</h5>
-                <input type="file" class="form-control px-2 py-1" placeholder="Gambar Berita">
+                <input name="image" id="image-input" type="file" class="form-control px-2 py-1" placeholder="Gambar Berita">
                 <p class="text-muted mt-2 mb-5">Ukuran Gambar yang Disarankan: <br> 4:3 (<i>400 x 300 px</i>) </p>
             </div>
             <div class="col-lg-8 ms-auto">
                 <div class="mb-3">
-                    <input type="text" class="form-control px-3 py-2" placeholder="Judul Berita">
+                    <input name="headline" type="text" class="form-control px-3 py-2" placeholder="Judul Berita">
                 </div>
                 <div class="row gap-4 mb-3">
-                    <div class="col">
-                        <input class="form-control px-3 py-2" type="text" placeholder="Penulis">
-                    </div>
-                    <div class="col">
-                        <input class="form-control px-3 py-2" type="date" placeholder="Tanggal Dibuat">
-                    </div>
+                    <input name="author" class="form-control px-3 py-2" type="text" placeholder="Penulis">
                 </div>
                 <div class="mb-3">
-                    <textarea class="form-control px-3 py-2" style="min-height: 16rem;" id="exampleFormControlTextarea1" rows="3" placeholder="Isi Berita"></textarea>
+                    <textarea name="description" class="form-control px-3 py-2" style="min-height: 16rem;" id="exampleFormControlTextarea1" rows="3" placeholder="Isi Berita"></textarea>
                 </div>
-                <div class="btn btn-success px-3 py-2">Buat Berita</div>
+                <button type="submit" class="btn btn-success px-3 py-2">Buat Berita</button>
             </div>
         </div>
     </form>
-    
+
 </div>
 
 </div>
@@ -59,5 +56,18 @@
         background-color: hsl(0, 0%, 95%);
     }
 </style>
+
+@endsection
+@section('js')
+
+<script>
+    document.getElementById('image-input').addEventListener('change', (ev) => {
+        let reader = new FileReader()
+        reader.readAsDataURL(ev.target.files[0])
+        reader.onload = () => {
+            document.getElementById('imagePreview').setAttribute('src', reader.result)
+        }
+    })
+</script>
 
 @endsection
