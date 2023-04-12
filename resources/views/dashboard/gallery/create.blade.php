@@ -14,7 +14,7 @@
         <div style="max-width: 32rem;">
             <img src="" alt="..." class="card-img my-2 ms-auto mb-4" style="max-width: 24rem;" id="imagePreview">
             <h5 class="mt-4 mb-2">Klik Untuk Menambah Gambar &darr;</h5>
-            <input name="image" type="file" class="form-control px-2 py-1" placeholder="Gambar Berita" id="image-input">
+            <input required name="image" type="file" class="form-control px-2 py-1" placeholder="Gambar Berita" id="image-input">
             <p class="text-muted mt-2 mb-4">Ukuran Gambar yang Disarankan: <br> 1:1 (<i>100 x 100 px</i>) </p>
             <textarea name="description" class="form-control px-3 py-2 mb-3" type="text" placeholder="Keterangan Gallery..."></textarea>
             <button type="submit" class="btn btn-success px-3 py-2">Buat Gallery</button>
