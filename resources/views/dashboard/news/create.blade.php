@@ -16,15 +16,15 @@
                 <img alt="..." class="card-img my-2 ms-auto" style="max-width: 24rem;" id="imagePreview">
                 <p class="custom-file-label"></p>
                 <h5 class="mt-4 mb-2">Klik Untuk Menambahkan Gambar &darr;</h5>
-                <input name="image" id="image-input" type="file" class="form-control px-2 py-1" placeholder="Gambar Berita">
+                <input required name="image" id="image-input" type="file" class="form-control px-2 py-1" placeholder="Gambar Berita">
                 <p class="text-muted mt-2 mb-5">Ukuran Gambar yang Disarankan: <br> 4:3 (<i>400 x 300 px</i>) </p>
             </div>
             <div class="col-lg-8 ms-auto">
                 <div class="mb-3">
-                    <input name="headline" type="text" class="form-control px-3 py-2" placeholder="Judul Berita">
+                    <input required name="headline" type="text" class="form-control px-3 py-2" placeholder="Judul Berita">
                 </div>
                 <div class="row gap-4 mb-3">
-                    <input name="author" class="form-control px-3 py-2" type="text" placeholder="Penulis">
+                    <input required name="author" class="form-control px-3 py-2" type="text" placeholder="Penulis">
                 </div>
                 <div class="mb-3">
                     <textarea name="description" class="form-control px-3 py-2" style="min-height: 16rem;" id="exampleFormControlTextarea1" rows="3" placeholder="Isi Berita"></textarea>
