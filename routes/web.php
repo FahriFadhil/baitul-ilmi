@@ -34,3 +34,5 @@ Route::resource('/dashboard/alumni', 'AlumniController');
 Route::view('/dashboard/pendaftaran', 'dashboard.enrollment.index');
 
 Route::view('/loginn', 'login.index');
+Route::view('/faiqganteng', 'dashboard.alumni.edit');
+Route::view('/pikri', 'dashboard.alumni.create');
