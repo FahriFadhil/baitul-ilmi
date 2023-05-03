@@ -15,7 +15,7 @@ class AlumniController extends Controller
      */
     public function index()
     {
-        $dataalumni = Alumni::paginate(2);
+        $dataalumni = Alumni::paginate(10);
         return view('dashboard.Alumni.index', compact('dataalumni'));
     }
 

@@ -17,7 +17,7 @@ class CreateAlumnisTable extends Migration
             $table->bigIncrements('id');
             $table->integer('graduation_id')->unsigned();
             $table->string('name');
-            $table->integer('nis');
+            $table->string('nis');
             $table->enum('gender', ['Laki-Laki', 'Perempuan']);
             $table->timestamps();
 

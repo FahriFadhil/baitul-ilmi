@@ -22,7 +22,7 @@
             <input required class="form-control mt-3 px-3 py-2" name="name" value="{{$dataalumni->name}}" type="text" placeholder="Nama Siswa">
 
 
-            <input required class="form-control mt-3 px-3 py-2" name="nis" value="{{$dataalumni->nis}}" type="number" placeholder="No induk">
+            <input required class="form-control mt-3 px-3 py-2" name="nis" value="{{$dataalumni->nis}}" type="number" max="9999999999"  placeholder="No induk">
 
 
 
