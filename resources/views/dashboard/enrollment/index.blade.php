@@ -111,7 +111,9 @@
         <div class="card p-4 shadow p-3 bg-body-tertiary rounded">
             <h3 class="fs-4 justify-content-center d-flex mt-3">Syarat Pendaftaran</h3>
             <div class="teks mt-4 mx-2">
+                @foreach($)
                 <div class="justify-content-end align-items-center rounded bg-light d-flex mb-2">
+                    
                     <p class="p-3 me-auto ">Membayar uang pendaftaran</p>
                     <button type="button" class="btn btn-secondary py-1 px-2 me-1">
                         <i class="bx bx-edit"></i>
@@ -120,10 +122,12 @@
                         <i class="bx bx-trash"></i>
                     </button>
                 </div>
+                @endforeach
             </div>
-            <form action="" method="post" class="mt-3 mx-2">
+            <form action="/dashboard/enrollment/syarat" method="post" class="mt-3 mx-2">
+                @csrf
                 <div class="input-group">
-                    <input required name="" type="text" class="form-control px-3 py-2" placeholder="Tambah Syarat Baru">
+                    <input required name="syarat" type="text" class="form-control px-3 py-2" placeholder="Tambah Syarat Baru">
                     <button type="submit" class="btn btn-success px-3 py-2">Tambah +</button>
                 </div>
             </form>
