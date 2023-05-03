@@ -17,7 +17,7 @@
     @foreach($data as $news)
 
     <div class="col p-2">
-        <a class="card border-0" href="{{ route('news.edit', $news->id) }}">
+        <a class="card border-0 shadow" href="{{ route('news.edit', $news->id) }}">
             <img src="{{ asset('storage/images') }}/{{ $news->image }}" alt="..." class="card-img p-1">
             <div class="card-body p-3">
                 <h5 class="card-title"> {{ $news->headline }}</h5>
