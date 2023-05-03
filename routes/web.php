@@ -37,3 +37,8 @@ Route::delete('/dashboard/alumni/destroy/{id}', 'AlumniController@destroy');
 
 Route::view('/dashboard/pendaftaran', 'dashboard.enrollment.index');
 Route::view('/loginn', 'login.index');
+
+Route::view('/dashboard/syarat', 'dashboard.enrollment.syarat');
+Route::resource('/dashboard/enrollment/syarat', 'SyaratPendaftaranController');
+
+// Route::get('/dashboard/syarat/{id}', 'SyaratPendaftaranController@edit');   
