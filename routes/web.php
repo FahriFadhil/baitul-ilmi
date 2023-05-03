@@ -31,8 +31,9 @@ Route::resource('/dashboard/gallery', 'GalleryController');
 
 Route::resource('/dashboard/alumni', 'AlumniController');
 
-Route::view('/dashboard/pendaftaran', 'dashboard.enrollment.index');
+Route::post('/dashboard/alumni/create/store', 'GraduationController@store');
+Route::delete('/dashboard/alumni/create/destroy/{id}', 'GraduationController@destroy');
+Route::delete('/dashboard/alumni/destroy/{id}', 'AlumniController@destroy');
 
+Route::view('/dashboard/pendaftaran', 'dashboard.enrollment.index');
 Route::view('/loginn', 'login.index');
-Route::view('/faiqganteng', 'dashboard.alumni.edit');
-Route::view('/pikri', 'dashboard.alumni.create');

@@ -8,7 +8,7 @@
         <div class="col search-bar">
             <input type="text" class="col py-2 px-3 rounded" placeholder="Cari Alumni...">
         </div>
-        <a class="col btn btn-primary py-2 px-3" href="/dashboard/gallery/create">Tambah Alumni +</a>
+        <a class="col btn btn-primary py-2 px-3" href="{{route('alumni.create')}}">Tambah Alumni +</a>
     </div>
 </div>
 
@@ -35,40 +35,39 @@
                         </th>
                     </thead>
                     <tbody class="p-2 mt-4">
+
+                        @foreach($dataalumni as $row)
                         <tr>
-                            <td class="p-2 text-center">1</td>
-                            <td class="p-2">0055924867</td>
-                            <td class="p-2">Muhammad Faiq Al Harits</td>
-                            <td class="p-2">Laki-Laki</td>
-                            <td class="p-2">
-                                <a href="#" class="btn btn-primary px-3 p-1 ms-2">Edit</a>
-                                <button type="submit" class="btn btn-danger p-1 px-2">Hapus</button>
+                            <td class="p-2 text-center">
+                            {{ $loop->iteration + ($dataalumni->perpage() * ($dataalumni->currentPage() -1)) }}
                             </td>
+                            <td class="p-2">{{$row->nis}}</td>
+                            <td class="p-2">{{$row->name}}</td>
+                            <td class="p-2">{{$row->gender}}</td>
+                            <form action="/dashboard/alumni/destroy/{{$row->id}}" method="post">
+                                @csrf
+                                {{method_field('DELETE')}}
+                                <td class="p-2">
+                                    <a href="{{route('alumni.edit', $row->id)}}" class="bx bx-edit btn btn-primary px-3 p-1 ms-2 px-4 py-2"></a>
+                                    <button type="sumbit" class="bx bx-trash btn btn-danger px-4 py-2"></button>
+                                </td>
+                            </form>
                         </tr>
-                        <tr>
-                            <td class="p-2 text-center">1</td>
-                            <td class="p-2">0055924867</td>
-                            <td class="p-2">Muhammad Faiq Al Harits</td>
-                            <td class="p-2">Laki-Laki</td>
-                            <td class="p-2">
-                                <a href="#" class="btn btn-primary px-3 p-1 ms-2">Edit</a>
-                                <button type="submit" class="btn btn-danger p-1 px-2">Hapus</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="p-2 text-center">1</td>
-                            <td class="p-2">0055924867</td>
-                            <td class="p-2">Muhammad Faiq Al Harits</td>
-                            <td class="p-2">Laki-Laki</td>
-                            <td class="p-2">
-                                <a href="#" class="btn btn-primary px-3 p-1 ms-2">Edit</a>
-                                <button type="submit" class="btn btn-danger p-1 px-2">Hapus</button>
-                            </td>
-                        </tr>
+                        @endforeach
                     </tbody>
                 </table>
+                {{ $dataalumni->appends(Request::all())->links() }}
             </div>
         </div>
     </div>
 </div>
+@endsection
+@section('css')
+
+<style>
+    .page-item .page-link{
+        padding: 20px;
+    }
+</style>
+
 @endsection

@@ -398,6 +398,7 @@ footer .copyright {
   margin-top: 2rem;
   padding: 1.25rem;
   transition: 0.3s;
+  border: 1px solid #666;
 }
 #profile-page .visi-misi .card h4 {
   margin-bottom: 1rem;
