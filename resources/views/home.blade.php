@@ -182,34 +182,30 @@
                 <h1>Berita Terbaru Baitul 'Ilmi</h1>
                 <a href="/news">Semua Berita &raquo;</a>
             </div>
-            <div class="row my-5 grid gap-3">
-                    <a class="card col-md p-0">
-                        <img src="https:/source.unsplash.com/2000x2000?school" class="card-img-top img-fluid" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, distinctio!</h5>
+            <div class="row my-5 row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 gap-3">
+                @foreach($data_berita as $news)
+                <a class="card border pt-2" href="">
+                    <img src="{{ asset('storage/images') }}/{{ $news->image }}" alt="..." class="card-img p-1">
+                    <div class="card-body p-3">
+                        <h5 class="card-title"> {{ $news->headline }}</h5>
+                        <div class="card-text pt-2">
+                            <p style="font-size: 15px;" class="text-muted">{{ implode(' ', array_slice(explode(' ', $news->description), 0, 12)) . (strlen($news->description) > 12 ? '...' : '') }}
+                            </p>
+                            <div class="d-flex justify-content-between pt-2">
+                                <p>
+                                    {{ $news->author }}
+                                </p>
+                                <p>
+                                    {{ \Carbon\Carbon::parse($news->created_at)->format('M d, Y') }}
+                                </p>
+                            </div>
                         </div>
-                    </a>
-                    <a class="card col-md p-0">
-                        <img src="https:/source.unsplash.com/2000x2000?school" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, distinctio!</h5>
-                        </div>
-                    </a>
-                    <a class="card col-md p-0">
-                        <img src="https:/source.unsplash.com/2000x2000?school" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, distinctio!</h5>
-                        </div>
-                    </a>
-                    <a class="card col-md p-0">
-                        <img src="https:/source.unsplash.com/2000x2000?school" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, beatae.</h5>
-                        </div>
-                    </a>
-                </div>
+                    </div>
+                </a>
+                @endforeach
             </div>
-        </section>
+    </div>
+    </section>
     </div>
 
 </main>

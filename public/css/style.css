@@ -340,6 +340,16 @@ footer .copyright {
 #home-page .container .berita .header a:hover {
   color: var(--clr-green-dark);
 }
+#home-page .container .berita .card {
+  transition: 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  border: 1px solid #000;
+}
+#home-page .container .berita .card:hover {
+  background-color: hsl(0, 0%, 98%);
+}
 
 #profile-page .container {
   font-size: var(--font-content-lg);

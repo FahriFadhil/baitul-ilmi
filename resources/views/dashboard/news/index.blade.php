@@ -23,7 +23,7 @@
                 <h5 class="card-title"> {{ $news->headline }}</h5>
                 <div class="card-text pt-2">
                     <p style="font-size: 15px;" class="text-muted">{{ implode(' ', array_slice(explode(' ', $news->description), 0, 12)) . (strlen($news->description) > 12 ? '...' : '') }}
-</p>
+                    </p>
                     <div class="d-flex justify-content-between pt-2">
                         <p>
                             {{ $news->author }}

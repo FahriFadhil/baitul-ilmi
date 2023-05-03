@@ -428,6 +428,18 @@ footer {
                     }
                 }
             }
+
+            .card {
+                transition: .3s;
+                cursor: pointer;
+                text-decoration: none;
+                color: black;
+                border: 1px solid #000;
+
+                &:hover {
+                    background-color: hsl(0, 0%, 98%);
+                }
+            }
         }
     }
 }
