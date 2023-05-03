@@ -17,7 +17,7 @@
     @foreach($data as $gallery)
 
     <div class="col p-2">
-        <div class="card border-0">
+        <div class="card border-0 shadow">
             <img src="{{ asset('storage/images') }}/{{ $gallery->image }}" alt="..." class="card-img p-1">
             <div class="card-img-overlay p-3 text-white">
                 <div class="card-action">
