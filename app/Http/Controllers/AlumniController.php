@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Alumni;
+use App\Graduation;
 use Illuminate\Http\Request;
 
 class AlumniController extends Controller
@@ -14,8 +15,8 @@ class AlumniController extends Controller
      */
     public function index()
     {
-        $data = Alumni::all();
-        return view('dashboard.Alumni.index', compact('data'));
+        $dataalumni = Alumni::paginate(10);
+        return view('dashboard.Alumni.index', compact('dataalumni'));
     }
 
     /**
@@ -25,7 +26,8 @@ class AlumniController extends Controller
      */
     public function create()
     {
-        //
+        $datakelulusan = Graduation::all();
+        return view('dashboard.alumni.create', compact('datakelulusan'));
     }
 
     /**
@@ -36,7 +38,9 @@ class AlumniController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        Alumni::create($data);
+        return redirect('/dashboard/alumni');
     }
 
     /**
@@ -56,9 +60,11 @@ class AlumniController extends Controller
      * @param  \App\Alumni  $alumni
      * @return \Illuminate\Http\Response
      */
-    public function edit(Alumni $alumni)
+    public function edit($id)
     {
-        //
+        $dataalumni = Alumni::FindOrFail($id);
+        $datakelulusan = Graduation::all();
+        return view('dashboard.alumni.edit', compact('dataalumni', 'datakelulusan'));
     }
 
     /**
@@ -68,9 +74,13 @@ class AlumniController extends Controller
      * @param  \App\Alumni  $alumni
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Alumni $alumni)
+    public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+
+        $alumni = Alumni::find($id);
+        $alumni->update($data);
+        return redirect ('/dashboard/alumni');
     }
 
     /**
@@ -79,8 +89,10 @@ class AlumniController extends Controller
      * @param  \App\Alumni  $alumni
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Alumni $alumni)
+    public function destroy($id)
     {
-        //
+        $data = Alumni::find($id);
+        $data -> delete();
+        return back();
     }
 }
