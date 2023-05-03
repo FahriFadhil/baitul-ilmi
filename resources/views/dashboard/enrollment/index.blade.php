@@ -12,9 +12,9 @@
             <div class="row">
                 <div class="col">
                     <div>
-                        <p>
+                        <h3 class="fs-4">
                             Status Pendaftaran :
-                        </p>
+                        </h3>
                         <h2 class="pt-2">Dibuka</h2>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                 <h3 class="fs-4 justify-content-center d-flex mt-3">Biaya Pendaftaran</h3>
             </div>
             <table class="teks text-start mx-5 mt-4 mb-1">
-                <tr class="pb-1">
+                <tr class="pb-2">
                     <td>
                         <p><i class="bx bx-money me-4"></i>Biaya Pendaftaran :</p>
                     </td>
@@ -41,7 +41,7 @@
                         <p>Rp 800.000,-</p>
                     </td>
                 </tr>
-                <tr class="pb-1">
+                <tr class="pb-2">
                     <td>
                         <p><i class="bx bx-detail me-4"></i>Biaya Masuk :</p>
                     </td>
@@ -49,7 +49,7 @@
                         <p>Rp 800.000,-</p>
                     </td>
                 </tr>
-                <tr class="pb-1">
+                <tr class="pb-2">
                     <td>
                         <p><i class="bx bx-task me-4"></i>SPP Bulanan :</p>
                     </td>
@@ -57,7 +57,7 @@
                         <p>Rp 800.000,-</p>
                     </td>
                 </tr>
-                <tr class="pb-1">
+                <tr class="pb-2">
                     <td>
                         <p><i class="bx bx-file me-4"></i>Biaya Daftar Ulang :</p>
                     </td>
@@ -107,28 +107,10 @@
 </div>
 
 <div class="row">
-    <div class="col-lg-6 pe-lg-3">
+    <div class="col-lg-6 pe-lg-3 mb-4">
         <div class="card p-4 shadow p-3 bg-body-tertiary rounded">
-            <h3 class="fs-4 justify-content-center d-flex mt-3">Agenda Pendaftaran</h3>
+            <h3 class="fs-4 justify-content-center d-flex mt-3">Syarat Pendaftaran</h3>
             <div class="teks mt-4 mx-2">
-                <div class="justify-content-end align-items-center rounded bg-light d-flex mb-2">
-                    <p class="p-3 me-auto ">Membayar uang pendaftaran</p>
-                    <button type="button" class="btn btn-secondary py-1 px-2 me-1">
-                        <i class="bx bx-edit"></i>
-                    </button>
-                    <button type="button" class="btn btn-danger py-1 px-2 me-3">
-                        <i class="bx bx-trash"></i>
-                    </button>
-                </div>
-                <div class="justify-content-end align-items-center rounded bg-light d-flex mb-2">
-                    <p class="p-3 me-auto ">Membayar uang pendaftaran</p>
-                    <button type="button" class="btn btn-secondary py-1 px-2 me-1">
-                        <i class="bx bx-edit"></i>
-                    </button>
-                    <button type="button" class="btn btn-danger py-1 px-2 me-3">
-                        <i class="bx bx-trash"></i>
-                    </button>
-                </div>
                 <div class="justify-content-end align-items-center rounded bg-light d-flex mb-2">
                     <p class="p-3 me-auto ">Membayar uang pendaftaran</p>
                     <button type="button" class="btn btn-secondary py-1 px-2 me-1">
@@ -149,7 +131,7 @@
     </div>
     <div class="col-lg-6 ps-lg-3 mb-4">
         <div class="card p-4 shadow p-3 bg-body-tertiary rounded">
-            <h3 class="fs-4 justify-content-center d-flex mt-3">Syarat Pendaftaran</h3>
+            <h3 class="fs-4 justify-content-center d-flex mt-3">Agenda Pendaftaran</h3>
             <div class="teks mt-4 mx-2">
                 <div class="justify-content-end align-items-center rounded bg-light d-flex mb-2">
                     <p class="p-3 me-auto ">Membayar uang pendaftaran</p>
