@@ -6,6 +6,8 @@ use App\Alumni;
 use App\Gallery;
 use App\News;
 use Illuminate\Http\Request;
+use App\SyaratPendaftaran;
+use App\AgendaPendaftaran;
 
 class MainController extends Controller
 {
@@ -45,4 +47,11 @@ class MainController extends Controller
     {
         return view('dashboard.index');
     }
+    public function pendaftaran()
+    {
+        $data_syarat = SyaratPendaftaran::all();
+        $data_agenda = AgendaPendaftaran::all();
+        return view('dashboard.enrollment.index', compact('data_syarat', 'data_agenda'));
+    }
+    
 }

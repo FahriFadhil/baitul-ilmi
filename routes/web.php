@@ -31,12 +31,16 @@ Route::post('/dashboard/alumni/create/store', 'GraduationController@store');
 Route::delete('/dashboard/alumni/create/destroy/{id}', 'GraduationController@destroy');
 Route::delete('/dashboard/alumni/destroy/{id}', 'AlumniController@destroy');
 
-Route::view('/dashboard/pendaftaran', 'dashboard.enrollment.index');
+Route::get('/dashboard/pendaftaran', 'MainController@pendaftaran');
 
 Route::view('/dashboard/biaya', 'dashboard.enrollment.biaya');
 Route::view('/loginn', 'login.index');
 
-Route::view('/dashboard/syarat', 'dashboard.enrollment.syarat');
 Route::resource('/dashboard/enrollment/syarat', 'SyaratPendaftaranController');
+Route::delete('/dashboard/enrollment/syarat/destroy/{id}', 'SyaratPendaftaranController@destroy');
+
+Route::resource('/dashboard/enrollment/agenda', 'AgendaPendaftaranController');
+Route::delete('/dashboard/enrollment/agenda/destroy/{id}', 'AgendaPendaftaranController@destroy');
+
 
 // Route::get('/dashboard/syarat/{id}', 'SyaratPendaftaranController@edit');   

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\SyaratPendaftaran;
 use Illuminate\Http\Request;
+use App\AgendaPendaftaran;
 
-class SyaratPendaftaranController extends Controller
+class AgendaPendaftaranController extends Controller
 {
     /**
      * Store a newly created resource in storage.
@@ -16,7 +16,7 @@ class SyaratPendaftaranController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        SyaratPendaftaran::create($data);
+        AgendaPendaftaran::create($data);
         return redirect('/dashboard/pendaftaran');
     }
 
@@ -25,39 +25,39 @@ class SyaratPendaftaranController extends Controller
      * edit the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\SyaratPendaftaran  $syarat
+     * @param  \App\AgendaPendaftaran  $syarat
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        $syarat = SyaratPendaftaran::findOrFail($id);
-        return view('dashboard.enrollment.syarat', compact('syarat'));
+        $agenda = AgendaPendaftaran::findOrFail($id);
+        return view('dashboard.enrollment.agenda', compact('agenda'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\SyaratPendaftaran  $agenda
+     * @param  \App\AgendaPendaftaran  $agenda
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        $syarat = SyaratPendaftaran::findOrFail($id);
+        $agenda = AgendaPendaftaran::findOrFail($id);
         $data = $request->all();
-        $syarat->update($data);
+        $agenda->update($data);
         return redirect('/dashboard/pendaftaran');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\SyaratPendaftaran  $news
+     * @param  \App\AgendaPendaftaran  $news
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        $data = SyaratPendaftaran::findOrFail($id);
+        $data = AgendaPendaftaran::findOrFail($id);
         $data->delete();
         return back();
     }
