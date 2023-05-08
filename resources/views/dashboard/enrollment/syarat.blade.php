@@ -9,14 +9,14 @@
 
 <div class="row">
     <div class="col-md-5">
-    <form method="post" action="{{ route('syarat.store') }}">
+    <form method="post" action="{{ route('syarat.update', $syarat->id) }}">
+            @csrf
+            @method('put')
             <div class="col-lg-4 align-items-center d-flex justify-content-center mt-4">
                 <img src="{{ asset('icon/logo.png') }}" alt="..." class="card-img my-1 ms-auto mt-4"
                     style="width:28rem; height:20rem; padding-left: 9rem;">
             </div>
-
-            <input required class="form-control mt-3 px-3 py-2" name="name" value="" type="text" placeholder="Syarat Pendaftaran">
-
+            <input required class="form-control mt-3 px-3 py-2" name="syarat" value="{{ $syarat->syarat }}" type="text" placeholder="Syarat Pendaftaran">
             <button class="btn btn-success px-4 py-2 mt-3" type="submit">Edit</button>
         </form>
     </div>

@@ -73,22 +73,28 @@
         <div class="card p-4 shadow p-3 bg-body-tertiary rounded">
             <h3 class="fs-4 justify-content-center d-flex mt-2">Syarat Pendaftaran</h3>
             <div class="teks mt-4 mx-2">
-
+                @foreach($data_syarat as $row)
                 <div class="justify-content-end align-items-center rounded bg-light d-flex mb-2">
-
-                    <p class="p-3 me-auto ">Membayar uang pendaftaran</p>
-                    <button type="button" class="btn btn-secondary py-1 px-2 me-1">
-                        <i class="bx bx-edit"></i>
-                    </button>
-                    <button type="button" class="btn btn-danger py-1 px-2 me-3">
-                        <i class="bx bx-trash"></i>
-                    </button>
+                    <p class="p-3 me-auto ">{{ $row->syarat }}</p>
+                    <form action="/dashboard/enrollment/syarat/{{$row->id}}" method="post">
+                        @csrf
+                        {{method_field('DELETE')}}
+                        <a href="{{ route('syarat.edit', $row->id) }}" type="button"
+                            class="btn btn-secondary py-1 px-2 me-1">
+                            <i class="bx bx-edit"></i>
+                        </a>
+                        <button type="submit" class="btn btn-danger py-1 px-2 me-3">
+                            <i class="bx bx-trash"></i>
+                        </button>
+                    </form>
                 </div>
+                @endforeach
             </div>
             <form action="/dashboard/enrollment/syarat" method="post" class="mt-3 mx-2">
                 @csrf
                 <div class="input-group">
-                    <input required name="syarat" type="text" class="form-control px-3 py-2" placeholder="Tambah Syarat Baru">
+                    <input required name="syarat" type="text" class="form-control px-3 py-2"
+                        placeholder="Tambah Syarat Baru">
                     <button type="submit" class="btn btn-success px-3 py-2">Tambah +</button>
                 </div>
             </form>
@@ -98,19 +104,28 @@
         <div class="card p-4 shadow p-3 bg-body-tertiary rounded">
             <h3 class="fs-4 justify-content-center d-flex mt-2">Agenda Pendaftaran</h3>
             <div class="teks mt-4 mx-2">
+                @foreach($data_agenda as $row)
                 <div class="justify-content-end align-items-center rounded bg-light d-flex mb-2">
-                    <p class="p-3 me-auto ">Membayar uang pendaftaran</p>
-                    <button type="button" class="btn btn-secondary py-1 px-2 me-1">
-                        <i class="bx bx-edit"></i>
-                    </button>
-                    <button type="button" class="btn btn-danger py-1 px-2 me-3">
-                        <i class="bx bx-trash"></i>
-                    </button>
+                    <p class="p-3 me-auto ">{{ $row->agenda }}</p>
+                    <form action="/dashboard/enrollment/agenda/{{$row->id}}" method="post">
+                        @csrf
+                        {{method_field('DELETE')}}
+                        <a href="{{ route('agenda.edit', $row->id) }}" type="button"
+                            class="btn btn-secondary py-1 px-2 me-1">
+                            <i class="bx bx-edit"></i>
+                        </a>
+                        <button type="submit" class="btn btn-danger py-1 px-2 me-3">
+                            <i class="bx bx-trash"></i>
+                        </button>
                 </div>
+                </form>
+                @endforeach
             </div>
-            <form action="" method="post" class="mt-3 mx-2">
+            <form action="/dashboard/enrollment/agenda/" method="post" class="mt-3 mx-2">
+                @csrf
                 <div class="input-group">
-                    <input required name="" type="text" class="form-control px-3 py-2" placeholder="Tambah Syarat Baru">
+                    <input required name="agenda" type="text" class="form-control px-3 py-2"
+                        placeholder="Tambah Agenda Baru">
                     <button type="submit" class="btn btn-success px-3 py-2">Tambah +</button>
                 </div>
             </form>
