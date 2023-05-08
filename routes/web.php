@@ -43,9 +43,9 @@ Route::delete('/dashboard/enrollment/syarat/destroy/{id}', 'SyaratPendaftaranCon
 Route::resource('/dashboard/enrollment/agenda', 'AgendaPendaftaranController');
 Route::delete('/dashboard/enrollment/agenda/destroy/{id}', 'AgendaPendaftaranController@destroy');
 
-// // Biaya
-Route::get('/dashboard/enrollment/biaya/edit', 'BiayaPendaftaranController@edit');
-Route::put('/dashboard/enrollment/biaya/update', 'BiayaPendaftaranController@update');
+Route::resource('/dashboard/enrollment/biaya', 'BiayaPendaftaranController');
+
+Route::resource('/dashboard/enrollment/alur', 'AlurPendaftaranController');
 
 Route::view('/loginn', 'login.index');
 

@@ -9,14 +9,15 @@ use DB;
 class BiayaPendaftaranController extends Controller
 {
     /**
-     * Show the form for editing the specified resource.
+     * edit the specified resource in storage.
      *
-     * @param  \App\News  $news
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\BiayaPendaftaran  $syarat
      * @return \Illuminate\Http\Response
      */
-    public function edit()
+    public function edit($id)
     {
-        $data_biaya = BiayaPendaftaran::all();
+        $data_biaya = BiayaPendaftaran::findOrFail($id);
         return view('dashboard.enrollment.biaya', compact('data_biaya'));
     }
 
@@ -24,19 +25,14 @@ class BiayaPendaftaranController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\News  $news
+     * @param  \App\BiayaPendaftaran  $data_biaya
      * @return \Illuminate\Http\Response
      */
-
-    public function update(Request $request)
+    public function update(Request $request, $id)
     {
-        $biaya_lama = BiayaPendaftaran::all();
-        $biaya_baru = $request->all();
-        dd($biaya_baru);
-        
-        $biaya = $biaya_baru['jumlah_biaya'];
-
+        $data_biaya = BiayaPendaftaran::findOrFail($id);
+        $data = $request->all();
+        $data_biaya->update($data);
         return redirect('/dashboard/pendaftaran');
-
     }
 }

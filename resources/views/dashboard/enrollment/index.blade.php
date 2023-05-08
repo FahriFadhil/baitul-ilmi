@@ -34,16 +34,16 @@
             </div>
             <div class="mx-2 mt-4 mb-4">
 
-                @foreach($data_biaya as $biaya)
+                @foreach($data_biaya as $row)
                 <div class="justify-content-end align-items-center rounded bg-light d-flex my-1">
-                    <p class="px-3 py-2">{{ $biaya->nama_biaya }}</p>:
-                    <p class="px-3 py-2 me-auto">{{ $biaya->jumlah_biaya }}</p>
-                    <button type="button" class="btn btn-sm btn-secondary py-1 px-2 me-3">
+                    <p class="px-3 py-2">{{ $row->nama_biaya }}</p>:
+                    <p class="px-3 py-2 me-auto">{{ $row->jumlah_biaya }}</p>
+                    <a href="dashboard/enrollment/biaya/{{$row->id}}/edit" class="btn btn-sm btn-secondary py-1 px-2 me-3">
                         <i class="bx bx-edit"></i>
-                    </button>
+                    </a>
                 </div>
                 @endforeach
-                
+
             </div>
         </div>
     </div>
@@ -54,14 +54,14 @@
             </div>
             <div class="mt-4 mx-2">
 
-            @foreach($data_alur as $alur)
+                @foreach($data_alur as $row)
                 <div class="justify-content-end align-items-center rounded bg-light d-flex mb-2">
-                    <p class="p-3 me-auto">{{ $alur->nama_alur }}</p>
-                    <button type="button" class="btn btn-secondary py-1 px-2 me-3">
+                    <p class="p-3 me-auto">{{ $row->nama_alur }}</p>
+                    <a href="dashboard/enrollment/alur/{{$row->id}}/edit" class="btn btn-sm btn-secondary py-1 px-2 me-3">
                         <i class="bx bx-edit"></i>
-                    </button>
+                    </a>
                 </div>
-            @endforeach
+                @endforeach
 
             </div>
         </div>
@@ -79,8 +79,7 @@
                     <form action="/dashboard/enrollment/syarat/{{$row->id}}" method="post">
                         @csrf
                         {{method_field('DELETE')}}
-                        <a href="{{ route('syarat.edit', $row->id) }}" type="button"
-                            class="btn btn-secondary py-1 px-2 me-1">
+                        <a href="{{ route('syarat.edit', $row->id) }}" type="button" class="btn btn-secondary py-1 px-2 me-1">
                             <i class="bx bx-edit"></i>
                         </a>
                         <button type="submit" class="btn btn-danger py-1 px-2 me-3">
@@ -93,8 +92,7 @@
             <form action="/dashboard/enrollment/syarat" method="post" class="mt-3 mx-2">
                 @csrf
                 <div class="input-group">
-                    <input required name="syarat" type="text" class="form-control px-3 py-2"
-                        placeholder="Tambah Syarat Baru">
+                    <input required name="syarat" type="text" class="form-control px-3 py-2" placeholder="Tambah Syarat Baru">
                     <button type="submit" class="btn btn-success px-3 py-2">Tambah +</button>
                 </div>
             </form>
@@ -110,22 +108,20 @@
                     <form action="/dashboard/enrollment/agenda/{{$row->id}}" method="post">
                         @csrf
                         {{method_field('DELETE')}}
-                        <a href="{{ route('agenda.edit', $row->id) }}" type="button"
-                            class="btn btn-secondary py-1 px-2 me-1">
+                        <a href="{{ route('agenda.edit', $row->id) }}" type="button" class="btn btn-secondary py-1 px-2 me-1">
                             <i class="bx bx-edit"></i>
                         </a>
                         <button type="submit" class="btn btn-danger py-1 px-2 me-3">
                             <i class="bx bx-trash"></i>
                         </button>
+                    </form>
                 </div>
-                </form>
                 @endforeach
             </div>
             <form action="/dashboard/enrollment/agenda/" method="post" class="mt-3 mx-2">
                 @csrf
                 <div class="input-group">
-                    <input required name="agenda" type="text" class="form-control px-3 py-2"
-                        placeholder="Tambah Agenda Baru">
+                    <input required name="agenda" type="text" class="form-control px-3 py-2" placeholder="Tambah Agenda Baru">
                     <button type="submit" class="btn btn-success px-3 py-2">Tambah +</button>
                 </div>
             </form>
