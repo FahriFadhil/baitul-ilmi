@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Alumni;
+use App\BiayaPendaftaran;
+use App\AlurPendaftaran;
 use App\Gallery;
 use App\News;
 use Illuminate\Http\Request;
@@ -49,9 +51,10 @@ class MainController extends Controller
     }
     public function pendaftaran()
     {
-        $data_syarat = SyaratPendaftaran::all();
-        $data_agenda = AgendaPendaftaran::all();
-        return view('dashboard.enrollment.index', compact('data_syarat', 'data_agenda'));
+      $data_syarat = SyaratPendaftaran::all();
+      $data_agenda = AgendaPendaftaran::all();
+      $data_biaya = BiayaPendaftaran::all();
+      $data_alur = AlurPendaftaran::all();
+      return view('dashboard.enrollment.index', compact('data_syarat', 'data_agenda', 'data_biaya', 'data_alur'));
     }
-    
 }

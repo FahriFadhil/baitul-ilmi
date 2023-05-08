@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBiayaPendaftaransTable extends Migration
+class CreateAlurPendaftaransTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateBiayaPendaftaransTable extends Migration
      */
     public function up()
     {
-        Schema::create('biaya_pendaftarans', function (Blueprint $table) {
+        Schema::create('alur_pendaftarans', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nama_biaya');
-            $table->string('jumlah_biaya');
+            $table->string('nama_alur');
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ class CreateBiayaPendaftaransTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('biaya_pendaftarans');
+        Schema::dropIfExists('alur_pendaftarans');
     }
 }

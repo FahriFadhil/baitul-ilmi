@@ -27,14 +27,15 @@ Route::get('/dashboard', 'MainController@dashboard');
 Route::resource('/dashboard/news', 'NewsController');
 Route::resource('/dashboard/gallery', 'GalleryController');
 Route::resource('/dashboard/alumni', 'AlumniController');
+Route::delete('/dashboard/alumni/destroy/{id}', 'AlumniController@destroy');
+// Alumni
 Route::post('/dashboard/alumni/create/store', 'GraduationController@store');
 Route::delete('/dashboard/alumni/create/destroy/{id}', 'GraduationController@destroy');
-Route::delete('/dashboard/alumni/destroy/{id}', 'AlumniController@destroy');
 
 Route::get('/dashboard/pendaftaran', 'MainController@pendaftaran');
+// Pendaftaran
 
-Route::view('/dashboard/biaya', 'dashboard.enrollment.biaya');
-Route::view('/loginn', 'login.index');
+
 
 Route::resource('/dashboard/enrollment/syarat', 'SyaratPendaftaranController');
 Route::delete('/dashboard/enrollment/syarat/destroy/{id}', 'SyaratPendaftaranController@destroy');
@@ -42,5 +43,10 @@ Route::delete('/dashboard/enrollment/syarat/destroy/{id}', 'SyaratPendaftaranCon
 Route::resource('/dashboard/enrollment/agenda', 'AgendaPendaftaranController');
 Route::delete('/dashboard/enrollment/agenda/destroy/{id}', 'AgendaPendaftaranController@destroy');
 
+// // Biaya
+Route::get('/dashboard/enrollment/biaya/edit', 'BiayaPendaftaranController@edit');
+Route::put('/dashboard/enrollment/biaya/update', 'BiayaPendaftaranController@update');
+
+Route::view('/loginn', 'login.index');
 
 // Route::get('/dashboard/syarat/{id}', 'SyaratPendaftaranController@edit');   
