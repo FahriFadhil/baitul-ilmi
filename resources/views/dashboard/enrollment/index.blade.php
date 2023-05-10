@@ -38,7 +38,7 @@
                 <div class="justify-content-end align-items-center rounded bg-light d-flex my-1">
                     <p class="px-3 py-2">{{ $row->nama_biaya }}</p>:
                     <p class="px-3 py-2 me-auto">{{ $row->jumlah_biaya }}</p>
-                    <a href="dashboard/enrollment/biaya/{{$row->id}}/edit" class="btn btn-sm btn-secondary py-1 px-2 me-3">
+                    <a href="{{ route('biaya.edit', $row->id) }}" class="btn btn-sm btn-secondary py-1 px-2 me-3">
                         <i class="bx bx-edit"></i>
                     </a>
                 </div>
@@ -47,6 +47,7 @@
             </div>
         </div>
     </div>
+
     <div class="col-lg-6 ps-lg-3 mb-4">
         <div class="card p-4 shadow p-3 bg-body-tertiary rounded">
             <div class="d-flex justify-content-center align-items-end mx-3">
@@ -57,7 +58,7 @@
                 @foreach($data_alur as $row)
                 <div class="justify-content-end align-items-center rounded bg-light d-flex mb-2">
                     <p class="p-3 me-auto">{{ $row->nama_alur }}</p>
-                    <a href="dashboard/enrollment/alur/{{$row->id}}/edit" class="btn btn-sm btn-secondary py-1 px-2 me-3">
+                    <a href="{{ route('alur.edit', $row->id) }}" class="btn btn-sm btn-secondary py-1 px-2 me-3">
                         <i class="bx bx-edit"></i>
                     </a>
                 </div>

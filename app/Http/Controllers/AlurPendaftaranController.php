@@ -11,27 +11,27 @@ class AlurPendaftaranController extends Controller
      * edit the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\AlurPendaftaran  $syarat
+     * @param  \App\AlurPendaftaran  $data_alur
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        $data_biaya = AlurPendaftaran::findOrFail($id);
-        return view('dashboard.enrollment.biaya', compact('data_biaya'));
+        $data_alur = AlurPendaftaran::findOrFail($id);
+        return view('dashboard.enrollment.alur', compact('data_alur'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\AlurPendaftaran  $data_biaya
+     * @param  \App\AlurPendaftaran  $data_alur
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        $data_biaya = AlurPendaftaran::findOrFail($id);
+        $data_alur = AlurPendaftaran::findOrFail($id);
         $data = $request->all();
-        $data_biaya->update($data);
+        $data_alur->update($data);
         return redirect('/dashboard/pendaftaran');
     }
 }
