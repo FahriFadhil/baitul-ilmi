@@ -76,7 +76,7 @@
             <div class="teks mt-4 mx-2">
                 @foreach($data_syarat as $row)
                 <div class="justify-content-end align-items-center rounded bg-light d-flex mb-2">
-                    <p class="p-3 me-auto ">{{ $row->syarat }}</p>
+                    <p class="p-3 me-auto w-75">{{ $row->syarat }}</p>
                     <form action="/dashboard/enrollment/syarat/{{$row->id}}" method="post">
                         @csrf
                         {{method_field('DELETE')}}
@@ -105,7 +105,7 @@
             <div class="teks mt-4 mx-2">
                 @foreach($data_agenda as $row)
                 <div class="justify-content-end align-items-center rounded bg-light d-flex mb-2">
-                    <p class="p-3 me-auto ">{{ $row->agenda }}</p>
+                    <p class="p-3 me-auto w-75">{{ $row->agenda }}</p>
                     <form action="/dashboard/enrollment/agenda/{{$row->id}}" method="post">
                         @csrf
                         {{method_field('DELETE')}}
