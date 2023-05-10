@@ -20,7 +20,7 @@
                     <div class="popup-image">
                         <img src="https:/source.unsplash.com/1000x1005?school" alt="Image">
                     </div>
-                    <a href="#" class="popup-close">Close</a>
+                    <a href="#" class="popup-close">keluar -></a>
                 </div>
             </div>
             <div class="item-galeri">
@@ -31,7 +31,7 @@
                     <div class="popup-image">
                         <img src="https:/source.unsplash.com/1000x1005?school" alt="Image">
                     </div>
-                    <a href="#" class="popup-close">Close</a>
+                    <a href="#" class="popup-close">keluar -></a>
                 </div>
             </div>
             <div class="item-galeri">
@@ -42,7 +42,7 @@
                     <div class="popup-image">
                         <img src="https:/source.unsplash.com/1000x1005?school" alt="Image">
                     </div>
-                    <a href="#" class="popup-close">Close</a>
+                    <a href="#" class="popup-close">keluar -></a>
                 </div>
             </div>
             <div class="item-galeri">
@@ -53,7 +53,7 @@
                     <div class="popup-image">
                         <img src="https:/source.unsplash.com/1000x1005?school" alt="Image">
                     </div>
-                    <a href="#" class="popup-close">Close</a>
+                    <a href="#" class="popup-close">keluar -></a>
                 </div>
             </div>
             <div class="item-galeri">
@@ -77,7 +77,7 @@
                     <div class="popup-image">
                         <img src="https:/source.unsplash.com/1000x1005?school" alt="Image">
                     </div>
-                    <a href="#" class="popup-close">Close</a>
+                    <a href="#" class="popup-close">keluar -></a>
                 </div>
             </div>
             <div class="item-galeri">
@@ -88,7 +88,7 @@
                     <div class="popup-image">
                         <img src="https:/source.unsplash.com/1000x1005?school" alt="Image">
                     </div>
-                    <a href="#" class="popup-close">Close</a>
+                    <a href="#" class="popup-close">keluar -></a>
                 </div>
             </div>
             <div class="item-galeri">
@@ -99,7 +99,7 @@
                     <div class="popup-image">
                         <img src="https:/source.unsplash.com/1000x1005?school" alt="Image">
                     </div>
-                    <a href="#" class="popup-close">Close</a>
+                    <a href="#" class="popup-close">keluar -></a>
                 </div>
             </div>
             <div class="item-galeri">
@@ -110,7 +110,7 @@
                     <div class="popup-image">
                         <img src="https:/source.unsplash.com/1000x1005?school" alt="Image">
                     </div>
-                    <a href="#" class="popup-close">Close</a>
+                    <a href="#" class="popup-close">keluar -></a>
                 </div>
             </div>
             <div class="item-galeri">
@@ -121,7 +121,7 @@
                     <div class="popup-image">
                         <img src="https:/source.unsplash.com/1000x1005?school" alt="Image">
                     </div>
-                    <a href="#" class="popup-close">makan</a>
+                    <a href="#" class="popup-close">keluar -></a>
                 </div>
             </div>
         </div>

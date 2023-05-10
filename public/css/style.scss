@@ -911,8 +911,14 @@ footer {
     .popup-close {
         position: absolute;
         top: 40px;
-        right: 10rem;
+        right: 6rem;
+        text-decoration: none;
+        color: #fff;
     }
+
+    // .popup-container .bx{
+    //     z-index: 2;
+    // }
 }
 
 #news-page {

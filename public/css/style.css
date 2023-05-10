@@ -718,7 +718,9 @@ footer .copyright {
 #gallery-page .popup-close {
   position: absolute;
   top: 40px;
-  right: 10rem;
+  right: 6rem;
+  text-decoration: none;
+  color: #fff;
 }
 
 #news-page .image-grid {
