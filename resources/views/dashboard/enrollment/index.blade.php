@@ -15,17 +15,38 @@
                         <h3 class="fs-4">
                             Status Pendaftaran :
                         </h3>
-                        <h2 class="pt-2">Dibuka</h2>
+                        @if($data_status['0']->status == 1)
+                        <h2 class="pt-2 text-success">
+                            Dibuka
+                        </h2>
+                        @else
+                        <h2 class="pt-2 text-danger">
+                            Ditutup
+                        </h2>
+                        @endif
                     </div>
                 </div>
-                <div class="ms-auto col-2">
-                    <div class="btn btn-secondary d-flex align-items-center gap-2 py-2 px-3">
+                <form method="post" href="{{ route('status.update', 1) }}" class="ms-auto col-2">
+                    @csrf
+                    {{ method_field('PUT') }}
+
+                    @if($data_status['0']->status == 1)
+                    <input type="hidden" value="0" name="status">
+                    @else
+                    <input type="hidden" value="1" name="status">
+                    @endif
+
+                    <button type="submit" class="btn btn-secondary d-flex align-items-center gap-2 py-2 px-3">
                         <i class="bx bx-edit"></i>
                         <p>
-                            Ubah
+                            @if($data_status['0']->status == 1)
+                            Tutup
+                            @else
+                            Buka
+                            @endif
                         </p>
-                    </div>
-                </div>
+                    </button>
+                </form>
             </div>
         </div>
         <div class="card shadow rounded px-4">
@@ -99,6 +120,7 @@
             </form>
         </div>
     </div>
+    @if($data_status['0']->status == 1)
     <div class="col-lg-6 ps-lg-3 mb-4">
         <div class="card p-4 shadow p-3 bg-body-tertiary rounded">
             <h3 class="fs-4 justify-content-center d-flex mt-2">Agenda Pendaftaran</h3>
@@ -128,6 +150,14 @@
             </form>
         </div>
     </div>
+    @else
+    @endif
+</div>
+
+<div id="statusEditModal" class="modal">
+    <form action="">
+        <input type="text">
+    </form>
 </div>
 
 @endsection
