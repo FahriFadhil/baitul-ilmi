@@ -58,7 +58,8 @@ class GalleryController extends Controller
      */
     public function show(Gallery $gallery)
     {
-        //
+        $data = Gallery::all($gallery);
+        return view('gallery.index', compact('data'));
     }
 
     /**

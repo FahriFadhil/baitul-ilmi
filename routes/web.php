@@ -48,4 +48,6 @@ Route::resource('/dashboard/enrollment/status', 'StatusPendaftaranController');
 
 Route::view('/loginn', 'login.index');
 
+Route::resource('/detail', 'NewsController');
+
 // Route::get('/dashboard/syarat/{id}', 'SyaratPendaftaranController@edit');   

@@ -182,9 +182,9 @@
                 <h1>Berita Terbaru Baitul 'Ilmi</h1>
                 <a href="/news">Semua Berita &raquo;</a>
             </div>
-            <div class="row my-5 row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 gap-3">
+            <div class="row my-5 row-cols-1 row-cols-md-3 row-cols-lg-3 row-cols-xl-4 gap-2">
                 @foreach($data_berita as $news)
-                <a class="card border pt-2" href="">
+                <a class="card border pt-2" href="{{route('news.show', $news->id)}}">
                     <img src="{{ asset('storage/images') }}/{{ $news->image }}" alt="..." class="card-img p-1">
                     <div class="card-body p-3">
                         <h5 class="card-title"> {{ $news->headline }}</h5>

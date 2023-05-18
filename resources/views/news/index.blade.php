@@ -8,136 +8,34 @@
         <h3>SMAIT Baitul Ilmi</h3>
     </div>
 
-    <div class="image-grid container">
-        <div class="item-grid">
-            <div class="title-berita">
-                <h5>makan</h5>
-            </div>
-        </div>
-        <div class="item-grid">
-            <div class="title-berita">
-                <h5>makan</h5>
-            </div>
-        </div>
-        <div class="item-grid">
-            <div class="title-berita">
-                <h5>makan</h5>
-            </div>
-        </div>
-        <div class="item-grid">
-            <div class="title-berita">
-                <h5>makan</h5>
-            </div>
-        </div>
-    </div>
     <div class="content container">
-        <!-- <div class="row row-cols-4">
-            <div class="col"></div>
-            <div class="col"></div>
-            <div class="col"></div>
-            <div class="col"></div>
-            <div class="col"></div>
-            <div class="col"></div>
-            <div class="col"></div>
-            <div class="col"></div>
-        </div> -->
-
-        <div class="item-galeri">
-            <img src="https:/source.unsplash.com/2000x2000?school" alt="">
-            <h4>Siswa Baitul Ilmi</h4>
-            <p>siswa ini makan dengan sesuatu yang besar dan membuat heboh sekolah, sehingga...</p>
-        </div>
-        <div class="item-galeri">
-            <img src="https:/source.unsplash.com/2000x2000?school" alt="">
-            <h4>Siswa Baitul Ilmi</h4>
-            <p>siswa ini makan dengan sesuatu yang besar dan membuat heboh sekolah, sehingga...</p>
-        </div>
-        <div class="item-galeri">
-            <img src="https:/source.unsplash.com/2000x2000?school" alt="">
-            <h4>Siswa Baitul Ilmi</h4>
-            <p>siswa ini makan dengan sesuatu yang besar dan membuat heboh sekolah, sehingga...</p>
-        </div>
-        <div class="item-galeri">
-            <img src="https:/source.unsplash.com/2000x2000?school" alt="">
-            <h4>Siswa Baitul Ilmi</h4>
-            <p>siswa ini makan dengan sesuatu yang besar dan membuat heboh sekolah, sehingga...</p>
-        </div>
-        <div class="item-galeri">
-            <img src="https:/source.unsplash.com/2000x2000?school" alt="">
-            <h4>Siswa Baitul Ilmi</h4>
-            <p>siswa ini makan dengan sesuatu yang besar dan membuat heboh sekolah, sehingga...</p>
-        </div>
-        <div class="item-galeri">
-            <img src="https:/source.unsplash.com/2000x2000?school" alt="">
-            <h4>Siswa Baitul Ilmi</h4>
-            <p>siswa ini makan dengan sesuatu yang besar dan membuat heboh sekolah, sehingga...</p>
-        </div>
-        <div class="item-galeri">
-            <img src="https:/source.unsplash.com/2000x2000?school" alt="">
-            <h4>Siswa Baitul Ilmi</h4>
-            <p>siswa ini makan dengan sesuatu yang besar dan membuat heboh sekolah, sehingga...</p>
-        </div>
-        <div class="item-galeri">
-            <img src="https:/source.unsplash.com/2000x2000?school" alt="">
-            <h4>Siswa Baitul Ilmi</h4>
-            <p>siswa ini makan dengan sesuatu yang besar dan membuat heboh sekolah, sehingga...</p>
-        </div>
-        <div class="item-galeri">
-            <img src="https:/source.unsplash.com/2000x2000?school" alt="">
-            <h4>Siswa Baitul Ilmi</h4>
-            <p>siswa ini makan dengan sesuatu yang besar dan membuat heboh sekolah, sehingga...</p>
-        </div>
-        <div class="item-galeri">
-            <img src="https:/source.unsplash.com/2000x2000?school" alt="">
-            <h4>Siswa Baitul Ilmi</h4>
-            <p>siswa ini makan dengan sesuatu yang besar dan membuat heboh sekolah, sehingga...</p>
-        </div>
-
-        
-        
-    </div>
 
 
-    <!-- <div class="judul">
-        <h1>Semua Berita SMAIT Baitul 'Ilmi</h1>
-    </div>
-
-    <section class="container">
-        <a href="#">
-            <article class="news-item">
-                <img src="https:/source.unsplash.com/800x800?school" alt="">
-                <h2>Baitul Ilmi</h2>
-                <p>20-10-2023</p>
-            </article>
-        </a>
-        <article class="news-item">
-            <img src="https:/source.unsplash.com/800x800?school" alt="">
-            <h2>Baitul Ilmi</h2>
-            <p>20-10-2023</p>
-        </article>
-        <article class="news-item">
-            <img src="https:/source.unsplash.com/800x800?school" alt="">
-            <h2>Baitul Ilmi</h2>
-            <p>20-10-2023</p>
-        </article>
-        <article class="news-item">
-            <img src="https:/source.unsplash.com/800x800?school" alt="">
-            <h2>Baitul Ilmi</h2>
-            <p>20-10-2023</p>
-        </article>
-        <article class="news-item">
-
-            <img src="https:/source.unsplash.com/800x800?school" alt="">
-            <h2>Baitul Ilmi</h2>
-            <p>20-10-2023</p>
-        </article>
-        <article class="news-item">
-            <img src="https:/source.unsplash.com/800x800?school" alt="">
-            <h2>Baitul Ilmi</h2>
-            <p>20-10-2023</p>
-        </article>
-    </section> -->
-
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-4" >
+            @foreach($data_berita as $row)
+            <div class="col my-5" ">
+                <a class="card text-decoration-none text-black justify-content-start d-flex align-items-start p-0 rounded-0"
+                    href="{{route('news.show', $row->id)}}">
+                    <img class="card-img-top rounded-0" src="{{ asset('storage/images') }}/{{ $row->image }}" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ $row->headline }}</h4>
+                        <div class="card-text " >
+                            <p>{{ implode(' ', array_slice(explode(' ', $row->description), 0, 12)) . (strlen($row->description) > 12 ? '...' : '') }}
+                            </p>
+                            <div class="d-flex justify-content-between">
+                                <p>
+                                    {{ $row->author }}
+                                </p>
+                                <p class="may">
+                                    {{ \Carbon\Carbon::parse($row->created_at)->format('M d, Y') }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            @endforeach
+        </div>
 </main>
 
 @endsection
