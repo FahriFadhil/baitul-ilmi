@@ -15,5 +15,6 @@ class DatabaseSeeder extends Seeder
         $this->call(Biaya::class);
         $this->call(Alur::class);
         $this->call(Syarat::class);
+        $this->call(Status::class);
     }
 }

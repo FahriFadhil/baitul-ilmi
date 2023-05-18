@@ -28,14 +28,11 @@ Route::resource('/dashboard/news', 'NewsController');
 Route::resource('/dashboard/gallery', 'GalleryController');
 Route::resource('/dashboard/alumni', 'AlumniController');
 Route::delete('/dashboard/alumni/destroy/{id}', 'AlumniController@destroy');
-// Alumni
+
 Route::post('/dashboard/alumni/create/store', 'GraduationController@store');
 Route::delete('/dashboard/alumni/create/destroy/{id}', 'GraduationController@destroy');
 
 Route::get('/dashboard/pendaftaran', 'MainController@pendaftaran');
-// Pendaftaran
-
-
 
 Route::resource('/dashboard/enrollment/syarat', 'SyaratPendaftaranController');
 Route::delete('/dashboard/enrollment/syarat/destroy/{id}', 'SyaratPendaftaranController@destroy');
@@ -46,6 +43,8 @@ Route::delete('/dashboard/enrollment/agenda/destroy/{id}', 'AgendaPendaftaranCon
 Route::resource('/dashboard/enrollment/biaya', 'BiayaPendaftaranController');
 
 Route::resource('/dashboard/enrollment/alur', 'AlurPendaftaranController');
+
+Route::resource('/dashboard/enrollment/status', 'StatusPendaftaranController');
 
 Route::view('/loginn', 'login.index');
 
