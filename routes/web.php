@@ -49,4 +49,6 @@ Route::resource('/dashboard/enrollment/alur', 'AlurPendaftaranController');
 
 Route::view('/loginn', 'login.index');
 
+Route::resource('/detail', 'NewsController');
+
 // Route::get('/dashboard/syarat/{id}', 'SyaratPendaftaranController@edit');   

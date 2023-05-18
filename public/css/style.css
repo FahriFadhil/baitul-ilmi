@@ -723,104 +723,37 @@ footer .copyright {
   color: #fff;
 }
 
-#news-page .image-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  width: 80%;
-  grid-template-areas: "a a b" "c d d";
-  grid-template-rows: repeat(2, 300px);
-  z-index: 0;
-  background-color: transparent;
-}
-#news-page .image-grid .item-grid {
-  cursor: pointer;
-}
-#news-page .image-grid .item-grid:nth-child(1) {
-  grid-area: a;
-  background-image: url(https:/source.unsplash.com/2000x2000?school);
-  margin: 5px;
-}
-#news-page .image-grid .item-grid:nth-child(2) {
-  background-image: url(https:/source.unsplash.com/2000x2000?school);
-  grid-area: b;
-  margin: 5px;
-}
-#news-page .image-grid .item-grid:nth-child(3) {
-  background-image: url(https:/source.unsplash.com/2000x2000?school);
-  grid-area: c;
-  margin: 5px;
-}
-#news-page .image-grid .item-grid:nth-child(4) {
-  background-image: url(https:/source.unsplash.com/2000x2000?school);
-  grid-area: d;
-  margin: 5px;
-}
-#news-page .image-grid .item-grid {
-  position: relative;
-}
-#news-page .image-grid div {
-  background-position: center;
-  background-size: cover;
-}
-#news-page .image-grid .title-berita {
-  justify-content: center;
-  display: flex;
-  position: absolute;
-  transform: translateX(-50%);
-  left: 50%;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  height: 30%;
-  align-items: center;
-  color: white;
-}
 #news-page .text-judul {
-  padding: 30px;
+  padding: 25px;
   margin-left: 8rem;
 }
 #news-page .text-judul h3 {
   color: #888;
   font-size: 15px;
 }
-#news-page .content {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 20px;
-  margin-bottom: 50px;
-  justify-content: center;
+
+#detail-news .detail {
   align-items: center;
-  margin-left: 6rem;
+  display: flex;
+  flex-direction: column;
 }
-#news-page .item-galeri {
-  flex: 25%;
-  max-width: 20%;
-  padding: 0 10px;
-  margin-bottom: 10px;
-  margin-top: 2rem;
+#detail-news .title {
+  margin-top: 7rem;
+  width: 65%;
+  line-height: 4;
 }
-#news-page .item-galeri h4 {
-  margin-top: 10px;
+#detail-news .title img {
+  width: 899px;
+  margin-bottom: 40px;
+  box-shadow: 9px 8px var(--clr-green-main);
+  border-radius: 7px;
 }
-#news-page .item-galeri img {
-  margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;
-  cursor: pointer;
-  border-radius: 0.25rem;
+#detail-news .title p {
+  float: left;
+  margin-right: 20px;
+  font-weight: medium;
 }
-#news-page .judul {
-  margin: auto;
-}
-@media screen and (max-width: 992px) {
-  #news-page .item-galeri {
-    flex: 50%;
-    max-width: 50%;
-  }
-}
-@media screen and (max-width: 600px) {
-  #news-page .item-galeri {
-    flex: 50%;
-    max-width: 50%;
-  }
+#detail-news .content {
+  width: 66%;
+  text-align: justify;
 }/*# sourceMappingURL=style.css.map */
