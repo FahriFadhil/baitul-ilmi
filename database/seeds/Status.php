@@ -15,6 +15,7 @@ class Status extends Seeder
         $status = [
             [
                 'status' => 0,
+                'tahun_ajaran' => '2023/2024',
             ],
         ];
 

@@ -17,6 +17,7 @@ class CreateBiayaPendaftaransTable extends Migration
             $table->bigIncrements('id');
             $table->string('nama_biaya');
             $table->string('jumlah_biaya');
+            $table->text('description');
             $table->timestamps();
         });
     }

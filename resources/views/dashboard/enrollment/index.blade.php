@@ -16,9 +16,12 @@
                             Status Pendaftaran :
                         </h3>
                         @if($data_status['0']->status == 1)
-                        <h2 class="pt-2 text-success">
-                            Dibuka
-                        </h2>
+                        <div class="row">
+                            <h2 class="col pt-2 text-success">
+                                Dibuka
+                            </h2>
+                            <p class="col mt-auto">Tahun Ajaran : {{$data_status['0']->tahun_ajaran}}</p>
+                        </div>
                         @else
                         <h2 class="pt-2 text-danger">
                             Ditutup
@@ -26,17 +29,9 @@
                         @endif
                     </div>
                 </div>
-                <form method="post" href="{{ route('status.update', 1) }}" class="ms-auto col-2">
-                    @csrf
-                    {{ method_field('PUT') }}
 
-                    @if($data_status['0']->status == 1)
-                    <input type="hidden" value="0" name="status">
-                    @else
-                    <input type="hidden" value="1" name="status">
-                    @endif
-
-                    <button type="submit" class="btn btn-secondary d-flex align-items-center gap-2 py-2 px-3">
+                <div class="col-2 ms-auto">
+                    <a href="{{ route('status.edit', 1) }}" class="btn btn-secondary d-flex align-items-center gap-2 py-2 px-3">
                         <i class="bx bx-edit"></i>
                         <p>
                             @if($data_status['0']->status == 1)
@@ -45,8 +40,9 @@
                             Buka
                             @endif
                         </p>
-                    </button>
-                </form>
+                    </a>
+                </div>
+
             </div>
         </div>
         <div class="card shadow rounded px-4">
@@ -148,16 +144,11 @@
                     <button type="submit" class="btn btn-success px-3 py-2">Tambah +</button>
                 </div>
             </form>
+            <p class="text-danger ms-2 mt-2" style="font-size: 12px;">Harap Isi Agenda Pendaftaran untuk Pemberitahuan Tanggal Tes, Registrasi, Daftar Ulang, dll.</p>
         </div>
     </div>
     @else
     @endif
-</div>
-
-<div id="statusEditModal" class="modal">
-    <form action="">
-        <input type="text">
-    </form>
 </div>
 
 @endsection

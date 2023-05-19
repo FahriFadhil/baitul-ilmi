@@ -17,7 +17,8 @@ class MainController extends Controller
     public function home()
     {
         $data_berita = News::all();
-        return view('home', compact('data_berita'));
+        $data_status = StatusPendaftaran::all();
+        return view('home', compact('data_berita', 'data_status'));
     }
     public function profile()
     {
@@ -34,7 +35,12 @@ class MainController extends Controller
     }
     public function enrollment()
     {
-        return view('enrollment');
+        $data_status = StatusPendaftaran::all();
+        $data_syarat = SyaratPendaftaran::all();
+        $data_agenda = AgendaPendaftaran::all();
+        $data_biaya = BiayaPendaftaran::all();
+        $data_alur = AlurPendaftaran::all();
+        return view('enrollment', compact('data_syarat', 'data_agenda', 'data_biaya', 'data_alur', 'data_status'));
     }
     public function gallery()
     {
@@ -52,11 +58,11 @@ class MainController extends Controller
     }
     public function pendaftaran()
     {
-      $data_syarat = SyaratPendaftaran::all();
-      $data_agenda = AgendaPendaftaran::all();
-      $data_biaya = BiayaPendaftaran::all();
-      $data_alur = AlurPendaftaran::all();
-      $data_status = StatusPendaftaran::all();
-      return view('dashboard.enrollment.index', compact('data_syarat', 'data_agenda', 'data_biaya', 'data_alur', 'data_status'));
+        $data_syarat = SyaratPendaftaran::all();
+        $data_agenda = AgendaPendaftaran::all();
+        $data_biaya = BiayaPendaftaran::all();
+        $data_alur = AlurPendaftaran::all();
+        $data_status = StatusPendaftaran::all();
+        return view('dashboard.enrollment.index', compact('data_syarat', 'data_agenda', 'data_biaya', 'data_alur', 'data_status'));
     }
 }

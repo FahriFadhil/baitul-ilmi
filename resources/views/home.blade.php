@@ -34,6 +34,8 @@
     </div>
 
     <div class="container">
+
+        @if($data_status['0']->status == 1)
         <section class="penerimaan row">
             <div class="content col-lg-6">
                 <h1>Dibuka Pendaftaran Peserta Didik Baru Tahun Ajaran 2023/2024.</h1>
@@ -52,6 +54,9 @@
                 <div class="image-bg" style="background-image: url(' https://source.unsplash.com/600x600?enrollment ') ;"></div>
             </div>
         </section>
+        @else
+        @endif
+        
 
         <section class="sambutan row">
             <div class="person col-lg-4">

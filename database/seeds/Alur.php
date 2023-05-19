@@ -14,19 +14,26 @@ class Alur extends Seeder
     {
         $alur = [
             [
-                'nama_alur' => 'Transfer Biaya'
+                'nama_alur' => 'Transfer Biaya',
+                'description' => 'Rp 200.000,- BSI Kode Bank (451).
+                No.Rek 711 018 111 8
+                a.n Yayasan Manarusunnah.'
             ],
             [
-                'nama_alur' => 'Daftar Online'
+                'nama_alur' => 'Daftar Online',
+                'description' => ''
             ],
             [
-                'nama_alur' => 'Cetak Bukti Pendaftaran'
+                'nama_alur' => 'Cetak Bukti Pendaftaran',
+                'description' => ''
             ],
             [
-                'nama_alur' => 'Lengkapi Berkas Pendaftaran'
+                'nama_alur' => 'Lengkapi Berkas Pendaftaran',
+                'description' => ''
             ],
             [
-                'nama_alur' => 'Mengikuti Tes dan Interview'
+                'nama_alur' => 'Mengikuti Tes dan Interview',
+                'description' => 'Mengikuti Tes dan Interview Sesuai Jadwal Yang Telah Ditentukan Pada Masing-Masing satuan sekolah.'
             ],
         ];
 

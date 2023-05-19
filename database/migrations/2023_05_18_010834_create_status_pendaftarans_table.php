@@ -16,6 +16,7 @@ class CreateStatusPendaftaransTable extends Migration
         Schema::create('status_pendaftarans', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->boolean('status');
+            $table->string('tahun_ajaran');
             $table->timestamps();
         });
     }

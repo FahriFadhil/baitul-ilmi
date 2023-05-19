@@ -16,5 +16,6 @@ class DatabaseSeeder extends Seeder
         $this->call(Alur::class);
         $this->call(Syarat::class);
         $this->call(Status::class);
+        $this->call(Agenda::class);
     }
 }

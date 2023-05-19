@@ -16,6 +16,7 @@ class CreateAlurPendaftaransTable extends Migration
         Schema::create('alur_pendaftarans', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nama_alur');
+            $table->text('description');
             $table->timestamps();
         });
     }
