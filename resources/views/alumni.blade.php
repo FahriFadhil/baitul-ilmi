@@ -31,7 +31,7 @@
             </tr>
             </tr>
         </table>
-        <table class="table-alumni table table-bordered container">
+        <table class="table-alumni table table-bordered container   ">
             <thead class="induk">
                 <th style="width:2%; text-align:center;">
                     <strong>No</strong>
@@ -47,72 +47,6 @@
                 </th>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>0055924867</td>
-                    <td>Muhammad Faiq Al Harits</td>
-                    <td>Laki-Laki</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>009392023</td>
-                    <td>Muhammad Fahri ep ep</td>
-                    <td>Pria</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>009392023</td>
-                    <td>Muhammad Fahri ep ep</td>
-                    <td>Pria</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>009392023</td>
-                    <td>Muhammad Fahri ep ep</td>
-                    <td>Pria</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>0055924867</td>
-                    <td>Muhammad Faiq Al Harits</td>
-                    <td>Laki-Laki</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>0055924867</td>
-                    <td>Muhammad Faiq Al Harits</td>
-                    <td>Laki-Laki</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>0055924867</td>
-                    <td>Muhammad Faiq Al Harits</td>
-                    <td>Laki-Laki</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>0055924867</td>
-                    <td>Muhammad Faiq Al Harits</td>
-                    <td>Laki-Laki</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>0055924867</td>
-                    <td>Muhammad Faiq Al Harits</td>
-                    <td>Laki-Laki</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>0055924867</td>
-                    <td>Muhammad Faiq Al Harits</td>
-                    <td>Laki-Laki</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>0055924867</td>
-                    <td>Muhammad Faiq Al Harits</td>
-                    <td>Laki-Laki</td>
-                </tr>
                 <tr>
                     <td>1</td>
                     <td>0055924867</td>

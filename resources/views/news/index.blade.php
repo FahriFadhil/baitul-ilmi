@@ -13,7 +13,7 @@
 
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-4" >
             @foreach($data_berita as $row)
-            <div class="col my-5" ">
+            <div class="col my-5">
                 <a class="card text-decoration-none text-black justify-content-start d-flex align-items-start p-0 rounded-0"
                     href="{{route('news.show', $row->id)}}">
                     <img class="card-img-top rounded-0" src="{{ asset('storage/images') }}/{{ $row->image }}" alt="...">
