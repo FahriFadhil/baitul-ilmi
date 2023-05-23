@@ -43,7 +43,7 @@ class MainController extends Controller
     }
     public function alumni()
     {
-        $data_alumni = Alumni::all();
+        $data_alumni = Alumni::paginate(5);
         return view('alumni', compact('data_alumni'));
     }
     public function dashboard()
