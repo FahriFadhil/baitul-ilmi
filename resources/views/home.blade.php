@@ -56,7 +56,6 @@
         </section>
         @else
         @endif
-        
 
         <section class="sambutan row">
             <div class="person col-lg-4">
