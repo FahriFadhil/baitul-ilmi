@@ -4,8 +4,8 @@
 @section('content')
 
 <main id="#page-alumni">
-    <div class="alumni">
-        <div class="input-group mt-2 container">
+    <div class="alumni container">
+        <div class="input-group mt-2">
             <label class="input-group-text" for="inputGroupSelect01">Alumni</label>
             <select class="form-select" id="inputGroupSelect01">
                 <option selected>Tahun</option>
@@ -18,7 +18,7 @@
             </div>
 
         </div>
-        <table class="table table-bordered container mt-4">
+        <table class="table table-bordered mt-4">
             <tr>
                 <td colspan="3" width="300">
                     <strong>Angkatan 2015/2017</strong>
@@ -31,97 +31,41 @@
             </tr>
             </tr>
         </table>
-        <table class="table-alumni table table-bordered container">
-            <thead class="induk">
-                <th style="width:2%; text-align:center;">
-                    <strong>No</strong>
-                </th>
-                <th style="width: 5%; text-align:center;">
-                    <strong>No.induk</strong>
-                </th>
-                <th style="width:20%; text-align:center;">
-                    <strong>Nama Siswa</strong>
-                </th>
-                <th style="width: 5%; text-align:center;">
-                    <strong>Jenis kelamin</strong>
-                </th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>0055924867</td>
-                    <td>Muhammad Faiq Al Harits</td>
-                    <td>Laki-Laki</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>009392023</td>
-                    <td>Muhammad Fahri ep ep</td>
-                    <td>Pria</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>009392023</td>
-                    <td>Muhammad Fahri ep ep</td>
-                    <td>Pria</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>009392023</td>
-                    <td>Muhammad Fahri ep ep</td>
-                    <td>Pria</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>0055924867</td>
-                    <td>Muhammad Faiq Al Harits</td>
-                    <td>Laki-Laki</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>0055924867</td>
-                    <td>Muhammad Faiq Al Harits</td>
-                    <td>Laki-Laki</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>0055924867</td>
-                    <td>Muhammad Faiq Al Harits</td>
-                    <td>Laki-Laki</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>0055924867</td>
-                    <td>Muhammad Faiq Al Harits</td>
-                    <td>Laki-Laki</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>0055924867</td>
-                    <td>Muhammad Faiq Al Harits</td>
-                    <td>Laki-Laki</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>0055924867</td>
-                    <td>Muhammad Faiq Al Harits</td>
-                    <td>Laki-Laki</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>0055924867</td>
-                    <td>Muhammad Faiq Al Harits</td>
-                    <td>Laki-Laki</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>0055924867</td>
-                    <td>Muhammad Faiq Al Harits</td>
-                    <td>Laki-Laki</td>
-                </tr>
-            </tbody>
-            
-        </table>
+        <div class=table-responsive>
+            <table class="table-alumni table table-bordered">
+                <thead class="induk m-4">
+                    <th style="width:1%;" class="text-center p-3">
+                        No
+                    </th>
+                    <th style="width: 4%;" class="text-center p-3">
+                        Nama
+                    </th>
+                    <th style="width: 4%;" class="text-center p-3">
+                        No.induk
+                    </th>
+                    <th style="width: 4%;" class="text-center p-3">
+                        Jenis kelamin
+                    </th>
+                </thead>
+                <tbody class="p-2 mt-4">
+
+                    @foreach($data_alumni as $row)
+                    <tr>
+                        <td class="p-2 text-center">
+                            {{ $loop->iteration + ($data_alumni->perpage() * ($data_alumni->currentPage() -1)) }}
+                        </td>
+                        <td class="p-2">{{$row->name}}</td>
+                        <td class="p-2">{{$row->nis}}</td>
+                        <td class="p-2">{{$row->gender}}</td>
+
+
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+            {{ $data_alumni->links() }}
+        </div>
+
     </div>
 
 </main>

@@ -11,7 +11,6 @@
 
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 gy-4">
             @foreach($data_berita as $row)
-
             <div class="col p-2">
                 <a class="card border-0 shadow" href="{{route('news.show', $row->id)}}">
                     <img src="{{ asset('storage/images') }}/{{ $row->image }}" alt="..." class="card-img p-1">
