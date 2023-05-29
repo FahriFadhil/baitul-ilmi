@@ -9,10 +9,15 @@
 
     <div class="content container">
 
+        @if( $data_berita->count() == 0 )
+        <div class="my-5 pb-5">
+            <h4>Maaf Belum Ada Data Berita</h4>
+        </div>
+        @else
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 gy-4">
             @foreach($data_berita as $row)
             <div class="col p-2">
-                <a class="card border-0 shadow" href="{{route('news.show', $row->id)}}">
+                <a class="card border-0 shadow" href="/news/detail/{{ $row->id }}">
                     <img src="{{ asset('storage/images') }}/{{ $row->image }}" alt="..." class="card-img p-1">
                     <div class="card-body py-2 px-3">
                         <h5 class="card-title"> {{ implode(' ', array_slice(explode(' ', $row->headline), 0, 8)) . (strlen($row->headline) > 8 ? '...' : '') }}</h5>
@@ -33,6 +38,7 @@
             </div>
             @endforeach
         </div>
+        @endif
 
     </div>
 </main>

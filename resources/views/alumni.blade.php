@@ -4,32 +4,32 @@
 @section('content')
 
 <main id="#page-alumni">
-    <div class="alumni container">
-        <div class="input-group mt-2">
-            <label class="input-group-text" for="inputGroupSelect01">Alumni</label>
-            <select class="form-select" id="inputGroupSelect01">
-                <option selected>Tahun</option>
-                <option value="1">2016/2017</option>
-                <option value="2">2017/2018</option>
-                <option value="3">2018/2019</option>
-            </select>
-            <div class="input-group-append">
-                <button class="btn btn-primary rounded-1" type="button" id="button-addon2">Ubah</button>
+    <div class="alumni container mb-5 pb-5">
+        <form action="/alumni" method="get">
+            <div class="input-group mt-2">
+                <label class="input-group-text" for="inputGroupSelect01">Alumni</label>
+                <select class="form-select" id="inputGroupSelect01" name="query_tahun">
+                    @foreach($data_tahun_kelulusan as $row)
+                    <option value="{{ $row->id }}">{{ $row->year }}</option>
+                    @endforeach
+                </select>
+                <div class="input-group-append">
+                    <button class="btn btn-primary rounded-1" type="submit" id="button-addon2">Ubah</button>
+                </div>
             </div>
-
-        </div>
+        </form>
         <table class="table table-bordered mt-4">
             <tr>
                 <td colspan="3" width="300">
-                    <strong>Angkatan 2015/2017</strong>
+                    <strong>Tahun Ajaran {{ $data_tahun_kelulusan_sekarang->year }}</strong>
                 </td>
             </tr>
             <tr>
                 <td colspan="4" width="300">
-                    <strong>Kepala Sekolah : Luzman Rifqi S.pd.I</strong>
+                    <strong>{{ $data_tahun_kelulusan_sekarang->principal_name }}</strong>
                 </td>
             </tr>
-            </tr>
+
         </table>
         <div class=table-responsive>
             <table class="table-alumni table table-bordered">
@@ -52,7 +52,7 @@
                     @foreach($data_alumni as $row)
                     <tr>
                         <td class="p-2 text-center">
-                            {{ $loop->iteration + ($data_alumni->perpage() * ($data_alumni->currentPage() -1)) }}
+                            {{ $loop->iteration }}
                         </td>
                         <td class="p-2">{{$row->name}}</td>
                         <td class="p-2">{{$row->nis}}</td>
@@ -63,7 +63,7 @@
                     @endforeach
                 </tbody>
             </table>
-            {{ $data_alumni->links() }}
+
         </div>
 
     </div>

@@ -10,6 +10,7 @@ use App\News;
 use Illuminate\Http\Request;
 use App\SyaratPendaftaran;
 use App\AgendaPendaftaran;
+use App\Graduation;
 use App\StatusPendaftaran;
 
 class MainController extends Controller
@@ -47,10 +48,16 @@ class MainController extends Controller
         $data_gallery = Gallery::all();
         return view('gallery', compact('data_gallery'));
     }
-    public function alumni()
+    public function alumni(Request $request)
     {
-        $data_alumni = Alumni::paginate(5);
-        return view('alumni', compact('data_alumni'));
+        $data_tahun_kelulusan = Graduation::all();
+        $data_tahun_kelulusan_sekarang = Graduation::where('id', $data_tahun_kelulusan->first()->id)->first();
+        $data_alumni = Alumni::where('graduation_id', $data_tahun_kelulusan->first()->id)->get();
+        if($request->get('query_tahun')) {
+            $data_tahun_kelulusan_sekarang = Graduation::where('id', $request->get('query_tahun'))->first();
+            $data_alumni = Alumni::where('graduation_id', $request->get('query_tahun'))->get();
+        }
+        return view('alumni', compact('data_alumni', 'data_tahun_kelulusan',  'data_tahun_kelulusan_sekarang'));
     }
     public function dashboard()
     {
@@ -64,5 +71,14 @@ class MainController extends Controller
         $data_alur = AlurPendaftaran::all();
         $data_status = StatusPendaftaran::all();
         return view('dashboard.enrollment.index', compact('data_syarat', 'data_agenda', 'data_biaya', 'data_alur', 'data_status'));
+    }
+    public function news_detail($id) {
+        {
+            $news = News::findOrFail($id);
+            return view('news.detail', compact('news'));
+        }
+    }
+    public function redirect_dashboard() {
+        return redirect('/dashboard');
     }
 }

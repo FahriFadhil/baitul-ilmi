@@ -3,8 +3,8 @@
 @section('content')
 
 <main id="detail-news">
-    <div class="row mx-5 px-5 my-4">
-        <div class="col-md-8">
+    <div class="row mx-5 px-5 py-4 my-4 justify-content-between">
+        <div class="col-md-7">
             <h1>
                 {{ $news->headline }}
             </h1>
@@ -20,7 +20,7 @@
             </p>
         </div>
         <div class="col-md-4">
-            <img src="{{ asset('storage/images') }}/{{ $news->image }}" alt="Gambar Berita">
+            <img src="{{ asset('storage/images') }}/{{ $news->image }}" alt="Gambar Berita" style="max-width: 100%;">
         </div>
     </div>
 </main>

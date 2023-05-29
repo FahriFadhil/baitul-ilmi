@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container-login">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -56,12 +56,6 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
                                 </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
                             </div>
                         </div>
                     </form>
@@ -70,4 +64,15 @@
         </div>
     </div>
 </div>
+
+@endsection
+
+@section('css')
+<style>
+    .container-login {
+        min-height: 50vh;
+        width: 50vw;
+        margin: 25vh auto;
+    }
+</style>
 @endsection

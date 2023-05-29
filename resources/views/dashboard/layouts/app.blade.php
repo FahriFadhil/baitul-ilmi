@@ -68,13 +68,16 @@
                 <div class="profile-details">
                     <div class="person">
                         <div class="name_job">
-                            <div class="name">Prem Shahi</div>
-                            <div class="job">Web designer</div>
+                            <div class="name">Admin</div>
+                            <div class="job">SMAIT Baitul 'Ilmi</div>
                         </div>
                     </div>
-                    <a href="">
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                         <i class='bx bx-log-out' id="log_out"></i>
                     </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
                 </div>
             </li>
         </ul>

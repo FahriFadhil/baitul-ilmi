@@ -77,7 +77,7 @@
 
         @yield('content')
 
-        <footer class="footer">
+        <footer class="footer" style="z-index: 100;">
             <div class="container py-4">
                 <div class="contact">
                     <div class="header gap-4">

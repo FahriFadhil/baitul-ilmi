@@ -186,6 +186,11 @@
                 <h1>Berita Terbaru Baitul 'Ilmi</h1>
                 <a href="/news">Semua Berita &raquo;</a>
             </div>
+            @if( $data_berita->count() == 0 )
+            <div class="my-5">
+                <h4>Maaf Belum Ada Berita Terbaru</h4>
+            </div>
+            @else
             <div class="row my-5 row-cols-1 row-cols-md-3 row-cols-lg-3 row-cols-xl-4 gap-2">
                 @foreach($data_berita as $news)
                 <a class="card border pt-2" href="{{route('news.show', $news->id)}}">
@@ -208,6 +213,7 @@
                 </a>
                 @endforeach
             </div>
+            @endif
     </div>
     </section>
     </div>
