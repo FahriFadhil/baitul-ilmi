@@ -13,9 +13,8 @@
 
 use App\Http\Controllers\NewsController;
 
-Route::group(['middleware' => 'guest'], function () {
-  Auth::routes();
-});
+
+Auth::routes();
 
 Route::get('/', 'MainController@home');
 Route::get('/profile', 'MainController@profile');
