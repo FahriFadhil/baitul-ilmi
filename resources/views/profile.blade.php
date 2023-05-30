@@ -111,7 +111,7 @@
         <section class="sejarah">
             <h1 class="text-center mb-5">Sejarah</h1>
             <div class="image">
-                <div class="bg-image" style="background-image: url(' https://source.unsplash.com/800x600?school ') ;"></div>
+                <div class="bg-image" style="background-image: url('{{asset('/images/Pembangunan Masjid2.jpeg')}}') ;"></div>
             </div>
             <div class="content card">
                 <p>
@@ -127,7 +127,7 @@
                         </p>
                     </div>
                     <div class="col-lg-6">
-                        <img class="img-thumbnail mb-4" src="https://source.unsplash.com/800x500?school" alt="">
+                        <img class="img-thumbnail mb-4" src="{{asset('/images/Pembangunan Masjid1.jpeg')}}" alt="">
                     </div>
                 </div>
                 <p>
@@ -145,7 +145,7 @@
                 </p>
                 <div class="row d-flex align-items-center">
                     <div class="col-lg-6">
-                        <img class="img-thumbnail mb-4" src="https://source.unsplash.com/800x400?school" alt="">
+                        <img class="img-thumbnail mb-4" src="{{asset('/images/Pembangunan Sekolah1.jpeg')}}" alt="">
                     </div>
                     <div class="col-lg-6">
                         <p>

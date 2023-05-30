@@ -55,4 +55,7 @@ Route::group(['middleware' => 'auth'], function () {
 
 
 
+Route::delete('/dashboard/index/destroy/{id}', 'GuruController@destroy');
+Route::post('/dashboard/index/store', 'GuruController@store');
+
 // Route::get('/dashboard/syarat/{id}', 'SyaratPendaftaranController@edit');   
