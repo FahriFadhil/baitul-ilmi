@@ -6,8 +6,8 @@
     <div class="container">
         <section class="sambutan row">
             <div class="person col-lg-4">
-                <div class="image-bg" style="background-image: url(' https://source.unsplash.com/600x600?principal man ') ;"></div>
-                <h4 class="mb-4">Luzman Rifqi S.pd</h4>
+                <div class="image-bg" style="background-image: url(' {{asset('/images/Foto Luzman Rifqi.jpg')}} ') ;"></div>
+                <h4 class="mb-4">Luzman Rifqi S.Kom.I</h4>
             </div>
             <div class="content col-lg-7 ms-auto d-flex flex-column justify-content-start gap-4 mb-4">
                 <h1>Sambutan<br>Kepala Sekolah.</h1>
