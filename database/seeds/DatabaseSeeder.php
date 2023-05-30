@@ -17,8 +17,8 @@ class DatabaseSeeder extends Seeder
         $this->call(Status::class);
         $this->call(Agenda::class);
         $this->call(Syarat::class);
-        $this->call(Admin::class);
         $this->call(Graduation::class);
         $this->call(Principal::class);
+        $this->call(Admin::class);
     }
 }
