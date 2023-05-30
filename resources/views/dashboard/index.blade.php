@@ -15,87 +15,115 @@
 
     </div>
     <div class="row gap-5">
-        <div class="col-lg my-3">
+        <div class="col-lg-7 my-3">
             <div class="d-flex justify-content-between align-items-center">
-                <h3>Overview Berita</h3>
-                <a href="">Lihat Selengkapnya &raquo;</a>
+                <h3>Overview Guru</h3>
+                <!-- <a href="/dashboard/news">Lihat Selengkapnya &raquo;</a> -->
             </div>
             <div class="card border-0 p-4 my-3">
                 <div class="col p-2">
-                    <a class="card card-news border-0" href="/dashboard/news/detail">
-                        <img src="{{ asset('icon/logo.png') }}" alt="..." class="card-img p-1">
-                        <div class="card-body p-3">
-                            <h5 class="card-title">Baitul 'Ilmi Membuka Pendaftaran</h5>
-                            <div class="card-text pt-3">
-                                <p style="font-size: 15px;" class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-                                <div class="d-flex justify-content-between pt-3">
-                                    <p>
-                                        Luzman Rifqi
-                                    </p>
-                                    <p>
-                                        28 Maret, 2023
-                                    </p>
-                                </div>
+                    <table class="table-alumni table table-bordered container">
+                        <thead class="induk">
+                            <th class="py-3" style="width:2%; text-align:center;">
+                                <strong>Foto</strong>
+                            </th>
+                            <th class="py-3" style="width: 5%; text-align:center;">
+                                <strong>Nama Guru</strong>
+                            </th>
+                            <th class="py-3" style="width:4%; text-align:center;">
+                                <strong>Materi</strong>
+                            </th>
+                            <th class="py-3" style="width:3%; text-align:center;">
+                                <strong>Materi</strong>
+                            </th>
+                        </thead>
+                        <tbody>
+                            @foreach($data_guru as $row)
+                            <tr>
+                                <td class="py-4 text-center px-5">
+                                    <!-- <p style="background-image: url(storage/images/{{ $row->image }});"></p> -->
+                                    <img src="{{asset('storage/images/' .$row->image)}}" alt="" class="w-50">
+                                </td>
+                                <td class="py-4 text-center">{{$row->nama}}</td>
+                                <td class="py-4 text-center">{{$row->description}}</td>
+                                <form action="/dashboard/index/destroy/{{$row->id}}" method="post">
+                                    @csrf
+                                    {{method_field('DELETE')}}
+                                    <td class="p-2 align-items-center justify-content-center d-flex mt-2">
+                                        <button type="sumbit" class="bx bx-trash btn btn-danger px-4 py-2"></button>
+                                    </td>
+                                </form>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="d-flex justify-content-between align-items-center mt-4">
+                    <h3>Profil Kepala Sekolah</h3>
+                </div>
+                <div class="col-lg-7">
+                    <div class="my-3">
+                        <div class="card border p-3 my-4">
+                    
+                            <img class="card-img-top" src="{{asset('storage/images/' .$data_principal->images)}}" alt="...">
+                            <h3 class="mt-3 bg-success rounded-3 py-3 px-3 fs-5 text-light">{{$data_principal->principal_name}}</h3>
+                            <hr class="mt-3" style="border-top: 3px solid black;">
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <h3 class="fs-5 fw-bold ms-1">Edit kepala Sekolah</h3>
                             </div>
+                            <div class="card-body text-center">
+                                <form action="/dashboard/index/update/{{$data_principal->id}}" enctype="multipart/form-data">
+                                    <div class="mt-3">
+                                        <img alt="..." class="card-img my-2 ms-auto" style="max-width: 24rem;"
+                                        id="imagePreview">
+                                        <p class="custom-file-label"></p>
+                                        <input required name="image" id="image-input" type="file"
+                                        class="form-control px-2 py-1" placeholder="Gambar Berita">
+                                        <p class="text-muted mt-2 mb-3 text-start">Ukuran Gambar yang Disarankan: <br> 4:2
+                                        (<i>200 x
+                                            400 px</i>)
+                                        </p>
+                                    </div>
+                                    <input required class="form-control mt-3 px-3 py-3" name="nama" type="text"
+                                    placeholder="Principal Name">
+                                    
+                                </form>
+                            </div>
+                            <button type="submit" class="btn btn-success px-5 py-3 fw-bold mt-3">Ubah</button>
+                            
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg my-3">
-            <div class="d-flex justify-content-between align-items-center">
-                <h3>Overview Gallery</h3>
-                <a href="">Lihat Selengkapnya &raquo;</a>
+        <div class="col-lg-4">
+            <div class="d-flex justify-content-between align-items-center mt-2">
+                <h3>Menambah Guru</h3>
             </div>
-            <div class="card card-gallery border-0 p-4 my-3">
-                <div class="row row-cols-1 row-cols-lg-2">
-                    <div class="col p-2">
-                        <div class="card">
-                            <img src="{{ asset('icon/logo.png') }}" alt="..." class="card-img p-1">
-                            <div class="card-img-overlay p-3 text-white">
-                                <div class="card-action">
-                                    <a href="" class="btn btn-lg btn-danger" onclick="confrim('Yakin Menghapus Gallery Ini?\nHal ini tidak dapat diulang')"><i class='bx bx-trash p-2'></i></a>
-                                </div>
-                                <p class="card-title">Lorem sit amet, consectetur adipisicing elit. Temporibus, placeat?</p>
-                            </div>
-                        </div>
+            <div class="card border p-3 my-4">
+                <form method="post" action="/dashboard/index/store" enctype="multipart/form-data">
+                    @csrf
+                    <input required class="form-control mt-3 px-3 py-3" name="nama" type="text" placeholder="Nama Guru">
+
+                    <input required class="form-control mt-3 px-3 py-3" name="description" type="text"
+                        placeholder="Materi">
+
+                    <div class="mt-3">
+                        <img alt="..." class="card-img my-2 ms-auto" style="max-width: 24rem;" id="imagePreview">
+                        <p class="custom-file-label"></p>
+                        <input required name="image" id="image-input" type="file" class="form-control px-2 py-1"
+                            placeholder="Gambar Berita">
+                        <p class="text-muted mt-2 mb-3">Ukuran Gambar yang Disarankan: <br> 4:3 (<i>200 x 300 px</i>)
+                        </p>
                     </div>
-                    <div class="col p-2">
-                        <div class="card">
-                            <img src="{{ asset('icon/logo.png') }}" alt="..." class="card-img p-1">
-                            <div class="card-img-overlay p-3 text-white">
-                                <div class="card-action">
-                                    <a href="" class="btn btn-lg btn-danger" onclick="confrim('Yakin Menghapus Gallery Ini?\nHal ini tidak dapat diulang')"><i class='bx bx-trash p-2'></i></a>
-                                </div>
-                                <p class="card-title">Lorem sit amet, consectetur adipisicing elit. Temporibus, placeat?</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col p-2">
-                        <div class="card">
-                            <img src="{{ asset('icon/logo.png') }}" alt="..." class="card-img p-1">
-                            <div class="card-img-overlay p-3 text-white">
-                                <div class="card-action">
-                                    <a href="" class="btn btn-lg btn-danger" onclick="confrim('Yakin Menghapus Gallery Ini?\nHal ini tidak dapat diulang')"><i class='bx bx-trash p-2'></i></a>
-                                </div>
-                                <p class="card-title">Lorem sit amet, consectetur adipisicing elit. Temporibus, placeat?</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col p-2">
-                        <div class="card">
-                            <img src="{{ asset('icon/logo.png') }}" alt="..." class="card-img p-1">
-                            <div class="card-img-overlay p-3 text-white">
-                                <div class="card-action">
-                                    <a href="" class="btn btn-lg btn-danger" onclick="confrim('Yakin Menghapus Gallery Ini?\nHal ini tidak dapat diulang')"><i class='bx bx-trash p-2'></i></a>
-                                </div>
-                                <p class="card-title">Lorem sit amet, consectetur adipisicing elit. Temporibus, placeat?</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+                    <button type="submit" class="btn btn-success px-5 py-3 fw-bold">Tambah Guru</button>
+                </form>
             </div>
         </div>
+
     </div>
 </div>
 
@@ -134,6 +162,22 @@
         bottom: .5rem;
         text-shadow: .5px .5px 0 black;
     }
+
 </style>
+
+@endsection
+
+@section('js')
+
+<script>
+    document.getElementById('image-input').addEventListener('change', (ev) => {
+        let reader = new FileReader()
+        reader.readAsDataURL(ev.target.files[0])
+        reader.onload = () => {
+            document.getElementById('imagePreview').setAttribute('src', reader.result)
+        }
+    })
+
+</script>
 
 @endsection

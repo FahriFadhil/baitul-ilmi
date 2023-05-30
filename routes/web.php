@@ -50,4 +50,7 @@ Route::view('/loginn', 'login.index');
 
 Route::resource('/detail', 'NewsController');
 
+Route::delete('/dashboard/index/destroy/{id}', 'GuruController@destroy');
+Route::post('/dashboard/index/store', 'GuruController@store');
+
 // Route::get('/dashboard/syarat/{id}', 'SyaratPendaftaranController@edit');   
