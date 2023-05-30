@@ -1,7 +1,7 @@
 <?php
 
-use App\Graduation as AppGraduation;
 use Illuminate\Database\Seeder;
+use App\Principal;
 
 class Graduation extends Seeder
 {
@@ -12,9 +12,8 @@ class Graduation extends Seeder
      */
     public function run()
     {
-        AppGraduation::create([
-            'year' => '2022/2023',
-            'principal_name' => 'Luzman Rifqi',
-        ]);
+        $grad = new App\Graduation;
+        $grad->name = "Luzman Rifqi S.Kom.I";
+        $grad->year = "2023-2024";
     }
 }
