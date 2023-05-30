@@ -21,7 +21,8 @@ class MainController extends Controller
     {
         $data_berita = News::all();
         $data_status = StatusPendaftaran::all();
-        return view('home', compact('data_berita', 'data_status'));
+        $data_principal = Principal::first();
+        return view('home', compact('data_berita', 'data_status', 'data_principal'));
     }
     public function profile()
     {
