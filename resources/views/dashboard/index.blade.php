@@ -53,41 +53,6 @@
                     </table>
                 </div>
             </div>
-            <div class="row mt-5">
-                <div class="d-flex justify-content-between align-items-center mt-4">
-                    <h3>Profil Kepala Sekolah</h3>
-                </div>
-                <div class="col-lg-6">
-                    <div class="my-3">
-                        <div class="card border p-3 my-4">
-
-                            <img class="card-img-top" src="{{asset('storage/images/' .$data_principal->images)}}" alt="...">
-                            <h3 class="mt-3 bg-success rounded-3 py-3 px-3 fs-5 text-light">{{$data_principal->principal_name}}</h3>
-                            <hr class="mt-3" style="border-top: 3px solid black;">
-                            <h3 class="fs-5 fw-bold mx-1 mt-3">Edit kepala Sekolah</h3>
-                            <p class="mx-1 my-2">Isi form di bawah untuk mengganti foto dan nama kepala sekolah</p>
-                            <div class="card-body text-center">
-                                <form action="/dashboard/index/update/1" method="post" enctype="multipart/form-data">
-                                    @csrf
-                                    {{ method_field('PUT') }}
-                                    <input required class="form-control mt-3 px-3 py-3" name="principal_name" type="text" placeholder="Kepala Sekolah yg Baru">
-                                    <div class="mt-3">
-                                        <img alt="..." class="card-img my-2 ms-auto" style="max-width: 24rem;" id="imagePreview">
-                                        <p class="custom-file-label"></p>
-                                        <input required name="images" id="image-input" type="file" class="form-control px-2 py-1" placeholder="Gambar Berita">
-                                        <p class="text-muted mt-2 mb-3 text-start">Ukuran Gambar yang Disarankan: <br> 2:3
-                                            (<i>200 x 300 px</i>)
-                                        </p>
-                                    </div>
-
-                                    <button type="submit" class="btn btn-success px-5 py-3 fw-bold mt-3">Ubah</button>
-                                </form>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
         <div class="col-lg-4">
             <div class="d-flex justify-content-between align-items-center mt-2">
@@ -112,7 +77,41 @@
                 </form>
             </div>
         </div>
+        <div class="row">
+            <div class="d-flex justify-content-between align-items-center mt-4">
+                <h3>Profil Kepala Sekolah</h3>
+            </div>
+            <div class="col-lg-4">
+                <div class="my-3">
+                    <div class="card border p-3 my-4">
 
+                        <img class="card-img-top" src="{{asset('storage/images/' .$data_principal->images)}}" alt="...">
+                        <h3 class="mt-3 bg-success rounded-3 py-3 px-3 fs-5 text-light">{{$data_principal->principal_name}}</h3>
+                        <hr class="mt-3" style="border-top: 3px solid black;">
+                        <h3 class="fs-5 fw-bold mx-1 mt-3">Edit kepala Sekolah</h3>
+                        <p class="mx-1 my-2">Isi form di bawah untuk mengganti foto dan nama kepala sekolah</p>
+                        <div class="card-body text-center">
+                            <form action="/dashboard/index/update/1" method="post" enctype="multipart/form-data">
+                                @csrf
+                                {{ method_field('PUT') }}
+                                <input required class="form-control mt-3 px-3 py-3" name="principal_name" type="text" placeholder="Kepala Sekolah yg Baru">
+                                <div class="mt-3">
+                                    <img alt="..." class="card-img my-2 ms-auto" style="max-width: 24rem;" id="imagePreview">
+                                    <p class="custom-file-label"></p>
+                                    <input required name="images" id="image-input" type="file" class="form-control px-2 py-1" placeholder="Gambar Berita">
+                                    <p class="text-muted mt-2 mb-3 text-start">Ukuran Gambar yang Disarankan: <br> 2:3
+                                        (<i>200 x 300 px</i>)
+                                    </p>
+                                </div>
+
+                                <button type="submit" class="btn btn-success px-5 py-3 fw-bold mt-3">Ubah</button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
