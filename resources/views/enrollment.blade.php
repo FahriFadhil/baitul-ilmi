@@ -68,7 +68,6 @@
                                 <div class="col">
                                     <div class="card-body">
                                         <h4>{{ $alur->nama_alur }}</h4>
-                                        <p>{{ $alur->description }}</p>
                                     </div>
                                 </div>
                             </div>

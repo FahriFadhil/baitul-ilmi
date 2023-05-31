@@ -68,8 +68,8 @@
                 <div class="profile-details">
                     <div class="person">
                         <div class="name_job">
-                            <div class="name">Admin</div>
-                            <div class="job">SMAIT Baitul 'Ilmi</div>
+                            <div class="name">{{ Auth::user()->name }}</div>
+                            <div class="job">{{ Auth::user()->email }}</div>
                         </div>
                     </div>
                     <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">

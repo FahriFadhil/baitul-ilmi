@@ -38,10 +38,10 @@
         @if($data_status['0']->status == 1)
         <section class="penerimaan row">
             <div class="content col-lg-6">
-                <h1>Dibuka Pendaftaran Peserta Didik Baru Tahun Ajaran 2023/2024.</h1>
+                <h1>Dibuka Pendaftaran Peserta Didik Baru Tahun Ajaran {{ $data_status['0']->tahun_ajaran }}.</h1>
                 <br>
                 <p>
-                    Sekolah SMA Islam Terpadu Baitul 'Ilmi sedang membuka pendaftaran bagi <b>siswa putri SMA dan sederajat</b> untuk tahun ajaran <b>2023 / 2023.</b>
+                    Sekolah SMA Islam Terpadu Baitul 'Ilmi sedang membuka pendaftaran bagi <b>siswa putri SMA dan sederajat</b> untuk tahun ajaran <b>{{ $data_status['0']->tahun_ajaran }}.</b>
                     <br> <br>
                     Kami mengajak para wali santri sekalian untuk bergabung menjadi keluarga besar Baitul 'Ilmi demi menuntun para siswi untuk menjadi seorang yang cerdas, berkarakter, dan berakhlak.
                 </p>
