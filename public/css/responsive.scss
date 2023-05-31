@@ -1,0 +1,140 @@
+@media (max-width:992px) {
+
+    :root {
+        --font-heading-lg: 2rem;
+        --font-heading-md: 1.5rem;
+        --font-heading-sm: 1.25rem;
+
+        --font-content-lg: 1.1rem;
+        --font-content-sm: .9rem;
+    }
+
+    nav {
+        .navbar-collapse {
+            margin: .5rem 0;
+
+            .nav-item {
+                margin-top: .25rem;
+
+                .nav-link {
+                    padding: .75rem;
+                }
+            }
+        }
+    }
+
+    footer {
+        .container {
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .contact {
+            width: 100%;
+        }
+        .map {
+            width: 100%;
+            iframe {
+                width: 100%;
+            }
+        }
+    }
+
+    // ===== HOME PAGE STYLE =====
+
+    #home-page {
+        .carousel {
+            margin-bottom: 2rem;
+        }
+        section {
+            padding: 0;
+        }
+        .container {
+            font-size: var(--font-content-lg);
+        }
+        .sambutan {
+            .person {
+                display: grid;
+                grid-template-areas: 'heading img'
+                                        'name img';
+                grid-template-columns: 6fr 2fr;
+                grid-template-rows: auto auto auto;
+                gap: 1rem;
+    
+                h1 {
+                    grid-area: heading;
+                    align-self: end;
+                }
+                h4 {
+                    grid-area: name;
+                }
+                .image-bg {
+                    grid-area: img;
+                    width: 20%;
+                }
+            }
+        }
+        .visi-misi {
+            .card {
+                p {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    // ===== PROFILE PAGE STYLE =====
+
+    #profile-page {
+        .sambutan {
+            .person {
+                position: relative;
+                margin-top: 2rem;
+                .image-bg {
+                    position: absolute;
+                    width: 15vw;
+                    right: 1rem;
+                    bottom: -7rem;
+                }
+            }
+            .content {
+                h1 {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+        .visi-misi {
+            .card {
+                p {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    // ===== PROFILE PAGE STYLE =====
+
+    #academic-page {
+        .ekstrakurikuler {
+            .row {
+                .card {
+                    aspect-ratio: 5/4;
+                }
+            }
+        }
+    }
+
+    #enrollment-page {
+        .syarat {
+            .card {
+                .title-point {
+                    
+                    h1 {
+                        padding: 2rem 0;
+                    }
+                }
+            }
+        }
+    }
+}
+

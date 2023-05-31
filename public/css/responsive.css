@@ -1,0 +1,84 @@
+@media (max-width: 992px) {
+  :root {
+    --font-heading-lg: 2rem;
+    --font-heading-md: 1.5rem;
+    --font-heading-sm: 1.25rem;
+    --font-content-lg: 1.1rem;
+    --font-content-sm: .9rem;
+  }
+  nav .navbar-collapse {
+    margin: 0.5rem 0;
+  }
+  nav .navbar-collapse .nav-item {
+    margin-top: 0.25rem;
+  }
+  nav .navbar-collapse .nav-item .nav-link {
+    padding: 0.75rem;
+  }
+  footer .container {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+  footer .contact {
+    width: 100%;
+  }
+  footer .map {
+    width: 100%;
+  }
+  footer .map iframe {
+    width: 100%;
+  }
+  #home-page .carousel {
+    margin-bottom: 2rem;
+  }
+  #home-page section {
+    padding: 0;
+  }
+  #home-page .container {
+    font-size: var(--font-content-lg);
+  }
+  #home-page .sambutan .person {
+    display: grid;
+    grid-template-areas: "heading img" "name img";
+    grid-template-columns: 6fr 2fr;
+    grid-template-rows: auto auto auto;
+    gap: 1rem;
+  }
+  #home-page .sambutan .person h1 {
+    grid-area: heading;
+    align-self: end;
+  }
+  #home-page .sambutan .person h4 {
+    grid-area: name;
+  }
+  #home-page .sambutan .person .image-bg {
+    grid-area: img;
+    width: 20%;
+  }
+  #home-page .visi-misi .card p {
+    width: 100%;
+  }
+  #profile-page .sambutan .person {
+    position: relative;
+    margin-top: 2rem;
+  }
+  #profile-page .sambutan .person .image-bg {
+    position: absolute;
+    width: 15vw;
+    right: 1rem;
+    bottom: -7rem;
+  }
+  #profile-page .sambutan .content h1 {
+    margin-bottom: 2rem;
+  }
+  #profile-page .visi-misi .card p {
+    width: 100%;
+  }
+  #academic-page .ekstrakurikuler .row .card {
+    aspect-ratio: 5/4;
+  }
+  #enrollment-page .syarat .card .title-point h1 {
+    padding: 2rem 0;
+  }
+}/*# sourceMappingURL=responsive.css.map */
