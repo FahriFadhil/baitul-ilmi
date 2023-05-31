@@ -7,13 +7,7 @@
 </div>
 
 <div class="py-4">
-    <div class="d-flex justify-content-between align-items-center">
-        <h3>Overview Pendaftaran</h3>
-        <a href="">Lihat Selengkapnya &raquo;</a>
-    </div>
-    <div class="card border-0 p-4 my-3">
 
-    </div>
     <div class="row gap-5">
         <div class="col-lg-7 my-3">
             <div class="d-flex justify-content-between align-items-center">
@@ -31,10 +25,10 @@
                                 <strong>Nama Guru</strong>
                             </th>
                             <th class="py-3" style="width:4%; text-align:center;">
-                                <strong>Materi</strong>
+                                <strong>Mapel</strong>
                             </th>
                             <th class="py-3" style="width:3%; text-align:center;">
-                                <strong>Materi</strong>
+                                <strong>Action</strong>
                             </th>
                         </thead>
                         <tbody>
@@ -59,40 +53,37 @@
                     </table>
                 </div>
             </div>
-            <div class="row">
+            <div class="row mt-5">
                 <div class="d-flex justify-content-between align-items-center mt-4">
                     <h3>Profil Kepala Sekolah</h3>
                 </div>
-                <div class="col-lg-7">
+                <div class="col-lg-6">
                     <div class="my-3">
                         <div class="card border p-3 my-4">
-                    
+
                             <img class="card-img-top" src="{{asset('storage/images/' .$data_principal->images)}}" alt="...">
                             <h3 class="mt-3 bg-success rounded-3 py-3 px-3 fs-5 text-light">{{$data_principal->principal_name}}</h3>
                             <hr class="mt-3" style="border-top: 3px solid black;">
-                            <div class="d-flex justify-content-between align-items-center mt-3">
-                                <h3 class="fs-5 fw-bold ms-1">Edit kepala Sekolah</h3>
-                            </div>
+                            <h3 class="fs-5 fw-bold mx-1 mt-3">Edit kepala Sekolah</h3>
+                            <p class="mx-1 my-2">Isi form di bawah untuk mengganti foto dan nama kepala sekolah</p>
                             <div class="card-body text-center">
-                                <form action="/dashboard/index/update/{{$data_principal->id}}" enctype="multipart/form-data">
+                                <form action="/dashboard/index/update/1" method="post" enctype="multipart/form-data">
+                                    @csrf
+                                    {{ method_field('PUT') }}
+                                    <input required class="form-control mt-3 px-3 py-3" name="principal_name" type="text" placeholder="Kepala Sekolah yg Baru">
                                     <div class="mt-3">
-                                        <img alt="..." class="card-img my-2 ms-auto" style="max-width: 24rem;"
-                                        id="imagePreview">
+                                        <img alt="..." class="card-img my-2 ms-auto" style="max-width: 24rem;" id="imagePreview">
                                         <p class="custom-file-label"></p>
-                                        <input required name="image" id="image-input" type="file"
-                                        class="form-control px-2 py-1" placeholder="Gambar Berita">
-                                        <p class="text-muted mt-2 mb-3 text-start">Ukuran Gambar yang Disarankan: <br> 4:2
-                                        (<i>200 x
-                                            400 px</i>)
+                                        <input required name="images" id="image-input" type="file" class="form-control px-2 py-1" placeholder="Gambar Berita">
+                                        <p class="text-muted mt-2 mb-3 text-start">Ukuran Gambar yang Disarankan: <br> 2:3
+                                            (<i>200 x 300 px</i>)
                                         </p>
                                     </div>
-                                    <input required class="form-control mt-3 px-3 py-3" name="nama" type="text"
-                                    placeholder="Principal Name">
-                                    
+
+                                    <button type="submit" class="btn btn-success px-5 py-3 fw-bold mt-3">Ubah</button>
                                 </form>
                             </div>
-                            <button type="submit" class="btn btn-success px-5 py-3 fw-bold mt-3">Ubah</button>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -107,15 +98,13 @@
                     @csrf
                     <input required class="form-control mt-3 px-3 py-3" name="nama" type="text" placeholder="Nama Guru">
 
-                    <input required class="form-control mt-3 px-3 py-3" name="description" type="text"
-                        placeholder="Materi">
+                    <input required class="form-control mt-3 px-3 py-3" name="description" type="text" placeholder="Mapel yg Diampu">
 
                     <div class="mt-3">
-                        <img alt="..." class="card-img my-2 ms-auto" style="max-width: 24rem;" id="imagePreview">
+                        <img alt="..." class="card-img my-2 ms-auto" style="max-width: 24rem;" id="imagePreview-2">
                         <p class="custom-file-label"></p>
-                        <input required name="image" id="image-input" type="file" class="form-control px-2 py-1"
-                            placeholder="Gambar Berita">
-                        <p class="text-muted mt-2 mb-3">Ukuran Gambar yang Disarankan: <br> 4:3 (<i>200 x 300 px</i>)
+                        <input required name="image" id="image-input-2" type="file" class="form-control px-2 py-1" placeholder="Gambar Berita">
+                        <p class="text-muted mt-2 mb-3">Ukuran Gambar yang Disarankan: <br> 2:3 (<i>200 x 300 px</i>)
                         </p>
                     </div>
 
@@ -162,7 +151,6 @@
         bottom: .5rem;
         text-shadow: .5px .5px 0 black;
     }
-
 </style>
 
 @endsection
@@ -177,7 +165,13 @@
             document.getElementById('imagePreview').setAttribute('src', reader.result)
         }
     })
-
+    document.getElementById('image-input-2').addEventListener('change', (ev) => {
+        let reader = new FileReader()
+        reader.readAsDataURL(ev.target.files[0])
+        reader.onload = () => {
+            document.getElementById('imagePreview-2').setAttribute('src', reader.result)
+        }
+    })
 </script>
 
 @endsection

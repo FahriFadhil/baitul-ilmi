@@ -34,6 +34,11 @@
                             Pilihan
                         </th>
                     </thead>
+                    @if($dataalumni->count()==0)
+                    <p class="mb-2">
+                        Data Belum Dimasukkan
+                    </p>
+                    @else
                     <tbody class="p-2 mt-4">
 
                         @foreach($dataalumni as $row)
@@ -55,6 +60,7 @@
                         </tr>
                         @endforeach
                     </tbody>
+                    @endif
                 </table>
                 {{ $dataalumni->appends(Request::all())->links() }}
             </div>

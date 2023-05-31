@@ -12,7 +12,13 @@
     </div>
 </div>
 
+
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6 py-4">
+    @if($data->count()==0)
+    <p class="mb-2">
+        Data Belum Dimasukkan
+    </p>
+    @else
 
     @foreach($data as $gallery)
 
@@ -34,6 +40,7 @@
 
     @endforeach
 
+    @endif
 </div>
 
 @endsection

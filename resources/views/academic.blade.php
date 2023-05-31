@@ -90,26 +90,26 @@
                     </div>
                 </div>
                 <div class="col-4">
-                    <div class="card" style="background-image: url('https://source.unsplash.com/800x400?sport');">
-                       
+                    <div class="card" style="background-image: url('https://source.unsplash.com/800x400?men sport');">
+
                     </div>
                 </div>
                 <div class="col-4">
-                    <div class="card" style="background-image: url('https://source.unsplash.com/800x401?sport');">
-                       
+                    <div class="card" style="background-image: url('https://source.unsplash.com/800x401?men sport');">
+
                     </div>
                 </div>
             </div>
             <hr>
             <div class="row">
                 <div class="col-4">
-                    <div class="card" style="background-image: url('https://source.unsplash.com/800x402?sport');">
-                       
+                    <div class="card" style="background-image: url('https://source.unsplash.com/800x402?men sport');">
+
                     </div>
                 </div>
                 <div class="col-4">
-                    <div class="card" style="background-image: url('https://source.unsplash.com/800x403?sport');">
-                       
+                    <div class="card" style="background-image: url('https://source.unsplash.com/800x403?men sport');">
+
                     </div>
                 </div>
                 <div class="col-4">
@@ -130,88 +130,38 @@
                     </div>
                 </div>
                 <div class="col-4">
-                    <div class="card" style="background-image: url('https://source.unsplash.com/800x404?sport');">
-                       
+                    <div class="card" style="background-image: url('https://source.unsplash.com/800x404?men sport');">
+
                     </div>
                 </div>
                 <div class="col-4">
-                    <div class="card" style="background-image: url('https://source.unsplash.com/800x405?sport');">
-                       
+                    <div class="card" style="background-image: url('https://source.unsplash.com/800x405?men sport');">
+
                     </div>
                 </div>
             </div>
         </section>
         <section class="teacher">
+            @if($data_guru->count()==0)
+            @else
             <h1 class="text-center pt-2">Tenaga Pengajar</h1>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-4">
+                @foreach($data_guru as $row)
                 <div class="col">
                     <div class="card">
-                            <img class="card-img-top" src="https://source.unsplash.com/800x800?teacher" alt="...">
-                            <div class="card-body text-center">
-                                <h4 class="card-title">Lorem, ipsum dolor.</h4>
-                                <div class="card-text">
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, nostrum.
-                                </div>
+                        <img class="card-img-top" src="{{asset('storage/images/'.$row->image)}}" alt="...">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">{{ $row->nama }}</h4>
+                            <div class="card-text">
+                                {{ $row->description }}
                             </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card">
-                            <img class="card-img-top" src="https://source.unsplash.com/800x801?teacher" alt="...">
-                            <div class="card-body text-center">
-                                <h4 class="card-title">Lorem, ipsum dolor.</h4>
-                                <div class="card-text">
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, nostrum.
-                                </div>
-                            </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                            <img class="card-img-top" src="https://source.unsplash.com/800x802?teacher" alt="...">
-                            <div class="card-body text-center">
-                                <h4 class="card-title">Lorem, ipsum dolor.</h4>
-                                <div class="card-text">
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, nostrum.
-                                </div>
-                            </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                            <img class="card-img-top" src="https://source.unsplash.com/800x803?teacher" alt="...">
-                            <div class="card-body text-center">
-                                <h4 class="card-title">Lorem, ipsum dolor.</h4>
-                                <div class="card-text">
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, nostrum.
-                                </div>
-                            </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                            <img class="card-img-top" src="https://source.unsplash.com/800x804?teacher" alt="...">
-                            <div class="card-body text-center">
-                                <h4 class="card-title">Lorem, ipsum dolor.</h4>
-                                <div class="card-text">
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, nostrum.
-                                </div>
-                            </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                            <img class="card-img-top" src="https://source.unsplash.com/800x805?teacher" alt="...">
-                            <div class="card-body text-center">
-                                <h4 class="card-title">Lorem, ipsum dolor.</h4>
-                                <div class="card-text">
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, nostrum.
-                                </div>
-                            </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
-            
+            @endif
+
         </section>
     </div>
 </main>

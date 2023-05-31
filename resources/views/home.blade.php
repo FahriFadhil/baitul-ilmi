@@ -60,7 +60,7 @@
         <section class="sambutan row">
             <div class="person col-lg-4">
                 <h1>Sambutan<br>Kepala Sekolah.</h1>
-                <div class="image-bg" style="background-image: url(' images/{{ $data_principal->images }} ') ;"></div>
+                <div class="image-bg" style="background-image: url(' storage/images/{{ $data_principal->images }} ') ;"></div>
                 <h4>{{ $data_principal->principal_name }}</h4>
             </div>
             <div class="content col-lg-7 ms-auto d-flex flex-column justify-content-center">

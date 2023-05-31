@@ -18,12 +18,12 @@ class GuruController extends Controller
     {
         $data = $request->all();
 
-            $destination_path = 'public/images'; //path tempat penyimpanan (storage/public/images/profile)
-            $image = $request -> file('image'); //mengambil request column image
-            $image_name = $image->getClientOriginalName(); //memberikan nama gambar yang akan disimpan di foto
-            $path = $request->file('image')->storeAs($destination_path, $image_name); //mengirimkan foto ke folder store
-            $data['image'] = $image_name; //mengirimkan ke database
-        
+        $destination_path = 'public/images'; //path tempat penyimpanan (storage/public/images/profile)
+        $image = $request->file('image'); //mengambil request column image
+        $image_name = $image->getClientOriginalName(); //memberikan nama gambar yang akan disimpan di foto
+        $path = $request->file('image')->storeAs($destination_path, $image_name); //mengirimkan foto ke folder store
+        $data['image'] = $image_name; //mengirimkan ke database
+
         Guru::create($data);
         return redirect('/dashboard');
     }
@@ -47,12 +47,13 @@ class GuruController extends Controller
         $data_principal = Principal::findOrFail($id);
         $data = $request->all();
 
-            $destination_path = 'public/images'; //path tempat penyimpanan (storage/public/images/profile)
-            $image = $request -> file('image'); //mengambil request column image
-            $image_name = $image->getClientOriginalName(); //memberikan nama gambar yang akan disimpan di foto
-            $path = $request->file('image')->storeAs($destination_path, $image_name); //mengirimkan foto ke folder store
-            $data['image'] = $image_name; //mengirimkan ke database
-        
+        dd($data_principal, $data);
+        $destination_path = 'public/images'; //path tempat penyimpanan (storage/public/images/profile)
+        $image = $request->file('images'); //mengambil request column images
+        $image_name = $image->getClientOriginalName(); //memberikan nama gambar yang akan disimpan di foto
+        $path = $request->file('images')->storeAs($destination_path, $image_name); //mengirimkan foto ke folder store
+        $data['images'] = $image; //mengirimkan nama ke database
+
         $data_principal->update($data);
         return redirect('/dashboard');
     }

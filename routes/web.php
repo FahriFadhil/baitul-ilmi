@@ -30,6 +30,10 @@ Route::group(['middleware' => 'auth'], function () {
   Route::get('/home', 'MainController@redirect_dashboard');
   Route::get('/dashboard', 'MainController@dashboard');
 
+  Route::delete('/dashboard/index/destroy/{id}', 'GuruController@destroy');
+  Route::post('/dashboard/index/store', 'GuruController@store');
+  Route::put('/dashboard/index/update/{id}', 'GuruController@update');
+
   Route::resource('/dashboard/news', 'NewsController');
   Route::resource('/dashboard/gallery', 'GalleryController');
   Route::resource('/dashboard/alumni', 'AlumniController');
@@ -54,8 +58,5 @@ Route::group(['middleware' => 'auth'], function () {
 });
 
 
-
-Route::delete('/dashboard/index/destroy/{id}', 'GuruController@destroy');
-Route::post('/dashboard/index/store', 'GuruController@store');
 
 // Route::get('/dashboard/syarat/{id}', 'SyaratPendaftaranController@edit');   

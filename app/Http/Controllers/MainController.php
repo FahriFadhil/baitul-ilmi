@@ -26,11 +26,13 @@ class MainController extends Controller
     }
     public function profile()
     {
-        return view('profile');
+        $data_principal = Principal::first();
+        return view('profile', compact('data_principal'));
     }
     public function academic()
     {
-        return view('academic');
+        $data_guru = Guru::all();
+        return view('academic', compact('data_guru'));
     }
     public function news()
     {
