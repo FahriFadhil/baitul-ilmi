@@ -13,7 +13,8 @@ class Graduation extends Seeder
     public function run()
     {
         $grad = new App\Graduation;
-        $grad->name = "Luzman Rifqi S.Kom.I";
+        $grad->principal_name = "Luzman Rifqi S.Kom.I";
         $grad->year = "2023-2024";
+        $grad->save();
     }
 }

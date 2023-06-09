@@ -8,7 +8,7 @@
     --clr-yellow-dark: #f9f400;
     --clr-yellow-light: #CCE50B;
 
-    --clr-black-main: #222;
+    --clr-black-main: #363636;
     --clr-black-dark: #000;
     --clr-black-light: #555;
 
@@ -243,13 +243,13 @@ footer {
                     padding: 1rem 2rem;
                     margin-top: 2rem;
                     color: var(--clr-white-main);
-                    background-color: var(--clr-black-main);
+                    background-color: #43c553;
                     box-shadow: .3rem .3rem 0 var(--clr-green-main);
                     text-decoration: none;
                     transition: .3s;
 
                     &:hover {
-                        box-shadow: .5rem .5rem 0 var(--clr-green-main);
+                        box-shadow: .5rem .5rem 0 var(--clr-green-dark);
                     }
                 }
             }

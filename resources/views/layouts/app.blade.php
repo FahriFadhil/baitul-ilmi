@@ -57,7 +57,7 @@
                             <a href="/academic" class="nav-link">ACADEMIC</a>
                         </li>
                         <li class="nav-item {{ Request::is('penerimaan') ? 'active' : '' }}">
-                            <a href="/penerimaan" class="nav-link">PENERIMAAN</a>
+                            <a href="/penerimaan" class="nav-link">DAFTAR PPDB</a>
                         </li>
                         <li class="nav-item {{ Request::is('news') ? 'active' : '' }}">
                             <a href="/news" class="nav-link">NEWS</a>
