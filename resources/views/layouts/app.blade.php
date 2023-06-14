@@ -37,8 +37,8 @@
         <nav class="navbar navbar-expand-lg px-4 py-2 fixed-top">
             <div class="container-fluid gap-3">
                 <a class="navbar-logo nav-link d-flex align-items-center gap-4" href="/">
-                    <img class="logo-img" src="{{ asset('icon/logo.png') }}">
-                    <div class="logo-text">SMA ISLAM TERPADU<span class="d-block"></span>BAITUL 'ILMI</div>
+                    <img class="logo-img" src="{{ asset('icon/logo.png') }}" style="background-image: linear-gradient(to bottom, red 50%, white 50%); border-radius: 4px; padding: .25rem">
+                    <div class="logo-text">SMA ISLAM TERPADU<span class="d-block mt-1">BAITUL 'ILMI</span></div>
                 </a>
 
                 <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#coll">

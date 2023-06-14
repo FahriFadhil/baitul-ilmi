@@ -9,7 +9,7 @@
                 <img src="{{asset('/images/Ujian PPDB_2.jpeg')}}" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="{{asset('/images/Ujian PAS_5.jpeg')}}"" class="d-block w-100" alt="...">
+                <img src="{{asset('/images/Ujian PAS_5.jpeg')}}" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
                 <img src="{{asset('/images/Pertemuan Wali Murid_2.jpeg')}}" class="d-block w-100" alt="...">
@@ -26,20 +26,20 @@
         <div class="carousel-text text-center">
             <h1 class="h2">
                 Pendaftaran Peserta Didik Baru
-                @if($data_status['0']->status == 1)
-                Tahun Ajaran {{ $data_status['0']->tahun_ajaran }}
+                @if($data_status->status == 1)
+                Tahun Ajaran {{ $data_status->tahun_ajaran }}
                 @else
                 @endif
             </h1>
             <div class="divider d-none d-md-block"></div>
             <p class="quote d-none d-md-block">
                 Sekolah SMA Islam Terpadu Baitul 'Ilmi membuka pendaftaran bagi <b>siswa putri SMA dan sederajat,</b>
-                @if($data_status['0']->status == 1)
-                untuk tahun ajaran {{ $data_status['0']->tahun_ajaran }}.
+                @if($data_status->status == 1)
+                untuk tahun ajaran {{ $data_status->tahun_ajaran }}.
                 @else
                 @endif
             </p>
-            @if($data_status['0']->status == 1)
+            @if($data_status->status == 1)
             <a href="" class="btn btn-success btn-lg mt-3"> Daftar Sekarang</a>
             @else
             @endif
@@ -120,7 +120,7 @@
                 @endforeach
             </div>
         </section>
-        @if($data_status['0']->status == 1)
+        @if($data_status->status == 1)
         <section class="agenda">
             <h1 class="text-center">Agenda Penerimaan Tahun Ajaran 2023/2024</h1>
             <div class="row mt-5 row-cols-1 row-cols-lg-2">

@@ -14,7 +14,7 @@
             <h4>Maaf Belum Ada Data Berita</h4>
         </div>
         @else
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 gy-4">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 gy-4 mt-4">
             @foreach($data_berita as $row)
             <div class="col p-2">
                 <a class="card border-0 shadow" href="/news/detail/{{ $row->id }}">

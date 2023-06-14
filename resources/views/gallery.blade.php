@@ -14,7 +14,7 @@
             <h4>Maaf Belum Ada Data Gallery</h4>
         </div>
         @else
-        <div class="row gy-4 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 mb-5 pb-5">
+        <div class="row gy-4 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 mb-5 mt-5 pb-5 gap-3">
             @foreach($data_gallery as $gallery)
 
             <!-- <div class="col p-2 gallery-item" data-id="{{ $gallery->id }}" style="cursor: pointer;">
@@ -26,7 +26,7 @@
                 </div>
             </div> -->
 
-            <div class="card m-0 p-0 border col-md-3 shadow cursor-pointer" role="button">
+            <div class="card m-0 p-1 border col-md-3 shadow cursor-pointer" role="button">
                 <img src="{{ asset('storage/images') }}/{{ $gallery->image }}" data-id="{{ $gallery->id }}" class="border gallery-item img-fluid" alt="Gallery">
             </div>
             <!-- Modal -->
@@ -37,7 +37,7 @@
                             <h5 class="modal-title" id="exampleModalLabel">{{ $gallery->description }}</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
+                        <div class="modal-body ">
                             <img src="{{ asset('storage/images') }}/{{ $gallery->image }}" class="modal-img img-fluid">
                         </div>
                     </div>

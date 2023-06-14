@@ -1,10 +1,20 @@
 @extends('layouts.app')
 
-
 @section('content')
 
 <main id="#page-alumni">
-    <div class="alumni container mb-5 pb-5">
+    <div class="alumni container mb-5 py-5">
+        @if($data_tahun_kelulusan->count()==0)
+
+        <div class="card mt-5 mb-5">
+            <div class="card-body text-center">
+                <h4 class="mt-2 mb-2">
+                    Belum ada Data Kelulusan Siswa
+                </h4>
+            </div>
+        </div>
+
+        @else
         <form action="/alumni" method="get">
             <div class="input-group mt-2">
                 <label class="input-group-text" for="inputGroupSelect01">Alumni</label>
@@ -31,6 +41,9 @@
             </tr>
 
         </table>
+        @if($data_alumni->count()==0)
+        Belum ada Data Siswa
+        @else
         <div class=table-responsive>
             <table class="table-alumni table table-bordered">
                 <thead class="induk m-4">
@@ -57,16 +70,13 @@
                         <td class="p-2">{{$row->name}}</td>
                         <td class="p-2">{{$row->nis}}</td>
                         <td class="p-2">{{$row->gender}}</td>
-
-
                     </tr>
                     @endforeach
                 </tbody>
             </table>
-
         </div>
-
+        @endif
+        @endif
     </div>
-
 </main>
 @endsection

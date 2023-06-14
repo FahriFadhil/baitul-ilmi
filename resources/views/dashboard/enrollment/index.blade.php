@@ -15,12 +15,12 @@
                         <h3 class="fs-4">
                             Status Pendaftaran :
                         </h3>
-                        @if($data_status['0']->status == 1)
+                        @if($data_status->status == 1)
                         <div class="row">
                             <h2 class="col pt-2 text-success">
                                 Dibuka
                             </h2>
-                            <p class="col mt-auto">Tahun Ajaran : {{$data_status['0']->tahun_ajaran}}</p>
+                            <p class="col mt-auto">Tahun Ajaran : {{$data_status->tahun_ajaran}}</p>
                         </div>
                         @else
                         <h2 class="pt-2 text-danger">
@@ -34,7 +34,7 @@
                     <a href="{{ route('status.edit', 1) }}" class="btn btn-secondary d-flex align-items-center gap-2 py-2 px-3">
                         <i class="bx bx-edit"></i>
                         <p>
-                            @if($data_status['0']->status == 1)
+                            @if($data_status->status == 1)
                             Tutup
                             @else
                             Buka
@@ -116,7 +116,7 @@
             </form>
         </div>
     </div>
-    @if($data_status['0']->status == 1)
+    @if($data_status->status == 1)
     <div class="col-lg-6 ps-lg-3 mb-4">
         <div class="card p-4 shadow p-3 bg-body-tertiary rounded">
             <h3 class="fs-4 justify-content-center d-flex mt-2">Agenda Pendaftaran</h3>

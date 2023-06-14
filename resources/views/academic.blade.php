@@ -90,12 +90,12 @@
                     </div>
                 </div>
                 <div class="col-4">
-                    <div class="card" style="background-image: url('https://source.unsplash.com/800x400?men sport');">
+                    <div class="card" style="background-image: url('{{asset('/images/photo-micro_teaching-1.jpeg')}}') ;">
 
                     </div>
                 </div>
                 <div class="col-4">
-                    <div class="card" style="background-image: url('https://source.unsplash.com/800x401?men sport');">
+                    <div class="card" style="background-image: url('{{asset('/images/photo-micro_teaching-2.jpeg')}}') ;">
 
                     </div>
                 </div>
@@ -103,12 +103,12 @@
             <hr>
             <div class="row">
                 <div class="col-4">
-                    <div class="card" style="background-image: url('https://source.unsplash.com/800x402?men sport');">
+                    <div class="card" style="background-image: url('{{asset('/images/photo-it-1.jpeg')}}') ;">
 
                     </div>
                 </div>
                 <div class="col-4">
-                    <div class="card" style="background-image: url('https://source.unsplash.com/800x403?men sport');">
+                    <div class="card" style="background-image:  url('{{asset('/images/photo-it-2.jpeg')}}') ;">
 
                     </div>
                 </div>
@@ -130,12 +130,12 @@
                     </div>
                 </div>
                 <div class="col-4">
-                    <div class="card" style="background-image: url('https://source.unsplash.com/800x404?men sport');">
+                    <div class="card" style="background-image: url('{{asset('/images/photo-home_management-1.jpeg')}}') ;">
 
                     </div>
                 </div>
                 <div class="col-4">
-                    <div class="card" style="background-image: url('https://source.unsplash.com/800x405?men sport');">
+                    <div class="card" style="background-image: url('{{asset('/images/photo-home_management-2.jpeg')}}') ;">
 
                     </div>
                 </div>

@@ -51,9 +51,7 @@ Route::group(['middleware' => 'auth'], function () {
   Route::delete('/dashboard/enrollment/agenda/destroy/{id}', 'AgendaPendaftaranController@destroy');
 
   Route::resource('/dashboard/enrollment/biaya', 'BiayaPendaftaranController');
-
   Route::resource('/dashboard/enrollment/alur', 'AlurPendaftaranController');
-
   Route::resource('/dashboard/enrollment/status', 'StatusPendaftaranController');
 });
 
