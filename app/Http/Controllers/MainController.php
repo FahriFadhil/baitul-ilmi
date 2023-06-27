@@ -13,6 +13,7 @@ use App\AgendaPendaftaran;
 use App\Graduation;
 use App\StatusPendaftaran;
 use App\Guru;
+use App\Ekskul;
 use App\Principal;
 
 class MainController extends Controller
@@ -69,9 +70,8 @@ class MainController extends Controller
     }
     public function dashboard()
     {
-        $data_principal = Principal::first();
-        $data_guru = Guru::all();
-        return view('dashboard.index', compact('data_guru', 'data_principal'));
+        $data = Ekskul::all();
+        return view('dashboard.index', compact('data'));
     }
     
     public function pendaftaran()
@@ -91,5 +91,11 @@ class MainController extends Controller
     }
     public function redirect_dashboard() {
         return redirect('/dashboard');
+    }
+    public function guru()
+    {   
+        $data_principal = Principal::first();
+        $data_guru = Guru::all();
+        return view('dashboard.guru.index', compact('data_guru', 'data_principal'));
     }
 }

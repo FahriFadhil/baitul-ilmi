@@ -38,16 +38,16 @@
         @if( $data_status->status == 1 )
         <section class="penerimaan row">
             <div class="content col-lg-6">
-                <h1>Dibuka Pendaftaran Peserta Didik Baru Tahun Ajaran {{ $data_status['0']->tahun_ajaran }}.</h1>
+                <h1>Dibuka Pendaftaran Peserta Didik Baru Tahun Ajaran {{ $data_status->tahun_ajaran }}.</h1>
                 <br>
                 <p>
-                    Sekolah SMA Islam Terpadu Baitul 'Ilmi sedang membuka pendaftaran bagi <b>siswa putri SMA dan sederajat</b> untuk tahun ajaran <b>{{ $data_status['0']->tahun_ajaran }}.</b>
+                    Sekolah SMA Islam Terpadu Baitul 'Ilmi sedang membuka pendaftaran bagi <b>siswa putri SMA dan sederajat</b> untuk tahun ajaran <b>{{ $data_status->tahun_ajaran }}.</b>
                     <br> <br>
                     Kami mengajak para wali santri sekalian untuk bergabung menjadi keluarga besar Baitul 'Ilmi demi menuntun para siswi untuk menjadi seorang yang cerdas, berkarakter, dan berakhlak.
                 </p>
                 <br>
                 <a href="/penerimaan" class="button-penerimaan">
-                    Daftar Sekarang
+                    <strong>Daftar Sekarang</strong>
                 </a>
             </div>
             <div class="image col-lg-6 ms-auto">

@@ -40,7 +40,7 @@
                 @endif
             </p>
             @if($data_status->status == 1)
-            <a href="" class="btn btn-success btn-lg mt-3"> Daftar Sekarang</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdgAgHCPgcatsIlUES3mXKN4xZmJsQgGh7Q24tzu88pHV_XWw/viewform" class="btn btn-success btn-lg mt-3"> Daftar Sekarang</a>
             @else
             @endif
         </div>

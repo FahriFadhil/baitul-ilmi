@@ -81,6 +81,7 @@
         </section>
         <section class="ekstrakurikuler">
             <h1 class="text-center pb-4">Kegiatan Ekstrakulikuler</h1>
+            <hr>
             <div class="row">
                 <div class="col-4">
                     <div class="card title">
@@ -121,25 +122,6 @@
                 </div>
             </div>
             <hr>
-            <div class="row">
-                <div class="col-4">
-                    <div class="card title">
-                        <h4 class="text-center">
-                            Life Skill & Home Management
-                        </h4>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="card" style="background-image: url('{{asset('/images/photo-home_management-1.jpeg')}}') ;">
-
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="card" style="background-image: url('{{asset('/images/photo-home_management-2.jpeg')}}') ;">
-
-                    </div>
-                </div>
-            </div>
         </section>
         <section class="teacher">
             @if($data_guru->count()==0)

@@ -19,6 +19,7 @@ class CreateAlumnisTable extends Migration
             $table->string('name');
             $table->string('nis');
             $table->enum('gender', ['Laki-Laki', 'Perempuan']);
+            $table->string('aktivitas');
             $table->timestamps();
 
             $table->foreign('graduation_id')->references('id')->on('graduations')->onDelete('cascade');

@@ -64,6 +64,13 @@
                 </a>
                 <span class="tooltip">Alumni</span>
             </li>
+            <li>
+                <a href="/dashboard/guru">
+                    <i class='bx bx-user'></i>
+                    <span class="links_name">Guru</span>
+                </a>
+                <span class="tooltip">Guru</span>
+            </li>
             <li class="profile">
                 <div class="profile-details">
                     <div class="person">
