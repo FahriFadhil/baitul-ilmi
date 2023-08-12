@@ -28,6 +28,9 @@
                             Nama Siswa
                         </th>
                         <th style="width: 5%;" class="text-center p-3">
+                            Aktivitas
+                        </th>
+                        <th style="width: 5%;" class="text-center p-3">
                             Jenis kelamin
                         </th>
                         <th style="width: 5%;" class="text-center p-3">
@@ -48,6 +51,7 @@
                             </td>
                             <td class="p-2">{{$row->nis}}</td>
                             <td class="p-2">{{$row->name}}</td>
+                            <td class="p-2">{{ $row->aktivitas }}</td>
                             <td class="p-2">{{$row->gender}}</td>
                             <form action="/dashboard/alumni/destroy/{{$row->id}}" method="post">
                                 @csrf

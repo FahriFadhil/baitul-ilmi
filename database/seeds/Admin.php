@@ -15,7 +15,7 @@ class Admin extends Seeder
         User::create([
             'name' => 'Admin',
             'email' => 'smabi.tamara@gmail.com',
-            'password' => bcrypt(env('ADMIN_PASSWORD')),
+            'password' => bcrypt('sekolahbaitulilmi'),
         ]);
     }
 }

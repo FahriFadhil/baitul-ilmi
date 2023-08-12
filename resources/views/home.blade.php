@@ -47,7 +47,7 @@
                 </p>
                 <br>
                 <a href="/penerimaan" class="button-penerimaan">
-                    Daftar Sekarang
+                    <strong>Daftar Sekarang</strong>
                 </a>
             </div>
             <div class="image col-lg-6 ms-auto">

@@ -32,6 +32,7 @@
                 @endforeach
             </select>
 
+            <input required class="form-control mt-3 px-3 py-2" name="name" value="{{ $dataalumni->aktivitas }}" type="text" placeholder="aktivitas">
 
             <select name="gender" class="form-control mt-3 px-3 py-2" value="{{ $dataalumni->gender }}" type="text" placeholder="Jenis Kelamin">
                 <option value="Perempuan">Perempuan</option>
