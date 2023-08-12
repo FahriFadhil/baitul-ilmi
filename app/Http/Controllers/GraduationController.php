@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Graduation;
+use App\Principal;
 use Illuminate\Http\Request;
 
 class GraduationController extends Controller

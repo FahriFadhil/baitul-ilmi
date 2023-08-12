@@ -13,6 +13,11 @@
 </div>
 
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xl-5 py-4">
+    @if($data->count()==0)
+    <p class="mb-2">
+        Data Belum Dimasukkan
+    </p>
+    @else
 
     @foreach($data as $news)
 
@@ -36,10 +41,9 @@
             </div>
         </a>
     </div>
-
-
     @endforeach
-
+    
+    @endif
 </div>
 
 @endsection

@@ -20,9 +20,9 @@
             <input required class="form-control mt-3 px-3 py-2" name="name" type="text" placeholder="Nama Siswa">
 
 
-            <input required class="form-control mt-3 px-3 py-2" name="nis" type="number" placeholder="No induk" max="9999999999">
+            <input required class="form-control mt-3 px-3 py-2" name="nis" type="number" placeholder="No induk siswa" max="9999999999">
 
-
+            <input required class="form-control mt-3 px-3 py-2" name="aktivitas" type="text" placeholder="aktivitas">
 
             <select name="graduation_id" class="form-control mt-3 px-3 py-2" type="text" placeholder="Tahun Kelulusan">
                 @foreach($datakelulusan as $row)

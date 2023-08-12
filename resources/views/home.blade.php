@@ -6,13 +6,13 @@
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="https://source.unsplash.com/1200x800?school" class="d-block w-100" alt="...">
+                <img src="{{asset('images/Masjid2.jpeg')}}" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="https://source.unsplash.com/1200x801?school" class="d-block w-100" alt="...">
+                <img src="{{asset('/images/WhatsApp Image 2022-01-21 at 08.13.06.jpeg')}}" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="https://source.unsplash.com/1200x802?school" class="d-block w-100" alt="...">
+                <img src="{{asset('/images/Masjid1.jpeg')}}" class="d-block w-100" alt="...">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -34,30 +34,34 @@
     </div>
 
     <div class="container">
+
+        @if( $data_status->status == 1 )
         <section class="penerimaan row">
             <div class="content col-lg-6">
-                <h1>Dibuka Pendaftaran Peserta Didik Baru Tahun Ajaran 2023/2024.</h1>
+                <h1>Dibuka Pendaftaran Peserta Didik Baru Tahun Ajaran {{ $data_status->tahun_ajaran }}.</h1>
                 <br>
                 <p>
-                    Sekolah SMA Islam Terpadu Baitul 'Ilmi sedang membuka pendaftaran bagi <b>siswa putri SMA dan sederajat</b> untuk tahun ajaran <b>2023 / 2023.</b>
+                    Sekolah SMA Islam Terpadu Baitul 'Ilmi sedang membuka pendaftaran bagi <b>siswa putri SMA dan sederajat</b> untuk tahun ajaran <b>{{ $data_status->tahun_ajaran }}.</b>
                     <br> <br>
                     Kami mengajak para wali santri sekalian untuk bergabung menjadi keluarga besar Baitul 'Ilmi demi menuntun para siswi untuk menjadi seorang yang cerdas, berkarakter, dan berakhlak.
                 </p>
                 <br>
                 <a href="/penerimaan" class="button-penerimaan">
-                    Daftar Sekarang
+                    <strong>Daftar Sekarang</strong>
                 </a>
             </div>
             <div class="image col-lg-6 ms-auto">
                 <div class="image-bg" style="background-image: url(' https://source.unsplash.com/600x600?enrollment ') ;"></div>
             </div>
         </section>
+        @else
+        @endif
 
         <section class="sambutan row">
             <div class="person col-lg-4">
                 <h1>Sambutan<br>Kepala Sekolah.</h1>
-                <div class="image-bg" style="background-image: url(' https://source.unsplash.com/600x600?principal man ') ;"></div>
-                <h4>Luzman Rifqi S.pd</h4>
+                <div class="image-bg" style="background-image: url(' storage/images/{{ $data_principal->images }} ') ;"></div>
+                <h4>{{ $data_principal->principal_name }}</h4>
             </div>
             <div class="content col-lg-7 ms-auto d-flex flex-column justify-content-center">
                 <div class="card">
@@ -182,6 +186,11 @@
                 <h1>Berita Terbaru Baitul 'Ilmi</h1>
                 <a href="/news">Semua Berita &raquo;</a>
             </div>
+            @if( $data_berita->count() == 0 )
+            <div class="my-5">
+                <h4>Maaf Belum Ada Berita Terbaru</h4>
+            </div>
+            @else
             <div class="row my-5 row-cols-1 row-cols-md-3 row-cols-lg-3 row-cols-xl-4 gap-2">
                 @foreach($data_berita as $news)
                 <a class="card border pt-2" href="{{route('news.show', $news->id)}}">
@@ -204,6 +213,7 @@
                 </a>
                 @endforeach
             </div>
+            @endif
     </div>
     </section>
     </div>

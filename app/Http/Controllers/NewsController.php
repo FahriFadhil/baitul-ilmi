@@ -51,18 +51,6 @@ class NewsController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  \App\News  $news
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        $news = News::findOrFail($id);
-        return view('news.detail', compact('news'));
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  \App\News  $news
