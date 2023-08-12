@@ -8,6 +8,13 @@ use App\Principal;
 
 class GuruController extends Controller
 {
+    public function index()
+    {
+        $data_principal = Principal::first();
+        $data_guru = Guru::all();
+        return view('dashboard.guru.index', compact('data_guru', 'data_principal'));
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -25,7 +32,7 @@ class GuruController extends Controller
         $data['image'] = $image_name; //mengirimkan ke database
 
         Guru::create($data);
-        return redirect('/dashboard');
+        return back();
     }
 
 
@@ -54,6 +61,6 @@ class GuruController extends Controller
         $data['images'] = $image_name; //mengirimkan nama ke database
 
         $data_principal->update($data);
-        return redirect('/dashboard');
+        return back();
     }
 }
