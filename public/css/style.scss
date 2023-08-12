@@ -243,8 +243,8 @@ footer {
                     padding: 1rem 2rem;
                     margin-top: 2rem;
                     color: var(--clr-white-main);
-                    background-color: #43c553;
-                    box-shadow: .3rem .3rem 0 var(--clr-green-main);
+                    background-color: var(--clr-green-main);
+                    box-shadow: .3rem .3rem 0 #43c553;
                     text-decoration: none;
                     transition: .3s;
 

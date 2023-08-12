@@ -123,6 +123,14 @@
                             @smabi_tambun
                         </p>
                     </a>
+                    <a class="contact-item" href="https://www.youtube.com/@smabi_tambun">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                            <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" />
+                        </svg>
+                        <p>
+                            SMAIT Baitul 'Ilmi Tambun Utara
+                        </p>
+                    </a>
                 </div>
                 <div class="map">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126918.07854481862!2d107.0104574438744!3d-6.238676647331844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698958fdb1a681%3A0xb737581e2c64f1ee!2sSMA%20IT%20BAITUL%20ILMI!5e0!3m2!1sid!2sid!4v1676383237102!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

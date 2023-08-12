@@ -8,111 +8,56 @@
 
 <div class="py-4">
 
-    <div class="row gap-5">
-        <div class="col-lg-7 my-3">
-            <div class="d-flex justify-content-between align-items-center">
-                <h3>Overview Guru</h3>
-                <!-- <a href="/dashboard/news">Lihat Selengkapnya &raquo;</a> -->
-            </div>
-            <div class="card border-0 p-4 my-3">
-                <div class="col p-2">
-                    <table class="table-alumni table table-bordered container">
-                        <thead class="induk">
-                            <th class="py-3" style="width:2%; text-align:center;">
-                                <strong>Foto</strong>
-                            </th>
-                            <th class="py-3" style="width: 5%; text-align:center;">
-                                <strong>Nama Guru</strong>
-                            </th>
-                            <th class="py-3" style="width:4%; text-align:center;">
-                                <strong>Mapel</strong>
-                            </th>
-                            <th class="py-3" style="width:3%; text-align:center;">
-                                <strong>Action</strong>
-                            </th>
-                        </thead>
-                        <tbody>
-                            @foreach($data_guru as $row)
-                            <tr>
-                                <td class="py-4 text-center px-5">
-                                    <!-- <p style="background-image: url(storage/images/{{ $row->image }});"></p> -->
-                                    <img src="{{asset('storage/images/' .$row->image)}}" alt="" class="w-50">
-                                </td>
-                                <td class="py-4 text-center">{{$row->nama}}</td>
-                                <td class="py-4 text-center">{{$row->description}}</td>
-                                <form action="/dashboard/index/destroy/{{$row->id}}" method="post">
-                                    @csrf
-                                    {{method_field('DELETE')}}
-                                    <td class="p-2 align-items-center justify-content-center d-flex mt-2">
-                                        <button type="sumbit" class="bx bx-trash btn btn-danger px-4 py-2"></button>
-                                    </td>
-                                </form>
-                            </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="d-flex justify-content-between align-items-center mt-2">
-                <h3>Menambah Guru</h3>
-            </div>
-            <div class="card border p-3 my-4">
-                <form method="post" action="/dashboard/index/store" enctype="multipart/form-data">
-                    @csrf
-                    <input required class="form-control mt-3 px-3 py-3" name="nama" type="text" placeholder="Nama Guru">
-
-                    <input required class="form-control mt-3 px-3 py-3" name="description" type="text" placeholder="Mapel yg Diampu">
-
-                    <div class="mt-3">
-                        <img alt="..." class="card-img my-2 ms-auto" style="max-width: 24rem;" id="imagePreview-2">
-                        <p class="custom-file-label"></p>
-                        <input required name="image" id="image-input-2" type="file" class="form-control px-2 py-1" placeholder="Gambar Berita">
-                        <p class="text-muted mt-2 mb-3">Ukuran Gambar yang Disarankan: <br> 2:3 (<i>200 x 300 px</i>)
-                        </p>
-                    </div>
-
-                    <button type="submit" class="btn btn-success px-5 py-3 fw-bold">Tambah Guru</button>
-                </form>
-            </div>
-        </div>
-        <div class="row">
-            <div class="d-flex justify-content-between align-items-center mt-4">
-                <h3>Profil Kepala Sekolah</h3>
-            </div>
-            <div class="col-lg-4">
-                <div class="my-3">
-                    <div class="card border p-3 my-4">
-
-                        <img class="card-img-top" src="{{asset('storage/images/' .$data_principal->images)}}" alt="...">
-                        <h3 class="mt-3 bg-success rounded-3 py-3 px-3 fs-5 text-light">{{$data_principal->principal_name}}</h3>
-                        <hr class="mt-3" style="border-top: 3px solid black;">
-                        <h3 class="fs-5 fw-bold mx-1 mt-3">Edit kepala Sekolah</h3>
-                        <p class="mx-1 my-2">Isi form di bawah untuk mengganti foto dan nama kepala sekolah</p>
-                        <div class="card-body text-center">
-                            <form action="/dashboard/index/update/1" method="post" enctype="multipart/form-data">
-                                @csrf
-                                {{ method_field('PUT') }}
-                                <input required class="form-control mt-3 px-3 py-3" name="principal_name" type="text" placeholder="Kepala Sekolah yg Baru">
-                                <div class="mt-3">
-                                    <img alt="..." class="card-img my-2 ms-auto" style="max-width: 24rem;" id="imagePreview">
-                                    <p class="custom-file-label"></p>
-                                    <input required name="images" id="image-input" type="file" class="form-control px-2 py-1" placeholder="Gambar Berita">
-                                    <p class="text-muted mt-2 mb-3 text-start">Ukuran Gambar yang Disarankan: <br> 2:3
-                                        (<i>200 x 300 px</i>)
-                                    </p>
-                                </div>
-
-                                <button type="submit" class="btn btn-success px-5 py-3 fw-bold mt-3">Ubah</button>
-                            </form>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
+    @if($data_gambar_home->count()==0)
+    @else
+    <div class="d-flex justify-content-between align-items-center pe-4">
+        <h3>Home Image Sliders</h3>
+        <p class="text-success">Saran ukuran 16:9 (1600px : 900px)</p>
     </div>
+    <div class="mt-4">
+        <form action="/dashboard/header/home/update" method="post" enctype="multipart/form-data" class="d-flex flex-column" style="border: #0c9b4bbf 1px solid; border-radius: .25rem;">
+            @csrf
+            {{ method_field('PUT') }}
+            <div class="row">
+                @foreach($data_gambar_home as $row)
+                <div class="col-lg-4 p-4" style="aspect-ratio: 16/9; position: relative;" onmouseover="showChildElement(this)" onmouseout="hideChildElement(this)">
+                    <div style="background-position: center; background-size: cover; background-image: url('{{ $row->image }}'); position: absolute; inset: 1rem;"></div>
+                    <div id="edit" class="d-flex justify-content-center align-items-center" style="position: absolute; inset: 1rem; visibility: hidden;">
+                        <i class="bx bx-edit" style="font-size: 4rem; color: #0c9b4bbf;"></i>
+                    </div>
+                    <input class="image-input" name="image{{ $row->id }}" type="file" style="position: absolute; inset: 1rem; cursor: pointer; visibility: hidden;">
+                </div>
+                @endforeach
+            </div>
+            <button type="submit" class="btn btn-success px-3 py-2">Ubah</button>
+        </form>
+    </div>
+    @endif
+    @if($data_gambar_pendaftaran->count()==0)
+    @else
+    <div class="d-flex justify-content-between align-items-center pe-4 mt-5">
+        <h3>Pendaftaran Image Sliders</h3>
+        <p class="text-success">Saran ukuran 16:9 (1600px : 900px)</p>
+    </div>
+    <div class="mt-4">
+        <form action="/dashboard/header/pendaftaran/update" method="post" enctype="multipart/form-data" class="d-flex flex-column" style="border: #0c9b4bbf 1px solid; border-radius: .25rem;">
+            @csrf
+            {{ method_field('PUT') }}
+            <div class="row">
+                @foreach($data_gambar_pendaftaran as $row)
+                <div class="col-lg-4 p-4" style="aspect-ratio: 16/9; position: relative;" onmouseover="showChildElement(this)" onmouseout="hideChildElement(this)">
+                    <div style="background-position: center; background-size: cover; background-image: url('{{ $row->image }}'); position: absolute; inset: 1rem;"></div>
+                    <div id="edit" class="d-flex justify-content-center align-items-center" style="position: absolute; inset: 1rem; visibility: hidden;">
+                        <i class="bx bx-edit" style="font-size: 4rem; color: #0c9b4bbf;"></i>
+                    </div>
+                    <input class="image-input" name="image{{ $row->id }}" type="file" style="position: absolute; inset: 1rem; cursor: pointer; visibility: hidden;">
+                </div>
+                @endforeach
+            </div>
+            <button type="submit" class="btn btn-success px-3 py-2">Ubah</button>
+        </form>
+    </div>
+    @endif
 </div>
 
 @endsection
@@ -157,20 +102,29 @@
 @section('js')
 
 <script>
-    document.getElementById('image-input').addEventListener('change', (ev) => {
-        let reader = new FileReader()
-        reader.readAsDataURL(ev.target.files[0])
-        reader.onload = () => {
-            document.getElementById('imagePreview').setAttribute('src', reader.result)
-        }
-    })
-    document.getElementById('image-input-2').addEventListener('change', (ev) => {
-        let reader = new FileReader()
-        reader.readAsDataURL(ev.target.files[0])
-        reader.onload = () => {
-            document.getElementById('imagePreview-2').setAttribute('src', reader.result)
-        }
-    })
+    document.querySelectorAll('.image-input').forEach(input =>
+        input.addEventListener('change', (ev) => {
+            console.log(ev.target);
+            let reader = new FileReader()
+            reader.readAsDataURL(ev.target.files[0])
+            reader.onload = () => {
+                console.log(ev.target.previousElementSibling.previousElementSibling);
+                ev.target.previousElementSibling.previousElementSibling.style.backgroundImage = `url('${reader.result}')`
+            }
+        })
+    )
+
+    function showChildElement(parentElement) {
+        parentElement.querySelector('#edit').style.visibility = 'visible';
+        parentElement.firstElementChild.style.boxShadow = '0 1px 4px 2px black'
+        parentElement.lastElementChild.style.visibility = 'visible'
+    }
+
+    function hideChildElement(parentElement) {
+        parentElement.querySelector('#edit').style.visibility = 'hidden';
+        parentElement.firstElementChild.style.boxShadow = 'none'
+        parentElement.lastElementChild.style.visibility = 'hidden'
+    }
 </script>
 
 @endsection

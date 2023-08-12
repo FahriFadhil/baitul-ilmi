@@ -5,15 +5,11 @@
 <main id="home-page">
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
+            @foreach($data_home_header as $row)
             <div class="carousel-item active">
-                <img src="{{asset('images/Masjid2.jpeg')}}" class="d-block w-100" alt="...">
+                <img src="{{ $row->image }}" class="d-block w-100" alt="...">
             </div>
-            <div class="carousel-item">
-                <img src="{{asset('/images/WhatsApp Image 2022-01-21 at 08.13.06.jpeg')}}" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="{{asset('/images/Masjid1.jpeg')}}" class="d-block w-100" alt="...">
-            </div>
+            @endforeach
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -51,7 +47,11 @@
                 </a>
             </div>
             <div class="image col-lg-6 ms-auto">
-                <div class="image-bg" style="background-image: url(' https://source.unsplash.com/600x600?enrollment ') ;"></div>
+                @if ($data_image_pendaftaran == null)
+                <div class="image-bg" style="background-image: url('https://source.unsplash.com/600x600?enrollment') ;"></div>
+                @else 
+                <div class="image-bg" style="background-image: url('{{ $data_image_pendaftaran->image }}') ;"></div>
+                @endif
             </div>
         </section>
         @else
