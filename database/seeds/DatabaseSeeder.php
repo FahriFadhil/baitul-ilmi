@@ -20,5 +20,7 @@ class DatabaseSeeder extends Seeder
         $this->call(Graduation::class);
         $this->call(Principal::class);
         $this->call(Admin::class);
+        $this->call(HomeHeader::class);
+        $this->call(PendaftaranHeader::class);
     }
 }

@@ -55,6 +55,8 @@ Route::group(['middleware' => 'auth'], function () {
   Route::resource('/dashboard/enrollment/alur', 'AlurPendaftaranController');
   Route::resource('/dashboard/enrollment/status', 'StatusPendaftaranController');
 
+  Route::put('/dashboard/header/home/update', 'HeaderController@home');
+  Route::put('/dashboard/header/pendaftaran/update', 'HeaderController@pendaftaran');
   Route::resource('/dashboard/guru', GuruController::class);
 });
 

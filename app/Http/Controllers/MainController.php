@@ -13,6 +13,8 @@ use App\AgendaPendaftaran;
 use App\Graduation;
 use App\StatusPendaftaran;
 use App\Guru;
+use App\HomeHeader;
+use App\PendaftaranHeader;
 use App\Ekskul;
 use App\Principal;
 
@@ -23,7 +25,9 @@ class MainController extends Controller
         $data_berita = News::all();
         $data_status = StatusPendaftaran::first();
         $data_principal = Principal::first();
-        return view('home', compact('data_berita', 'data_status', 'data_principal'));
+        $data_home_header = HomeHeader::all();
+        $data_image_pendaftaran = PendaftaranHeader::first();
+        return view('home', compact('data_berita', 'data_status', 'data_principal', 'data_home_header', 'data_image_pendaftaran'));
     }
     public function profile()
     {
@@ -48,7 +52,8 @@ class MainController extends Controller
         $data_agenda = AgendaPendaftaran::all();
         $data_biaya = BiayaPendaftaran::all();
         $data_alur = AlurPendaftaran::all();
-        return view('enrollment', compact('data_syarat', 'data_agenda', 'data_biaya', 'data_alur', 'data_status'));
+        $data_pendaftaran_header = PendaftaranHeader::all();
+        return view('enrollment', compact('data_syarat', 'data_agenda', 'data_biaya', 'data_alur', 'data_status', 'data_pendaftaran_header'));
     }
     public function gallery()
     {
@@ -71,8 +76,10 @@ class MainController extends Controller
     }
     public function dashboard()
     {
+        $data_gambar_home = HomeHeader::all();
+        $data_gambar_pendaftaran = PendaftaranHeader::all();
         $data = Ekskul::all();
-        return view('dashboard.index', compact('data'));
+        return view('dashboard.index', compact('data_gambar_home', 'data_gambar_pendaftaran', 'data'));
     }
     
     public function pendaftaran()

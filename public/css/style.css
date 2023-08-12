@@ -195,8 +195,8 @@ footer .copyright {
   padding: 1rem 2rem;
   margin-top: 2rem;
   color: var(--clr-white-main);
-  background-color: #43c553;
-  box-shadow: 0.3rem 0.3rem 0 var(--clr-green-main);
+  background-color: var(--clr-green-main);
+  box-shadow: 0.3rem 0.3rem 0 #43c553;
   text-decoration: none;
   transition: 0.3s;
 }
