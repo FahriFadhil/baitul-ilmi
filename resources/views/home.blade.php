@@ -242,27 +242,44 @@
                     nilai-nilai keislaman, hafalan Al-Qur'an dan penanaman akhlak Islam, bimbingan dan pengetahuan
                     sehingga siswa memiliki kemampuan hard skill dan keahlian soft skill.</p>
             </div>
-    
 
-        <section class="youtube-profile">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-8">
-                        <div class="card">
 
-                            <div class="card-body">
-                                <div class="embed-responsive embed-responsive-16by9">
-                                    <iframe class="embed-responsive-item" src="" allowfullscreen></iframe>
+            <section class="youtube-profile">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe class="embed-responsive-item"
+                                            src="https://www.youtube.com/watch?v=H2-Mv4VCM7E&ab_channel=IbrahimKhusairi"
+                                            allowfullscreen></iframe>
+                                        <div class="swiper-slide">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
-
-
     </div>
 </main>
+
+
+@endsection
+@section('js')
+
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: "auto",
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+
+</script>
 
 @endsection
