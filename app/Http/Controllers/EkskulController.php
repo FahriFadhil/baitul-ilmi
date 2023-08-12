@@ -33,14 +33,18 @@ class EkskulController extends Controller
     {
         $data = $request->all();
 
-            $destination_path = 'public/image';
+        if ($request->hasFile('photo')) {
+            $destination_path = 'public/images';
             $image = $request->file('photo');
             $name = $image->getClientOriginalName();
             $request->file('photo')->storeAs($destination_path, $name);
             $data['photo'] = $name;
+        };
         
         Ekskul::create($data);
         return redirect('/dashboard');
+     
+        
     }
 
     /**
@@ -75,20 +79,17 @@ class EkskulController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data = $request->all(); // Mengambil semua data yang dikirimkan dalam permintaan HTTP dan menyimpannya dalam variabel
-        $ekskul = Ekskul::find($id);
-        if($request->hasFile('photo'))
-        {
-            if($ekskul->photo)
-        {
-          Storage::delete('public/images/'. $ekskul->photo);  
-        }
+        $ekskul = Ekskul::findOrFail($id);
+        $data = $request->all();
+
+        if ($request->hasFile('photo')) {
             $destination_path = 'public/images';
             $image = $request->file('photo');
             $name = $image->getClientOriginalName();
-            $path = $request->file('photo')->storeAs($destination_path, $name);
+            $request->file('photo')->storeAs($destination_path, $name);
             $data['photo'] = $name;
-        }
+        };
+
         $ekskul->update($data);
         return redirect('/dashboard');
     }

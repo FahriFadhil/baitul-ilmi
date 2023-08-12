@@ -14,12 +14,12 @@
                 <form action="/dashboard/index/update/{{$ekskul->id}}" enctype="multipart/form-data" method="post">
                     @csrf
                     {{ method_field ('PUT') }}
-                    <div class="p-3">
+                    <div class="p-4">
                         <p class="fs-3 fw-bold">Edit</p>
                         <div class="col">
                             <div class="col-md-6">
-                                <img src="/storage/image/{{$ekskul->photo}}" alt="" class="card-img img-crop" id="imagePreview">
-                                <h5 class="mt-2 mb-2">Klik Untuk Menambahkan Gambar &darr;</h5>
+                                <img src="/storage/image/{{$ekskul->photo}}" alt="" class="card-img img-crop mt-3" id="imagePreview">
+                                <h5 class="mt-4 mb-2">Klik Untuk Menambahkan Gambar &darr;</h5>
                                 <input class="form-control py-1 px-2" type="file" name="photo" id="image-input">
                                 <p class="text-muted mt-2">Ukuran Gambar yang Disarankan: <br> 1:2 (<i>100 x 200 px</i>)
                                 </p>

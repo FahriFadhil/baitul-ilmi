@@ -33,7 +33,8 @@ class MainController extends Controller
     public function academic()
     {
         $data_guru = Guru::all();
-        return view('academic', compact('data_guru'));
+        $data_ekskul = Ekskul::all();
+        return view('academic', compact('data_guru', 'data_ekskul'));
     }
     public function news()
     {
