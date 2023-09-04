@@ -17,6 +17,7 @@ use App\HomeHeader;
 use App\PendaftaranHeader;
 use App\Ekskul;
 use App\Principal;
+use App\Video;
 
 class MainController extends Controller
 {
@@ -27,7 +28,8 @@ class MainController extends Controller
         $data_principal = Principal::first();
         $data_home_header = HomeHeader::all();
         $data_image_pendaftaran = PendaftaranHeader::first();
-        return view('home', compact('data_berita', 'data_status', 'data_principal', 'data_home_header', 'data_image_pendaftaran'));
+        $data_video = Video::first();
+        return view('home', compact('data_berita', 'data_status', 'data_principal', 'data_home_header', 'data_image_pendaftaran', 'data_video'));
     }
     public function profile()
     {
@@ -79,7 +81,8 @@ class MainController extends Controller
         $data_gambar_home = HomeHeader::all();
         $data_gambar_pendaftaran = PendaftaranHeader::all();
         $data = Ekskul::all();
-        return view('dashboard.index', compact('data_gambar_home', 'data_gambar_pendaftaran', 'data'));
+        $data_video = Video::first();
+        return view('dashboard.index', compact('data_gambar_home', 'data_gambar_pendaftaran', 'data', 'data_video'));
     }
     
     public function pendaftaran()

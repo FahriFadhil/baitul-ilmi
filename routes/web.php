@@ -61,6 +61,8 @@ Route::group(['middleware' => 'auth'], function () {
   Route::post('/dashboard/guru/store', 'GuruController@store');
   Route::delete('/dashboard/guru/destroy/{id}', 'GuruController@destroy');
   Route::put('/dashboard/guru/update/{id}', 'GuruController@update');
+
+  Route::put('/dashboard/index/video/update/{id}', 'VideoController@update');
 });
 
 
