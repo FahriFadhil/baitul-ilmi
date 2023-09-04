@@ -244,7 +244,7 @@
                         <div class="col-md-8">
                             <div class="card">
                                 <div class="card-body">
-                                    <iframe width="100%" height="450" allowfullscreen src="https://youtube.com/embed/{{ $data_video->url }}" frameborder="0"></iframe>
+                                    <iframe width="100%" height="431" allowfullscreen src="https://youtube.com/embed/{{ $data_video->url }}" frameborder="0"></iframe>
                                 </div>
                             </div>
                         </div>

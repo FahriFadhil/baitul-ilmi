@@ -163,7 +163,7 @@
                             <input type="text" class="form-control  px-2 py-2" name="url" placeholder="ID Video Youtube">
                         </div>
                         <p class="text-sm">
-                            *Harap input <b>ID</b> dari Video Youtubenya, Bukan Linknya. ID Berada di Akhir Link Video setelah tanda '='. Contoh ID: <b>shuIfhrLIP0</b>
+                            *Harap input <b>ID</b> dari Video Youtubenya, Bukan Linknya. ID Berada di Akhir Link Video setelah tanda '='. Contoh ID: <b>{{ $data_video->url }}</b>
                         </p>
                     </div>
                     <div class="col-md-12 ms-4 mt-3 mb-4">
