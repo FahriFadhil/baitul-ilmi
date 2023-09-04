@@ -5,11 +5,15 @@
 <main id="enrollment-page">
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-            @foreach($data_pendaftaran_header as $row)
-            <div class="carousel-item active">
-                <img src="{{ $row->image }}" class="d-block w-100" alt="...">
+        <div class="carousel-item active">
+                <img src="{{asset('images/Ujian PPDB_2.jpeg')}}" class="d-block w-100" alt="...">
             </div>
-            @endforeach
+            <div class="carousel-item">
+                <img src="{{asset('/images/Ujian PAS_5.jpeg')}}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{{asset('images/Pertemuan Wali Murid_2.jpeg')}}" class="d-block w-100" alt="...">
+            </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
