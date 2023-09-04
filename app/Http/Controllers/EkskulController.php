@@ -35,16 +35,14 @@ class EkskulController extends Controller
 
         if ($request->hasFile('photo')) {
             $destination_path = 'public/images';
-            $image = $request->file('photo');
+            $image = $request['photo'];
             $name = $image->getClientOriginalName();
-            $request->file('photo')->storeAs($destination_path, $name);
+            $request['photo']->storeAs($destination_path, $name);
             $data['photo'] = $name;
         };
         
         Ekskul::create($data);
-        return redirect('/dashboard');
-     
-        
+        return redirect('/dashboard');    
     }
 
     /**

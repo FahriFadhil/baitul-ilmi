@@ -6,7 +6,7 @@
     <h1>{{ ucfirst(basename(Request::path())) }}</h1>
 </div>
 
-<div class="py-4">
+<!-- <div class="py-4">
 
     @if($data_gambar_home->count()==0)
     @else
@@ -58,7 +58,7 @@
         </form>
     </div>
     @endif
-</div>
+</div> -->
 
 <div class="row mt-4">
     <div class="col-md-4">
@@ -84,8 +84,8 @@
                             <input type="text" class="form-control  px-2 py-2" name="nama" placeholder="Nama Ekskul">
                         </div>
                     </div>
-                    <div class="col-md-10 ms-4 >
-                    <label for=" nama">Deskripsi</label>
+                    <div class="col-md-10 ms-4">
+                    <label for="nama">Deskripsi</label>
                         <div class="input-group mt-2">
                             <textarea name="deskripsi" rows="3" class="form-control px-2 py-1"
                                 placeholder="deskripsi"></textarea>
@@ -137,7 +137,7 @@
                             </form>
                         </ul>
                     </div>
-                    <img src="/storage/image/{{$ekskul->photo}}" alt="..."
+                    <img src="/storage/images/{{$ekskul->photo}}" alt="..."
                         class="img-fluid card-img mt-3 img-fluid card-img"
                         style="height: 200px; object-fit: cover; border-radius: 10px;">
                     <div class="card-body mt-4 ms-1 bg-white mb-1">

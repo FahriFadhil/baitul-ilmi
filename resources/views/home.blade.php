@@ -43,7 +43,7 @@
     <div class="container">
 
         @if( $data_status->status == 1 )
-        <section class="penerimaan row">
+        <section class="penerimaan row mb-5">
             <div class="content col-lg-6">
                 <h1>Dibuka Pendaftaran Peserta Didik Baru Tahun Ajaran {{ $data_status->tahun_ajaran }}.</h1>
                 <br>

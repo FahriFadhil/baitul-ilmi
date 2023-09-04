@@ -21,7 +21,7 @@
                     <h3 class="fs-5 fw-bold mx-1 mt-3">Edit kepala Sekolah</h3>
                     <p class="mx-1 my-2">Isi form di bawah untuk mengganti foto dan nama kepala sekolah</p>
                     <div class="card-body text-center">
-                        <form action="/dashboard/index/update/1" method="post" enctype="multipart/form-data">
+                        <form action="/dashboard/guru/update/1" method="post" enctype="multipart/form-data">
                             @csrf
                             {{ method_field('PUT') }}
                             <input required class="form-control mt-3 px-3 py-3" name="principal_name" type="text"
@@ -49,7 +49,7 @@
                 <h3>Menambah Guru</h3>
             </div>
             <div class="card border p-3 mt-3">
-                <form method="post" action="/dashboard/index/store" enctype="multipart/form-data">
+                <form method="post" action="/dashboard/guru/store" enctype="multipart/form-data">
                     @csrf
                     <input required class="form-control mt-3 px-3 py-3" name="nama" type="text" placeholder="Nama Guru">
 
@@ -98,7 +98,7 @@
                                 </td>
                                 <td class="py-4 text-center">{{$row->nama}}</td>
                                 <td class="py-4 text-center">{{$row->description}}</td>
-                                <form action="/dashboard/index/destroy/{{$row->id}}" method="post">
+                                <form action="/dashboard/guru/destroy/{{$row->id}}" method="post">
                                     @csrf
                                     {{method_field('DELETE')}}
                                     <td class="p-2 align-items-center justify-content-center d-flex mt-2">

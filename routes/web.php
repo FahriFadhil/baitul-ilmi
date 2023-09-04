@@ -57,7 +57,10 @@ Route::group(['middleware' => 'auth'], function () {
 
   Route::put('/dashboard/header/home/update', 'HeaderController@home');
   Route::put('/dashboard/header/pendaftaran/update', 'HeaderController@pendaftaran');
-  Route::resource('/dashboard/guru', GuruController::class);
+  Route::get('/dashboard/guru', 'GuruController@index');
+  Route::post('/dashboard/guru/store', 'GuruController@store');
+  Route::delete('/dashboard/guru/destroy/{id}', 'GuruController@destroy');
+  Route::put('/dashboard/guru/update/{id}', 'GuruController@update');
 });
 
 
