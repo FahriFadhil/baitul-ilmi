@@ -53,8 +53,11 @@
                     <th style="width: 4%;" class="text-center p-3">
                         Nama
                     </th>
-                    <th style="width: 4%;" class="text-center p-3">
+                    <th style="width: 3%;" class="text-center p-3">
                         No.induk
+                    </th>
+                    <th style="width: 3%;" class="text-center p-3">
+                        Aktivitas Sekarang
                     </th>
                     <th style="width: 4%;" class="text-center p-3">
                         Jenis kelamin
@@ -69,6 +72,7 @@
                         </td>
                         <td class="p-2">{{$row->name}}</td>
                         <td class="p-2">{{$row->nis}}</td>
+                        <td class="p-2">{{$row->aktivitas}}</td>
                         <td class="p-2">{{$row->gender}}</td>
                     </tr>
                     @endforeach

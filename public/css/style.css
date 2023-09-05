@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --clr-green-main: #0c9b4bbf;
   --clr-green-dark: #0c9b4b;
@@ -194,8 +195,8 @@ footer .copyright {
   padding: 1rem 2rem;
   margin-top: 2rem;
   color: var(--clr-white-main);
-  background-color: #43c553;
-  box-shadow: 0.3rem 0.3rem 0 var(--clr-green-main);
+  background-color: var(--clr-green-main);
+  box-shadow: 0.3rem 0.3rem 0 #43c553;
   text-decoration: none;
   transition: 0.3s;
 }
@@ -350,6 +351,30 @@ footer .copyright {
 #home-page .container .berita .card:hover {
   background-color: hsl(0, 0%, 98%);
 }
+#home-page .swiper {
+  width: 100%;
+  height: 20rem;
+  margin-top: 75px;
+}
+#home-page .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#home-page .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#home-page .swiper-slide {
+  width: 32%;
+  height: 80%;
+}
 
 #profile-page .container {
   font-size: var(--font-content-lg);
@@ -460,6 +485,11 @@ footer .copyright {
   box-shadow: 0.5rem 0.5rem 0 var(--clr-green-main);
 }
 
+#academic-page {
+  /* Icons */
+  /* Arrows */
+  /* Dots */
+}
 #academic-page .container {
   font-size: var(--font-content-lg);
 }
@@ -516,6 +546,61 @@ footer .copyright {
   display: grid;
   place-items: center;
 }
+#academic-page .ekstrakurikuler .swiper {
+  width: 100%;
+  height: 20rem;
+  margin-top: 75px;
+}
+#academic-page .ekstrakurikuler .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#academic-page .ekstrakurikuler .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#academic-page .ekstrakurikuler .swiper-slide {
+  width: 32%;
+  height: 80%;
+}
+#academic-page .ekstrakurikuler .card-ekskul {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  z-index: 0;
+  inset: 60% 0 0 0;
+}
+#academic-page .ekstrakurikuler .card-ekskul p {
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 65%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 15px;
+}
+#academic-page .ekstrakurikuler .card-ekskul h1 {
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 20px;
+}
 #academic-page .teacher {
   padding-bottom: 6rem;
 }
@@ -528,10 +613,227 @@ footer .copyright {
 #academic-page .teacher .row .card img {
   aspect-ratio: 3/4;
 }
+#academic-page .slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  touch-action: none;
+  -webkit-tap-highlight-color: transparent;
+}
+#academic-page .slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+#academic-page .slick-list:focus {
+  outline: none;
+}
+#academic-page .slick-loading .slick-list {
+  background: white url(https://i.imgur.com/YWGUhK4.gif) center center no-repeat;
+}
+#academic-page .slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+#academic-page .slick-slider .slick-list,
+#academic-page .slick-track,
+#academic-page .slick-slide,
+#academic-page .slick-slide img {
+  transform: translate3d(0, 0, 0);
+}
+#academic-page .slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  zoom: 1;
+}
+#academic-page .slick-track:before,
+#academic-page .slick-track:after {
+  content: "";
+  display: table;
+}
+#academic-page .slick-track:after {
+  clear: both;
+}
+#academic-page .slick-loading .slick-track {
+  visibility: hidden;
+}
+#academic-page .slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+#academic-page .slick-slide img {
+  display: block;
+}
+#academic-page .slick-slide.dragging img {
+  pointer-events: none;
+}
+#academic-page .slick-initialized .slick-slide {
+  display: block;
+}
+#academic-page .slick-loading .slick-slide {
+  visibility: hidden;
+}
+#academic-page .slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+@font-face {
+  font-family: "slick";
+  src: url("https://www.codedevelopr.com/screenshots/2014/slick.eot");
+  src: url("https://www.codedevelopr.com/screenshots/2014/slick.eot?#iefix") format("embedded-opentype"), url("https://www.codedevelopr.com/screenshots/2014/slick.woff") format("woff"), url("https://www.codedevelopr.com/screenshots/2014/slick.ttf") format("truetype"), url("https://www.codedevelopr.com/screenshots/2014/slick.svg#slick") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+#academic-page .slick-prev,
+#academic-page .slick-next {
+  position: absolute;
+  display: block;
+  height: 20px;
+  width: 20px;
+  line-height: 0;
+  font-size: 0;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
+  top: 50%;
+  margin-top: -10px;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+#academic-page .slick-prev:focus,
+#academic-page .slick-next:focus {
+  outline: none;
+}
+#academic-page .slick-prev.slick-disabled:before,
+#academic-page .slick-next.slick-disabled:before {
+  opacity: 0.25;
+}
+#academic-page .slick-prev:before,
+#academic-page .slick-next:before {
+  font-family: "slick";
+  font-size: 20px;
+  line-height: 1;
+  color: white;
+  opacity: 0.85;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#academic-page .slick-prev {
+  left: -25px;
+}
+#academic-page .slick-prev:before {
+  content: "←";
+}
+#academic-page .slick-next {
+  right: -25px;
+}
+#academic-page .slick-next:before {
+  content: "→";
+}
+#academic-page .slick-slider {
+  margin-bottom: 30px;
+}
+#academic-page .slick-dots {
+  position: absolute;
+  bottom: -45px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0px;
+  width: 100%;
+}
+#academic-page .slick-dots li {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin: 0px 5px;
+  padding: 0px;
+  cursor: pointer;
+}
+#academic-page .slick-dots li button {
+  border: 0;
+  background: transparent;
+  display: block;
+  height: 20px;
+  width: 20px;
+  outline: none;
+  line-height: 0;
+  font-size: 0;
+  color: transparent;
+  padding: 5px;
+  cursor: pointer;
+  outline: none;
+}
+#academic-page .slick-dots li button:focus {
+  outline: none;
+}
+#academic-page .slick-dots li button:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "•";
+  width: 20px;
+  height: 20px;
+  font-family: "slick";
+  font-size: 6px;
+  line-height: 20px;
+  text-align: center;
+  color: black;
+  opacity: 0.25;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#academic-page .slick-dots li.slick-active button:before {
+  opacity: 0.75;
+}
+#academic-page .slick-slide > .slick-slider-img {
+  margin: 10px;
+  padding: 2%;
+  position: relative;
+  border: 5px solid #FFF;
+  display: block;
+  width: 100%;
+}
+#academic-page .slick-slide .image {
+  padding: 10px;
+  /*height: 180px;*/
+}
+#academic-page .slick-slide img {
+  border: 5px solid #FFF;
+  display: block;
+  width: 100%;
+}
+#academic-page .slick-slide img.slick-loading {
+  display: none;
+}
 
 #enrollment-page .carousel {
   position: relative;
   margin-bottom: 4rem;
+}
+#enrollment-page .carousel .btn {
+  font-weight: bolder;
+  border-radius: 0.4rem;
+  padding: 1rem 1.5rem;
+  margin-top: 2rem;
+  color: var(--clr-white-main);
+  background-color: #43c553;
+  text-decoration: none;
+  font-size: 18px;
 }
 #enrollment-page .carousel .carousel-text {
   position: absolute;

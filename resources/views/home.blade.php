@@ -28,7 +28,9 @@
                 SMA Islam Terpadu Baitul 'Ilmi
             </h1>
             <div class="divider d-none d-md-block"></div>
-            <p class="quote d-none d-md-block">"Ilmu itu dia akan menghilangkan sesuatu yang menutupi matamu, dan memberikan kamu petunjuk jalan apabila kamu tersesat. Dia akan memberikanmu manfaat sepanjang kehidupanmu dan akan tetap semerbak selama kepergianmu."</p>
+            <p class="quote d-none d-md-block">"Ilmu itu dia akan menghilangkan sesuatu yang menutupi matamu, dan
+                memberikan kamu petunjuk jalan apabila kamu tersesat. Dia akan memberikanmu manfaat sepanjang
+                kehidupanmu dan akan tetap semerbak selama kepergianmu."</p>
             <p class="d-none d-md-block">- Abu Ishaq Al Ilbiri -</p>
         </div>
     </div>
@@ -36,40 +38,88 @@
     <div class="container">
 
         @if( $data_status->status == 1 )
-        <section class="penerimaan row">
+        <section class="penerimaan row mb-5">
             <div class="content col-lg-6">
-                <h1>Dibuka Pendaftaran Peserta Didik Baru Tahun Ajaran {{ $data_status['0']->tahun_ajaran }}.</h1>
+                <h1>Dibuka Pendaftaran Peserta Didik Baru Tahun Ajaran {{ $data_status->tahun_ajaran }}.</h1>
                 <br>
                 <p>
-                    Sekolah SMA Islam Terpadu Baitul 'Ilmi sedang membuka pendaftaran bagi <b>siswa putri SMA dan sederajat</b> untuk tahun ajaran <b>{{ $data_status['0']->tahun_ajaran }}.</b>
+                    Sekolah SMA Islam Terpadu Baitul 'Ilmi sedang membuka pendaftaran bagi <b>siswa putri SMA dan
+                        sederajat</b> untuk tahun ajaran <b>{{ $data_status->tahun_ajaran }}.</b>
                     <br> <br>
-                    Kami mengajak para wali santri sekalian untuk bergabung menjadi keluarga besar Baitul 'Ilmi demi menuntun para siswi untuk menjadi seorang yang cerdas, berkarakter, dan berakhlak.
+                    Kami mengajak para wali santri sekalian untuk bergabung menjadi keluarga besar Baitul 'Ilmi demi
+                    menuntun para siswi untuk menjadi seorang yang cerdas, berkarakter, dan berakhlak.
                 </p>
                 <br>
                 <a href="/penerimaan" class="button-penerimaan">
-                    Daftar Sekarang
+                    <strong>Daftar Sekarang</strong>
                 </a>
             </div>
             <div class="image col-lg-6 ms-auto">
-                <div class="image-bg" style="background-image: url(' https://source.unsplash.com/600x600?enrollment ') ;"></div>
+                @if ($data_image_pendaftaran == null)
+                <div class="image-bg" style="background-image: url('https://source.unsplash.com/600x600?enrollment') ;"></div>
+                @else
+                <div class="image-bg" style="background-image: url('{{ $data_image_pendaftaran->image }}') ;"></div>
+                @endif
             </div>
         </section>
         @else
         @endif
 
+        <section class="berita container">
+            <div class="header">
+                <h1>Berita Terbaru Baitul 'Ilmi</h1>
+                <a href="/news">Semua Berita &raquo;</a>
+            </div>
+            @if( $data_berita->count() == 0 )
+            <div class="my-5">
+                <h4>Maaf Belum Ada Berita Terbaru</h4>
+            </div>
+            @else
+            <div class="row my-5 row-cols-1 row-cols-md-3 row-cols-lg-3 row-cols-xl-4 gap-2">
+                @foreach($data_berita as $news)
+                <a class="card border pt-2" href="{{route('news.show', $news->id)}}">
+                    <img src="{{ asset('storage/images') }}/{{ $news->image }}" alt="..." class="card-img p-1">
+                    <div class="card-body p-3">
+                        <h5 class="card-title"> {{ $news->headline }}</h5>
+                        <div class="card-text pt-2">
+                            <p style="font-size: 15px;" class="text-muted">
+                                {{ implode(' ', array_slice(explode(' ', $news->description), 0, 12)) . (strlen($news->description) > 12 ? '...' : '') }}
+                            </p>
+                            <div class="d-flex justify-content-between pt-2">
+                                <p>
+                                    {{ $news->author }}
+                                </p>
+                                <p>
+                                    {{ \Carbon\Carbon::parse($news->created_at)->format('M d, Y') }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                @endforeach
+            </div>
+            @endif
+
+        </section>
+
         <section class="sambutan row">
             <div class="person col-lg-4">
                 <h1>Sambutan<br>Kepala Sekolah.</h1>
-                <div class="image-bg" style="background-image: url(' storage/images/{{ $data_principal->images }} ') ;"></div>
+                <div class="image-bg" style="background-image: url(' storage/images/{{ $data_principal->images }} ') ;">
+                </div>
                 <h4>{{ $data_principal->principal_name }}</h4>
             </div>
             <div class="content col-lg-7 ms-auto d-flex flex-column justify-content-center">
                 <div class="card">
                     <p>
-                        Memiliki anak yang sholih/sholihah cerdas berkarkter adalah merupakan harapan dan keinginan semua keluarga muslim, untuk meraih cita-cita tersebut dibutuhkan sebuah usaha yang serius, sistematis dan fokus.
+                        Memiliki anak yang sholih/sholihah cerdas berkarkter adalah merupakan harapan dan keinginan
+                        semua keluarga muslim, untuk meraih cita-cita tersebut dibutuhkan sebuah usaha yang serius,
+                        sistematis dan fokus.
                     </p>
                     <p>
-                        Hal itu bisa dimulai dengan mengubah paradigma bahwa pendidikan terbaik adalah pendidikan nabi dan para sahabatnya, maka kita wajib mengikuti bagaimana langkah dan metode nabi ﷺ mendidik generasi terbaik sebagaimana kalimat Imam.
+                        Hal itu bisa dimulai dengan mengubah paradigma bahwa pendidikan terbaik adalah pendidikan nabi
+                        dan para sahabatnya, maka kita wajib mengikuti bagaimana langkah dan metode nabi ﷺ mendidik
+                        generasi terbaik sebagaimana kalimat Imam.
                     </p>
                     <p>
                         <b>
@@ -82,7 +132,8 @@
                         <br>
                     </p>
                     <p>
-                        "Tidaklah akan baik generasi akhir umat ini kecuali dengan apa yang telah membuat baik generasi awalnya..."
+                        "Tidaklah akan baik generasi akhir umat ini kecuali dengan apa yang telah membuat baik generasi
+                        awalnya..."
                     </p>
                 </div>
                 <a href="/profile" class="pt-4">Baca Selengkapnya &raquo;</a>
@@ -169,55 +220,53 @@
             <h1 class="text-center mb-5">Visi & Misi</h1>
             <div class="card d-flex align-items-center text-center">
                 <h4>Visi</h4>
-                <p>Menuju generasi berilmu dengan berpegang teguh kepada Al-Qur'an dan Sunnah sesuai dengan pamahaman salafussholeh.</p>
+                <p>Menuju generasi berilmu dengan berpegang teguh kepada Al-Qur'an dan Sunnah sesuai dengan pamahaman
+                    salafussholeh.</p>
             </div>
             <div class="card d-flex align-items-center text-center">
                 <h4>Misi</h4>
-                <p>Membentuk dan menanamkan pendidikan agama islam dengan aqidah, akhlak dan ibadah berdasarkan pemahaman para salafussholeh Menyelenggarakan pendidikan yang berkualitas namun terjangkau oleh masyarakat.</p>
+                <p>Membentuk dan menanamkan pendidikan agama islam dengan aqidah, akhlak dan ibadah berdasarkan
+                    pemahaman para salafussholeh Menyelenggarakan pendidikan yang berkualitas namun terjangkau oleh
+                    masyarakat.</p>
                 <p class="dot"></p>
-                <p>Mengembangkan potensi anak dan menyiapkan untuk mandiri dan bersahaja dalam hidup serta berilmu dan siap meniti jenjang pendidikan yang lebih tinggi.</p>
+                <p>Mengembangkan potensi anak dan menyiapkan untuk mandiri dan bersahaja dalam hidup serta berilmu dan
+                    siap meniti jenjang pendidikan yang lebih tinggi.</p>
                 <p class="dot"></p>
-                <p>Memberikan pelayanan yang optimal dan profesional dibidang pendidikan dengan cara pengajaran nilai-nilai keislaman, hafalan Al-Qur'an dan penanaman akhlak Islam, bimbingan dan pengetahuan sehingga siswa memiliki kemampuan hard skill dan keahlian soft skill.</p>
+                <p>Memberikan pelayanan yang optimal dan profesional dibidang pendidikan dengan cara pengajaran
+                    nilai-nilai keislaman, hafalan Al-Qur'an dan penanaman akhlak Islam, bimbingan dan pengetahuan
+                    sehingga siswa memiliki kemampuan hard skill dan keahlian soft skill.</p>
             </div>
-        </section>
 
-        <section class="berita container">
-            <div class="header">
-                <h1>Berita Terbaru Baitul 'Ilmi</h1>
-                <a href="/news">Semua Berita &raquo;</a>
-            </div>
-            @if( $data_berita->count() == 0 )
-            <div class="my-5">
-                <h4>Maaf Belum Ada Berita Terbaru</h4>
-            </div>
-            @else
-            <div class="row my-5 row-cols-1 row-cols-md-3 row-cols-lg-3 row-cols-xl-4 gap-2">
-                @foreach($data_berita as $news)
-                <a class="card border pt-2" href="{{route('news.show', $news->id)}}">
-                    <img src="{{ asset('storage/images') }}/{{ $news->image }}" alt="..." class="card-img p-1">
-                    <div class="card-body p-3">
-                        <h5 class="card-title"> {{ $news->headline }}</h5>
-                        <div class="card-text pt-2">
-                            <p style="font-size: 15px;" class="text-muted">{{ implode(' ', array_slice(explode(' ', $news->description), 0, 12)) . (strlen($news->description) > 12 ? '...' : '') }}
-                            </p>
-                            <div class="d-flex justify-content-between pt-2">
-                                <p>
-                                    {{ $news->author }}
-                                </p>
-                                <p>
-                                    {{ \Carbon\Carbon::parse($news->created_at)->format('M d, Y') }}
-                                </p>
+
+            <section class="youtube-profile">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-body">
+                                    <iframe width="100%" height="431" allowfullscreen src="https://youtube.com/embed/{{ $data_video->url }}" frameborder="0"></iframe>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </a>
-                @endforeach
-            </div>
-            @endif
+                </div>
+            </section>
     </div>
-    </section>
-    </div>
-
 </main>
+
+
+@endsection
+@section('js')
+
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: "auto",
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+</script>
 
 @endsection
